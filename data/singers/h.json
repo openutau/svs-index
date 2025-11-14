@@ -1,0 +1,111 @@
+[
+    {
+        "id": "hatsune-miku",
+        "names": {
+            "en": "Hatsune Miku",
+            "ja": "初音ミク",
+            "zh": "初音未来"
+        },
+        "owners": [
+            "Crypton Future Media, INC."
+        ],
+        "authors": [
+            "Crypton Future Media, INC."
+        ],
+        "homepage_url": "https://piapro.net/",
+        "profile_image_url": "https://piapro.net/intl/images/btn_miku.jpg",
+        "variants": [
+            {
+                "id": "hatsune-miku-v4-chinese",
+                "names": {
+                    "en": "HATSUNE MIKU V4 CHINESE",
+                    "ja": "初音ミク V4 CHINESE",
+                    "zh": "初音未来 V4 CHINESE"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            },
+            {
+                "id": "hatsune-miku-v4x",
+                "names": {
+                    "en": "HATSUNE MIKU V4X",
+                    "ja": "初音ミク V4X",
+                    "zh": "初音未来 V4X"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            },
+            {
+                "id": "hatsune-miku-v4x-english",
+                "names": {
+                    "en": "HATSUNE MIKU V4X ENGLISH",
+                    "ja": "初音ミク V4X ENGLISH",
+                    "zh": "初音未来 V4X ENGLISH"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            },
+            {
+                "id": "hatsune-miku-v3",
+                "names": {
+                    "en": "HATSUNE MIKU V3",
+                    "ja": "初音ミク V3",
+                    "zh": "初音未来 V3"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            },
+            {
+                "id": "hatsune-miku-v3-english",
+                "names": {
+                    "en": "HATSUNE MIKU V3 ENGLISH",
+                    "ja": "初音ミク V3 ENGLISH",
+                    "zh": "初音未来 V3 ENGLISH"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            },
+            {
+                "id": "hatsune-miku-append",
+                "names": {
+                    "en": "HATSUNE MIKU Append",
+                    "ja": "初音ミク Append",
+                    "zh": "初音未来 Append"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            },
+            {
+                "id": "vocaloide2-hatsune-miku",
+                "names": {
+                    "en": "VOCALOID2 HATSUNE MIKU",
+                    "ja": "VOCALOID2 初音ミク",
+                    "zh": "VOCALOID2 初音未来"
+                },
+                "download_url": null,
+                "manual_download_url": null,
+                "tags": [
+                    "vocaloid"
+                ]
+            }
+        ]
+    }
+]

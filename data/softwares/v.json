@@ -1,0 +1,18 @@
+[
+    {
+        "id": "vocaloid4",
+        "names": {
+            "en": "Vocaloid4"
+        },
+        "category": "host",
+        "developers": [
+            "Crypton Future Media, INC."
+        ],
+        "homepage_url": "https://www.vocaloid.com/",
+        "download_url": null,
+        "manual_download_url": null,
+        "tags": [
+            "host"
+        ]
+    }
+]

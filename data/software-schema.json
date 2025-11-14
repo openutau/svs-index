@@ -1,0 +1,74 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SVS Index Software Data",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "id",
+            "names",
+            "category",
+            "developers"
+        ],
+        "properties": {
+            "id": {
+                "description": "Unique hyphenated identifier for the software (e.g., vocaloid4, moresampler).",
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            "names": {
+                "description": "Map of language codes (ISO 639-1) to the software's name.",
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                    "type": "string"
+                }
+            },
+            "category": {
+                "description": "Category of the software.",
+                "type": "string",
+                "enum": [
+                    "host",
+                    "host_extension",
+                    "utility"
+                ]
+            },
+            "developers": {
+                "description": "List of developers for the software.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "homepage_url": {
+                "description": "Official home page link for the software.",
+                "type": "string",
+                "format": "uri"
+            },
+            "download_url": {
+                "description": "Direct link for official software download, or null if not applicable.",
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "format": "uri"
+            },
+            "manual_download_url": {
+                "description": "Link to the file host page requiring manual user interaction for download, or null.",
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "format": "uri"
+            },
+            "tags": {
+                "description": "List of tags associated with the software.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "additionalProperties": false
+        }
+    }
+}

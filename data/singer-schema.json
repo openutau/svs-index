@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SVS Index Singer Data",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "required": [
+            "id",
+            "names",
+            "owners",
+            "authors",
+            "variants"
+        ],
+        "properties": {
+            "id": {
+                "description": "Unique hyphenated identifier for the singer (e.g., hatsune-miku).",
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+            },
+            "names": {
+                "description": "Map of language codes (ISO 639-1) to the singer's name.",
+                "type": "object",
+                "required": [
+                    "en"
+                ],
+                "minProperties": 1,
+                "additionalProperties": {
+                    "type": "string"
+                }
+            },
+            "owners": {
+                "description": "List of owners for the singer.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "authors": {
+                "description": "List of authors for the singer.",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "homepage_url": {
+                "description": "Official home page link for the singer.",
+                "type": "string",
+                "format": "uri"
+            },
+            "profile_image_url": {
+                "description": "External link to a profile image.",
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "format": "uri"
+            },
+            "variants": {
+                "description": "A list of different voicebank versions, models, or types for this singer.",
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "id",
+                        "names",
+                        "download_url",
+                        "manual_download_url"
+                    ],
+                    "properties": {
+                        "id": {
+                            "description": "Unique ID for the specific variant (e.g., hatsune-miku-v4x).",
+                            "type": "string",
+                            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                        },
+                        "names": {
+                            "description": "Map of language codes to the variant's name.",
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "minProperties": 1,
+                            "additionalProperties": {
+                                "type": "string"
+                            }
+                        },
+                        "download_url": {
+                            "description": "Direct link for official software download, or null if not applicable.",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "format": "uri"
+                        },
+                        "manual_download_url": {
+                            "description": "Link to the file host page requiring manual user interaction for download, or null.",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "format": "uri"
+                        },
+                        "tags": {
+                            "description": "List of tags associated with the variant.",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            }
+        },
+        "additionalProperties": false
+    }
+}
