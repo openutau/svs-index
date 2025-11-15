@@ -1,0 +1,45 @@
+[
+  {
+    "id": "tao-kha",
+    "names": {
+      "en": "Táo Kha"
+    },
+    "owners": [
+      "aple"
+    ],
+    "authors": [
+      "aple"
+    ],
+    "variants": [
+      {
+        "id": "kajine-ringo-lite",
+        "names": {
+          "en": "Kajine Ringo LITE",
+          "ja": "齧音リンゴ LITE"
+        },
+        "download_url": "https://mega.nz/file/Vkh0GRCB#vZchq1mrLX4lgNGNF1d3zYHDY9tbUPlezuiXr9nPIu8",
+        "manual_download_url": "https://hatsune39.neocities.org/taokha",
+        "tags": [
+          "utau",
+          "ja",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "tao-kha-akane",
+        "names": {
+          "en": "Táo Kha Akane"
+        },
+        "download_url": "https://bowlroll.net/file/343768",
+        "manual_download_url": "https://hatsune39.neocities.org/taokha",
+        "tags": [
+          "utau",
+          "ja",
+          "cvvc"
+        ]
+      }
+    ],
+    "homepage_url": "https://hatsune39.neocities.org/taokha",
+    "profile_image_url": "https://i.ibb.co/M49qPpZ/Image.png"
+  }
+]
