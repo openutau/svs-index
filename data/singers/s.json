@@ -1,0 +1,78 @@
+[
+  {
+    "id": "shizuma-saito",
+    "names": {
+      "en": "Shizuma Saito",
+      "ja": "靜間彩冬"
+    },
+    "owners": [
+      "cadlaxa"
+    ],
+    "authors": [
+      "cadlaxa"
+    ],
+    "variants": [
+      {
+        "id": "shizuma-saito-v104",
+        "names": {
+          "en": "Shizuma Saito v104 (OPENUTAU BUNDLE)",
+          "ja": "靜間彩冬 v104 (OPENUTAU BUNDLE)"
+        },
+        "download_url": "https://drive.google.com/drive/folders/1mpHOrEJTh8bVw270-6vbKW1Ikx7SnW1V",
+        "manual_download_url": "https://drive.google.com/file/d/1v2NZ4SXjwE3LItTJ-O3Zs5pZJmIH7nN_/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "en",
+          "ja",
+          "fil",
+          "cvvc",
+          "arpasing"
+        ]
+      },
+      {
+        "id": "shizuma-saito-v103-enlite",
+        "names": {
+          "en": "Shizuma Saito v103 [EN LITE]",
+          "ja": "靜間彩冬 v103 [EN LITE]"
+        },
+        "download_url": "https://drive.google.com/file/d/1k6nnf91eJ7VnZAtkaZvsXSIGc7qsJQMP/view?usp=drive_link",
+        "manual_download_url": null,
+        "tags": [
+          "utau",
+          "en",
+          "arpasing"
+        ]
+      },
+      {
+        "id": "shizuma-saito-v103-ja",
+        "names": {
+          "en": "Shizuma Saito v103 [JA]",
+          "ja": "靜間彩冬 v103 [JA]"
+        },
+        "download_url": "https://drive.google.com/file/d/14wsBtoaru-GTyB9SxlaqS45LRirPo_mG/view?usp=drive_link",
+        "manual_download_url": null,
+        "tags": [
+          "utau",
+          "ja",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "shizuma-saito-v103-fil",
+        "names": {
+          "en": "Shizuma Saito v103 [FIL]",
+          "ja": "靜間彩冬 v103 [FIL]"
+        },
+        "download_url": "https://drive.google.com/file/d/1ouTy8A2pLj-ER--Tfv_mNV9W7cWEb84P/view?usp=drive_link",
+        "manual_download_url": null,
+        "tags": [
+          "utau",
+          "fil",
+          "cvvc"
+        ]
+      }
+    ],
+    "homepage_url": "https://cadlaxa.github.io/Shizuma-Saito-site/",
+    "profile_image_url": "https://drive.google.com/file/d/1EWji1o3GlDdQtzz7OGIB4xeiWSyeGv7Z/view?usp=drive_link"
+  }
+]
