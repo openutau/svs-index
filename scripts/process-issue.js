@@ -8,12 +8,31 @@ import RJSON from 'relaxed-json';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// GitHub context from environment
-const issueBody = process.env.ISSUE_BODY || '';
-const issueTitle = process.env.ISSUE_TITLE || '';
-const issueNumber = process.env.ISSUE_NUMBER || '';
-const githubRepo = process.env.GITHUB_REPOSITORY || '';
+// GitHub context from environment (with fallbacks from GITHUB_EVENT_PATH)
+let issueBody = process.env.ISSUE_BODY || '';
+let issueTitle = process.env.ISSUE_TITLE || '';
+let issueNumber = process.env.ISSUE_NUMBER || '';
+let githubRepo = process.env.GITHUB_REPOSITORY || '';
 const githubToken = process.env.GITHUB_TOKEN || '';
+
+function tryLoadEventPayload() {
+  try {
+    const p = process.env.GITHUB_EVENT_PATH;
+    if (!p || !fs.existsSync(p)) return null;
+    const txt = fs.readFileSync(p, 'utf8');
+    return JSON.parse(txt);
+  } catch { return null; }
+}
+
+// Populate missing context from event payload when possible
+(() => {
+  const ev = tryLoadEventPayload();
+  if (!ev) return;
+  if (!issueNumber && ev.issue && ev.issue.number) issueNumber = String(ev.issue.number);
+  if (!githubRepo && ev.repository && ev.repository.full_name) githubRepo = ev.repository.full_name;
+  if (!issueTitle && ev.issue && ev.issue.title) issueTitle = ev.issue.title;
+  if (!issueBody && ev.issue && ev.issue.body) issueBody = ev.issue.body;
+})();
 
 function parseIssueForm(body) {
   const data = {};
@@ -62,13 +81,25 @@ function cleanOptional(raw) {
 
 function buildSingerObject(data) {
   function stripCodeFence(raw) {
-    if (!raw) return raw;
+    if (raw == null) return raw;
     const s = String(raw).trim();
-    // Match ```json\n...\n``` or ```\n...\n```
-    const fenceMatch = s.match(/^```[a-zA-Z0-9]*\r?\n([\s\S]*?)\r?\n```\s*$/);
-    if (fenceMatch) {
-      return fenceMatch[1].trim();
+    // Prefer a fenced code block labeled as json/jsonc/js/javascript
+    const regex = /```\s*([A-Za-z0-9_-]*)\s*\r?\n([\s\S]*?)\r?\n```/gm;
+    let best = null;
+    let m;
+    while ((m = regex.exec(s)) !== null) {
+      const lang = (m[1] || '').toLowerCase();
+      const body = m[2] || '';
+      if (!best) best = body; // fallback to first
+      if (/^(json|jsonc|js|javascript)$/.test(lang)) {
+        // Prefer JSON-like labeled block
+        return body.trim();
+      }
     }
+    if (best != null) return best.trim();
+    // Also try a simpler single-fence capture even without trailing newline before closing fence
+    const loose = s.match(/```[A-Za-z0-9_-]*\s*\r?\n([\s\S]*?)```/m);
+    if (loose && loose[1]) return loose[1].trim();
     return s;
   }
 
@@ -98,10 +129,16 @@ function buildSingerObject(data) {
     const cleaned = stripCodeFence(raw);
     variants = RJSON.parse(cleaned);
   } catch (e) {
-    throw new Error(
+    const err = new Error(
       'Invalid JSON in "Variants" field. Ensure it is valid JSON (usually an array). Example: [\n  { "id": "eng", "names": { "en": "English" } }\n]\nOriginal error: ' +
-        (e && e.message ? e.message : String(e))
+      (e && e.message ? e.message : String(e))
     );
+    err.details = {
+      parseError: e && e.message ? e.message : String(e),
+      field: 'variants',
+      snippet: String(data.variants_json || data.variants || '').slice(0, 2000)
+    };
+    throw err;
   }
 
   const obj = {
@@ -215,16 +252,28 @@ function validateSchema(obj, schemaPath) {
       const msg = `${err.message}${err.params ? ' ' + JSON.stringify(err.params) : ''}`;
       console.log(`::error title=Schema validation failed,path=${p}::${msg}`);
     }
-    throw new Error(
+    const err = new Error(
       'Schema validation failed. Please correct the following:\n' +
       formatted +
       '\n\nSee the schema file and README for required fields.'
     );
+    err.details = {
+      formatted,
+      errors: (validate.errors || []).map(e => ({
+        path: toDotPath(e.instancePath, e.params),
+        message: e.message,
+        params: e.params || {}
+      }))
+    };
+    throw err;
   }
 }
 
 async function postIssueComment(body) {
-  if (!githubToken || !githubRepo || !issueNumber) return;
+  if (!githubToken || !githubRepo || !issueNumber) {
+    console.warn('Cannot post issue comment: missing GitHub context');
+    return;
+  }
   const url = `https://api.github.com/repos/${githubRepo}/issues/${issueNumber}/comments`;
   const res = await fetch(url, {
     method: 'POST',
@@ -281,6 +330,95 @@ async function main() {
   const parsedData = parseIssueForm(issueBody);
   const obj = category === 'singer' ? buildSingerObject(parsedData) : buildSoftwareObject(parsedData);
 
+  // Optional lightweight direct download URL validation (no full download)
+  // Enable with VALIDATE_LINKS=1. Fail (instead of warn) with STRICT_DOWNLOAD_CHECK=1.
+  const shouldValidate = process.env.VALIDATE_LINKS === '1';
+  const strictMode = process.env.STRICT_DOWNLOAD_CHECK === '1';
+  const linkIssues = [];
+
+  async function probe(url) {
+    if (!url) return null;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    try {
+      // First try HEAD request
+      let res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal });
+      if (!res.ok || res.status === 405) {
+        // Fallback: range GET (first byte)
+        res = await fetch(url, { method: 'GET', headers: { Range: 'bytes=0-0' }, redirect: 'follow', signal: controller.signal });
+      }
+      const ct = (res.headers.get('content-type') || '').toLowerCase();
+      const disp = res.headers.get('content-disposition') || '';
+      const len = res.headers.get('content-length');
+      return { status: res.status, contentType: ct, contentDisposition: disp, contentLength: len };
+    } catch (e) {
+      return { error: e && e.message ? e.message : String(e) };
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  function isLikelyFile(meta, url) {
+    if (!meta) return false;
+    if (meta.error) return false; // treat unreachable as not verified
+    const ct = meta.contentType;
+    if (!ct) return false;
+    // Accept common archive/audio/binary types
+    if (/application\/(zip|x-zip-compressed|octet-stream|x-rar-compressed|x-7z-compressed)/.test(ct)) return true;
+    if (/audio\//.test(ct)) return true;
+    if (/image\//.test(ct)) return true; // Some voicebanks may zip images? allow images when direct.
+    if (/text\/plain/.test(ct) && /\.(ini|txt|ust|svs|vsqx)$/i.test(url)) return true;
+    if (/application\/json/.test(ct) && /\.json$/i.test(url)) return true;
+    // If content-disposition suggests attachment
+    if (meta.contentDisposition && /attachment/i.test(meta.contentDisposition)) return true;
+    // Heuristic: URL ends with archive/audio extension
+    if (/\.(zip|rar|7z|wav|ogg|mp3|ust|svs|vsqx)$/i.test(url)) return true;
+    return false;
+  }
+
+  async function validateLink(url, label) {
+    if (!url) return;
+    const meta = await probe(url);
+    if (meta && meta.error) {
+      linkIssues.push({ url, label, type: 'unreachable', detail: meta.error });
+      return;
+    }
+    if (!isLikelyFile(meta, url)) {
+      linkIssues.push({ url, label, type: 'not-file', detail: meta });
+    }
+  }
+
+  if (shouldValidate) {
+    if (category === 'software') {
+      // Only validate direct download_url; manual link may be a landing page
+      await validateLink(obj.download_url, 'software.download_url');
+    } else {
+      // Singer: check variant URLs
+      for (let i = 0; i < (obj.variants || []).length; i++) {
+        const v = obj.variants[i];
+        await validateLink(v.download_url, `variants[${i}].download_url`);
+      }
+    }
+  }
+
+  if (linkIssues.length) {
+    const lines = linkIssues.map(li => `| ${li.label} | ${li.url} | ${li.type} | ${typeof li.detail === 'string' ? li.detail : (li.detail && li.detail.contentType) || ''} |`).join('\n');
+    const table = '\n#### Link Validation\n\n| Field | URL | Status | Detail |\n|-------|-----|--------|--------|\n' + lines + '\n';
+    // If strict mode and any non-file issue
+    if (strictMode && linkIssues.some(li => li.type !== 'file')) {
+      const err = new Error('One or more download links appear to be web pages or unreachable. Please provide a direct file URL.');
+      err.details = { linkIssues };
+      throw err;
+    } else {
+      // Print a warning annotation for each issue
+      linkIssues.forEach(li => {
+        console.log(`::warning title=Link validation ${li.type}::${li.label} => ${li.url}`);
+      });
+      // Append to console for workflow logs
+      console.log(table);
+    }
+  }
+
   // Validate
   validateSchema(obj, schemaPath);
 
@@ -316,7 +454,31 @@ async function run() {
     // Attempt to report back to the originating issue
     const header = '### ❌ Submission failed validation';
     const advice = '\nIf you believe this is a mistake, please update your issue with corrections and re-run the workflow.';
-    await postIssueComment(`${header}\n\n${msg}${advice}`);
+    let detailsMd = '';
+    if (error && error.details && error.details.errors) {
+      const list = error.details.errors.map(e => `| ${e.path} | ${e.message} | ${JSON.stringify(e.params)} |`).join('\n');
+      detailsMd = '\n#### Validation Details\n\n| Path | Message | Params |\n|------|---------|--------|\n' + list + '\n';
+      detailsMd += '\n<details><summary>Formatted List</summary>\n\n' + error.details.formatted + '\n\n</details>\n';
+    }
+    if (error && error.details && error.details.field === 'variants') {
+      const snip = error.details.snippet || '';
+      detailsMd += '\n#### Variants JSON Parse Error\n\n';
+      detailsMd += '**Error:** ' + (error.details.parseError || '') + '\n\n';
+      if (snip) {
+        detailsMd += '<details><summary>Submitted Variants (truncated)</summary>\n\n```\n' + snip + '\n```\n\n</details>\n';
+      }
+    }
+    if (error && error.details && error.details.linkIssues) {
+      const li = error.details.linkIssues;
+      if (li.length) {
+        const lines = li.map(x => `| ${x.label} | ${x.url} | ${x.type} | ${typeof x.detail === 'string' ? x.detail : (x.detail && x.detail.contentType) || ''} |`).join('\n');
+        detailsMd += '\n#### Link Validation (strict mode)\n\n| Field | URL | Status | Detail |\n|-------|-----|--------|--------|\n' + lines + '\n';
+      }
+    }
+    if (error && error.stack) {
+      detailsMd += '\n<details><summary>Stack Trace</summary>\n\n````\n' + String(error.stack).slice(0, 6000) + '\n````\n\n</details>\n';
+    }
+    await postIssueComment(`${header}\n\n${msg}${detailsMd}${advice}`);
     process.exit(1);
   }
 }
