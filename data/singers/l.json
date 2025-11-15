@@ -1,0 +1,107 @@
+[
+  {
+    "id": "lem-shapeshifter",
+    "names": {
+      "en": "Lem Shapeshifter",
+      "ja": "澪夢レム"
+    },
+    "owners": [
+      "wik_wav"
+    ],
+    "authors": [
+      "wik_wav"
+    ],
+    "variants": [
+      {
+        "id": "lem-v4-phascogale",
+        "names": {
+          "en": "Lem V4 Phascogale",
+          "ja": "澪夢レムV4★ファスコガーレ"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/343690",
+        "tags": [
+          "utau",
+          "cvvc",
+          "ja"
+        ]
+      },
+      {
+        "id": "lem-v4-quoll",
+        "names": {
+          "en": "Lem V4 Quoll",
+          "ja": "澪夢レムV4★フクロネコ"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/343688",
+        "tags": [
+          "utau",
+          "cvvc",
+          "ja"
+        ]
+      },
+      {
+        "id": "lem-v4-civet",
+        "names": {
+          "en": "Lem V4 Civet",
+          "ja": "澪夢レムV4★シベット"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/342053",
+        "tags": [
+          "utau",
+          "cvvc",
+          "ja"
+        ]
+      },
+      {
+        "id": "lem-vccv-mongoose",
+        "names": {
+          "en": "Lem VCCV / CVVC Mongoose",
+          "ja": "澪夢レムCVVC★マングース"
+        },
+        "file_url": null,
+        "download_page_url": "https://wik-wav.neocities.org/lem_downloads",
+        "tags": [
+          "utau",
+          "vccv",
+          "cvvc",
+          "en",
+          "ja"
+        ]
+      },
+      {
+        "id": "lem-v3-weasel",
+        "names": {
+          "en": "Lem V3 weasel",
+          "ja": "澪夢レムV3★イイズナ"
+        },
+        "file_url": null,
+        "download_page_url": "https://wik-wav.neocities.org/lem_downloads",
+        "tags": [
+          "utau",
+          "cvvc",
+          "vcv",
+          "ja"
+        ]
+      },
+      {
+        "id": "lem-diffsinger-marten",
+        "names": {
+          "en": "Lem Diffsinger Marten",
+          "ja": "澪夢レムDS★テン"
+        },
+        "file_url": null,
+        "download_page_url": "https://wik-wav.neocities.org/lem_downloads",
+        "tags": [
+          "diffsinger",
+          "en",
+          "jp",
+          "pl"
+        ]
+      }
+    ],
+    "homepage_url": "https://wik-wav.neocities.org/Lem",
+    "profile_image_url": "https://wik-wav.neocities.org/content/Lem_Pfp.jpg"
+  }
+]
