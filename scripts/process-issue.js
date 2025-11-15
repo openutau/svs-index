@@ -215,11 +215,20 @@ function validateSchema(obj, schemaPath) {
       const msg = `${err.message}${err.params ? ' ' + JSON.stringify(err.params) : ''}`;
       console.log(`::error title=Schema validation failed,path=${p}::${msg}`);
     }
-    throw new Error(
+    const err = new Error(
       'Schema validation failed. Please correct the following:\n' +
       formatted +
       '\n\nSee the schema file and README for required fields.'
     );
+    err.details = {
+      formatted,
+      errors: (validate.errors || []).map(e => ({
+        path: toDotPath(e.instancePath, e.params),
+        message: e.message,
+        params: e.params || {}
+      }))
+    };
+    throw err;
   }
 }
 
@@ -281,6 +290,95 @@ async function main() {
   const parsedData = parseIssueForm(issueBody);
   const obj = category === 'singer' ? buildSingerObject(parsedData) : buildSoftwareObject(parsedData);
 
+  // Optional lightweight direct download URL validation (no full download)
+  // Enable with VALIDATE_LINKS=1. Fail (instead of warn) with STRICT_DOWNLOAD_CHECK=1.
+  const shouldValidate = process.env.VALIDATE_LINKS === '1';
+  const strictMode = process.env.STRICT_DOWNLOAD_CHECK === '1';
+  const linkIssues = [];
+
+  async function probe(url) {
+    if (!url) return null;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    try {
+      // First try HEAD request
+      let res = await fetch(url, { method: 'HEAD', redirect: 'follow', signal: controller.signal });
+      if (!res.ok || res.status === 405) {
+        // Fallback: range GET (first byte)
+        res = await fetch(url, { method: 'GET', headers: { Range: 'bytes=0-0' }, redirect: 'follow', signal: controller.signal });
+      }
+      const ct = (res.headers.get('content-type') || '').toLowerCase();
+      const disp = res.headers.get('content-disposition') || '';
+      const len = res.headers.get('content-length');
+      return { status: res.status, contentType: ct, contentDisposition: disp, contentLength: len };
+    } catch (e) {
+      return { error: e && e.message ? e.message : String(e) };
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  function isLikelyFile(meta, url) {
+    if (!meta) return false;
+    if (meta.error) return false; // treat unreachable as not verified
+    const ct = meta.contentType;
+    if (!ct) return false;
+    // Accept common archive/audio/binary types
+    if (/application\/(zip|x-zip-compressed|octet-stream|x-rar-compressed|x-7z-compressed)/.test(ct)) return true;
+    if (/audio\//.test(ct)) return true;
+    if (/image\//.test(ct)) return true; // Some voicebanks may zip images? allow images when direct.
+    if (/text\/plain/.test(ct) && /\.(ini|txt|ust|svs|vsqx)$/i.test(url)) return true;
+    if (/application\/json/.test(ct) && /\.json$/i.test(url)) return true;
+    // If content-disposition suggests attachment
+    if (meta.contentDisposition && /attachment/i.test(meta.contentDisposition)) return true;
+    // Heuristic: URL ends with archive/audio extension
+    if (/\.(zip|rar|7z|wav|ogg|mp3|ust|svs|vsqx)$/i.test(url)) return true;
+    return false;
+  }
+
+  async function validateLink(url, label) {
+    if (!url) return;
+    const meta = await probe(url);
+    if (meta && meta.error) {
+      linkIssues.push({ url, label, type: 'unreachable', detail: meta.error });
+      return;
+    }
+    if (!isLikelyFile(meta, url)) {
+      linkIssues.push({ url, label, type: 'not-file', detail: meta });
+    }
+  }
+
+  if (shouldValidate) {
+    if (category === 'software') {
+      // Only validate direct download_url; manual link may be a landing page
+      await validateLink(obj.download_url, 'software.download_url');
+    } else {
+      // Singer: check variant URLs
+      for (let i = 0; i < (obj.variants || []).length; i++) {
+        const v = obj.variants[i];
+        await validateLink(v.download_url, `variants[${i}].download_url`);
+      }
+    }
+  }
+
+  if (linkIssues.length) {
+    const lines = linkIssues.map(li => `| ${li.label} | ${li.url} | ${li.type} | ${typeof li.detail === 'string' ? li.detail : (li.detail && li.detail.contentType) || ''} |`).join('\n');
+    const table = '\n#### Link Validation\n\n| Field | URL | Status | Detail |\n|-------|-----|--------|--------|\n' + lines + '\n';
+    // If strict mode and any non-file issue
+    if (strictMode && linkIssues.some(li => li.type !== 'file')) {
+      const err = new Error('One or more download links appear to be web pages or unreachable. Please provide a direct file URL.');
+      err.details = { linkIssues };
+      throw err;
+    } else {
+      // Print a warning annotation for each issue
+      linkIssues.forEach(li => {
+        console.log(`::warning title=Link validation ${li.type}::${li.label} => ${li.url}`);
+      });
+      // Append to console for workflow logs
+      console.log(table);
+    }
+  }
+
   // Validate
   validateSchema(obj, schemaPath);
 
@@ -316,7 +414,20 @@ async function run() {
     // Attempt to report back to the originating issue
     const header = '### ❌ Submission failed validation';
     const advice = '\nIf you believe this is a mistake, please update your issue with corrections and re-run the workflow.';
-    await postIssueComment(`${header}\n\n${msg}${advice}`);
+    let detailsMd = '';
+    if (error && error.details && error.details.errors) {
+      const list = error.details.errors.map(e => `| ${e.path} | ${e.message} | ${JSON.stringify(e.params)} |`).join('\n');
+      detailsMd = '\n#### Validation Details\n\n| Path | Message | Params |\n|------|---------|--------|\n' + list + '\n';
+      detailsMd += '\n<details><summary>Formatted List</summary>\n\n' + error.details.formatted + '\n\n</details>\n';
+    }
+    if (error && error.details && error.details.linkIssues) {
+      const li = error.details.linkIssues;
+      if (li.length) {
+        const lines = li.map(x => `| ${x.label} | ${x.url} | ${x.type} | ${typeof x.detail === 'string' ? x.detail : (x.detail && x.detail.contentType) || ''} |`).join('\n');
+        detailsMd += '\n#### Link Validation (strict mode)\n\n| Field | URL | Status | Detail |\n|-------|-----|--------|--------|\n' + lines + '\n';
+      }
+    }
+    await postIssueComment(`${header}\n\n${msg}${detailsMd}${advice}`);
     process.exit(1);
   }
 }
