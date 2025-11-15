@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-manifest.js && prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\" && tsc && vite build && node scripts/copy-data.js"
+    "build": "node scripts/generate-manifest.js && prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,md}\" && tsc && vite build && node scripts/copy-data.js && node scripts/build-registry.js"
   },
   "devDependencies": {
     "ajv": "^8.17.1",
