@@ -12,38 +12,38 @@ type State = {
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
 app.innerHTML = `
-  <header class="container">
-    <h1>SVS Index</h1>
-    <p class="subtitle">Index of Singing Voice Synthesis singers and softwares</p>
+  <header class="container header-main">
+    <div class="header-content">
+      <h1>SVS Index</h1>
+      <p class="subtitle">Index of Singing Voice Synthesis singers and softwares</p>
+      <div class="header-links">
+        <a href="https://github.com/openutau/svs-index/issues/new?template=singer-submission.yml" target="_blank">Submit Singer</a>
+        <span class="separator">|</span>
+        <a href="https://github.com/openutau/svs-index/issues/new?template=software-submission.yml" target="_blank">Submit Software</a>
+      </div>
+    </div>
   </header>
   <section class="container controls">
-    <label>
-      Category
-      <select id="category">
-        <option value="singer">Singers</option>
-        <option value="software">Softwares</option>
-      </select>
-    </label>
-    <label class="grow">
-      Search
+    <div class="category-selector">
+      <button data-category="singer" class="active">Singers</button>
+      <button data-category="software">Softwares</button>
+    </div>
+    <div class="search-control">
       <input id="search" type="search" placeholder="Type to filter by id, names, tags" autocomplete="off" />
-    </label>
+    </div>
   </section>
   <section class="container">
     <div id="status" class="status">Loading data…</div>
-    <table id="results" class="results">
-      <thead></thead>
-      <tbody></tbody>
-    </table>
+    <div id="results" class="results"></div>
   </section>
 `;
 
-const categoryEl = document.getElementById('category') as HTMLSelectElement;
+const categorySelector = document.querySelector(
+  '.category-selector'
+) as HTMLDivElement;
 const searchEl = document.getElementById('search') as HTMLInputElement;
 const statusEl = document.getElementById('status') as HTMLDivElement;
-const tableEl = document.getElementById('results') as HTMLTableElement;
-const thead = tableEl.querySelector('thead')!;
-const tbody = tableEl.querySelector('tbody')!;
+const resultsEl = document.getElementById('results') as HTMLDivElement;
 
 const state: State = {
   category: 'singer',
@@ -59,6 +59,11 @@ function normalize(str: string): string {
 function singerMatches(s: Singer, q: string): boolean {
   if (!q) return true;
   const n = normalize(q);
+  // If query starts with @, only match IDs
+  if (q.startsWith('@')) {
+    const idQuery = n.substring(1);
+    return s.id.includes(idQuery);
+  }
   if (s.id.includes(n)) return true;
   for (const val of Object.values(s.names))
     if (normalize(val).includes(n)) return true;
@@ -72,6 +77,11 @@ function singerMatches(s: Singer, q: string): boolean {
 function softwareMatches(s: Software, q: string): boolean {
   if (!q) return true;
   const n = normalize(q);
+  // If query starts with @, only match IDs
+  if (q.startsWith('@')) {
+    const idQuery = n.substring(1);
+    return s.id.includes(idQuery);
+  }
   if (s.id.includes(n)) return true;
   for (const val of Object.values(s.names))
     if (normalize(val).includes(n)) return true;
@@ -79,84 +89,74 @@ function softwareMatches(s: Software, q: string): boolean {
   return false;
 }
 
-function renderTableHeader(category: Category) {
-  if (category === 'singer') {
-    thead.innerHTML = `<tr>
-      <th>Name</th>
-      <th>Owners</th>
-      <th>Authors</th>
-      <th>Tags</th>
-      <th>Homepage</th>
-      <th></th>
-    </tr>`;
-  } else {
-    thead.innerHTML = `<tr>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Developers</th>
-      <th>Tags</th>
-      <th>Homepage</th>
-      <th></th>
-    </tr>`;
-  }
-}
-
 function render() {
-  renderTableHeader(state.category);
   const q = normalize(state.query);
   if (state.category === 'singer') {
-    const rows = state.singers.filter((s) => singerMatches(s, q));
-    tbody.innerHTML = rows
+    const filtered = state.singers.filter((s) => singerMatches(s, q));
+    resultsEl.innerHTML = filtered
       .map((s) => {
         const name = s.names.en || Object.values(s.names)[0] || s.id;
-        const owners = s.owners.join(', ');
-        const authors = s.authors.join(', ');
+        const detailUrl = `/detail.html?category=singer&id=${encodeURIComponent(s.id)}`;
+
+        // Collect all unique tags from variants
         const tagSet = new Set<string>();
         s.variants.forEach((v) => (v.tags || []).forEach((t) => tagSet.add(t)));
-        const tags = Array.from(tagSet).join(', ');
-        const homepage = s.homepage_url
-          ? `<a href="${s.homepage_url}" target="_blank">link</a>`
-          : '';
-        const detail = `<a href="/detail.html?category=singer&id=${encodeURIComponent(s.id)}">Details</a>`;
-        return `<tr>
-        <td>${name}</td>
-        <td>${owners}</td>
-        <td>${authors}</td>
-        <td>${tags}</td>
-        <td>${homepage}</td>
-        <td>${detail}</td>
-      </tr>`;
+        const tags = Array.from(tagSet)
+          .map((t) => `<span class="tag">${t}</span>`)
+          .join('');
+
+        // Render variant names
+        const variants = s.variants
+          .map((v) => {
+            const vName = v.names.en || Object.values(v.names)[0] || v.id;
+            return `<span class="variant">${vName}</span>`;
+          })
+          .join('');
+
+        return `<div class="card">
+          <div class="card-header">
+            <a href="${detailUrl}" class="card-title">${name}</a>
+            <span class="card-id">@${s.id}</span>
+          </div>
+          ${variants ? `<div class="card-variants">${variants}</div>` : ''}
+          ${tags ? `<div class="card-tags">${tags}</div>` : ''}
+        </div>`;
       })
       .join('');
   } else {
-    const rows = state.softwares.filter((s) => softwareMatches(s, q));
-    tbody.innerHTML = rows
+    const filtered = state.softwares.filter((s) => softwareMatches(s, q));
+    resultsEl.innerHTML = filtered
       .map((s) => {
         const name = s.names.en || Object.values(s.names)[0] || s.id;
-        const developers = s.developers.join(', ');
-        const tags = (s.tags || []).join(', ');
-        const homepage = s.homepage_url
-          ? `<a href="${s.homepage_url}" target="_blank">link</a>`
-          : '';
-        const detail = `<a href="/detail.html?category=software&id=${encodeURIComponent(s.id)}">Details</a>`;
-        return `<tr>
-        <td>${name}</td>
-        <td>${s.category}</td>
-        <td>${developers}</td>
-        <td>${tags}</td>
-        <td>${homepage}</td>
-        <td>${detail}</td>
-      </tr>`;
+        const detailUrl = `/detail.html?category=software&id=${encodeURIComponent(s.id)}`;
+
+        const tags = (s.tags || [])
+          .map((t) => `<span class="tag">${t}</span>`)
+          .join('');
+
+        return `<div class="card">
+          <div class="card-header">
+            <a href="${detailUrl}" class="card-title">${name}</a>
+            <span class="card-id">@${s.id}</span>
+          </div>
+          ${tags ? `<div class="card-tags">${tags}</div>` : ''}
+        </div>`;
       })
       .join('');
   }
 }
 
 function wireEvents() {
-  categoryEl.addEventListener('change', () => {
-    state.category = categoryEl.value as Category;
-    render();
+  const categoryButtons = categorySelector.querySelectorAll('button');
+  categoryButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      categoryButtons.forEach((btn) => btn.classList.remove('active'));
+      button.classList.add('active');
+      state.category = button.dataset.category as Category;
+      render();
+    });
   });
+
   searchEl.addEventListener('keyup', () => {
     state.query = searchEl.value;
     render();

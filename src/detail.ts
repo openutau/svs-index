@@ -18,62 +18,70 @@ function link(url?: string | null): string {
 
 function renderSinger(s: Singer) {
   const namesList = Object.entries(s.names)
-    .map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`)
+    .map(([k, v]) => `<div><strong>${k}</strong></div><div>${v}</div>`)
     .join('');
   const variants = s.variants
     .map(
-      (v) => `<li>
-        <div><strong>${v.names.en || v.id}</strong></div>
-        ${v.tags && v.tags.length ? `<div>Tags: ${v.tags.join(', ')}</div>` : ''}
-        <div>
-          ${v.download_url ? `Download: ${link(v.download_url)}` : ''}
-          ${v.manual_download_url ? `&nbsp;Manual: ${link(v.manual_download_url)}` : ''}
+      (v) => `<div class="variant-card">
+        <div class="variant-card-header">${v.names.en || v.id}</div>
+        <div class="variant-meta">
+          ${v.tags && v.tags.length ? `<div>Tags: ${v.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
+          ${v.download_url ? `<div>Download: ${link(v.download_url)}</div>` : ''}
+          ${v.manual_download_url ? `<div>Manual: ${link(v.manual_download_url)}</div>` : ''}
         </div>
-      </li>`
+      </div>`
     )
     .join('');
 
   app.innerHTML = `
-    <header class="container">
-      <h1>${s.names.en || s.id}</h1>
-      <p class="subtitle"><a href="/">Home</a></p>
+    <header class="container detail-header">
+      <h1>${s.names.en || s.id} <span class="card-id">@${s.id}</span></h1>
+      <a href="/" class="back-link">← Back to Index</a>
     </header>
     <section class="container">
-      <div class="kv">
-        <div><strong>ID:</strong> ${s.id}</div>
-        <div><strong>Homepage:</strong> ${link(s.homepage_url)}</div>
-        <div><strong>Owners:</strong> ${s.owners.join(', ')}</div>
-        <div><strong>Authors:</strong> ${s.authors.join(', ')}</div>
+      <div class="detail-card">
+        <h3>Details</h3>
+        <div class="kv-list">
+          <div><strong>Homepage</strong></div><div>${link(s.homepage_url)}</div>
+          <div><strong>Owners</strong></div><div>${s.owners.join(', ')}</div>
+          <div><strong>Authors</strong></div><div>${s.authors.join(', ')}</div>
+        </div>
       </div>
-      <h3>Names</h3>
-      <ul>${namesList}</ul>
+      <div class="detail-card">
+        <h3>Names</h3>
+        <div class="kv-list">${namesList}</div>
+      </div>
       <h3>Variants</h3>
-      <ul>${variants}</ul>
+      ${variants}
     </section>
   `;
 }
 
 function renderSoftware(s: Software) {
   const namesList = Object.entries(s.names)
-    .map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`)
+    .map(([k, v]) => `<div><strong>${k}</strong></div><div>${v}</div>`)
     .join('');
   app.innerHTML = `
-    <header class="container">
-      <h1>${s.names.en || s.id}</h1>
-      <p class="subtitle"><a href="/">Home</a></p>
+    <header class="container detail-header">
+      <h1>${s.names.en || s.id} <span class="card-id">@${s.id}</span></h1>
+      <a href="/" class="back-link">← Back to Index</a>
     </header>
     <section class="container">
-      <div class="kv">
-        <div><strong>ID:</strong> ${s.id}</div>
-        <div><strong>Homepage:</strong> ${link(s.homepage_url)}</div>
-        <div><strong>Category:</strong> ${s.category}</div>
-        <div><strong>Developers:</strong> ${s.developers.join(', ')}</div>
-        ${s.tags?.length ? `<div><strong>Tags:</strong> ${s.tags.join(', ')}</div>` : ''}
-        ${s.download_url ? `<div><strong>Download:</strong> ${link(s.download_url)}</div>` : ''}
-        ${s.manual_download_url ? `<div><strong>Manual:</strong> ${link(s.manual_download_url)}</div>` : ''}
+      <div class="detail-card">
+        <h3>Details</h3>
+        <div class="kv-list">
+          <div><strong>Homepage</strong></div><div>${link(s.homepage_url)}</div>
+          <div><strong>Category</strong></div><div>${s.category}</div>
+          <div><strong>Developers</strong></div><div>${s.developers.join(', ')}</div>
+          ${s.tags?.length ? `<div><strong>Tags</strong></div><div>${s.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
+          ${s.download_url ? `<div><strong>Download</strong></div><div>${link(s.download_url)}</div>` : ''}
+          ${s.manual_download_url ? `<div><strong>Manual</strong></div><div>${link(s.manual_download_url)}</div>` : ''}
+        </div>
       </div>
-      <h3>Names</h3>
-      <ul>${namesList}</ul>
+      <div class="detail-card">
+        <h3>Names</h3>
+        <div class="kv-list">${namesList}</div>
+      </div>
     </section>
   `;
 }

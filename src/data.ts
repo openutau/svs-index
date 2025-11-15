@@ -30,10 +30,10 @@ async function ensureCategoryUpdated(category: Category): Promise<void> {
     category === 'singer' ? '/data/singers/' : '/data/softwares/';
 
   const changedFiles: string[] = [];
-  for (const { file, ts } of entries) {
+  for (const { file, hash } of entries) {
     const metaKey = `${category}:file:${file}`;
-    const savedTs = (await getMeta<number>(metaKey)) ?? -1;
-    if (savedTs < ts) {
+    const savedHash = (await getMeta<string>(metaKey)) ?? '';
+    if (savedHash !== hash) {
       changedFiles.push(file);
     }
   }
@@ -48,7 +48,7 @@ async function ensureCategoryUpdated(category: Category): Promise<void> {
         allData.push(...data);
         await setMeta(
           `singer:file:${file}`,
-          entries.find((e) => e.file === file)!.ts
+          entries.find((e) => e.file === file)!.hash
         );
       }
     }
@@ -61,7 +61,7 @@ async function ensureCategoryUpdated(category: Category): Promise<void> {
         allData.push(...data);
         await setMeta(
           `software:file:${file}`,
-          entries.find((e) => e.file === file)!.ts
+          entries.find((e) => e.file === file)!.hash
         );
       }
     }

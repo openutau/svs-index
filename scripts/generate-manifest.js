@@ -1,19 +1,21 @@
 import fs from 'fs';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function getFilesWithTimestamps(dir) {
+function getFilesWithHashes(dir) {
   if (!fs.existsSync(dir)) return [];
   const files = fs.readdirSync(dir).filter((f) => f.endsWith('.json'));
   return files.map((file) => {
     const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const content = fs.readFileSync(filePath);
+    const hash = crypto.createHash('sha256').update(content).digest('hex');
     return {
       file,
-      ts: stat.mtimeMs,
+      hash,
     };
   });
 }
@@ -24,8 +26,8 @@ function generateManifest() {
   const softwaresDir = path.join(dataDir, 'softwares');
 
   const manifest = {
-    singers: getFilesWithTimestamps(singersDir),
-    softwares: getFilesWithTimestamps(softwaresDir),
+    singers: getFilesWithHashes(singersDir),
+    softwares: getFilesWithHashes(softwaresDir),
   };
 
   return manifest;

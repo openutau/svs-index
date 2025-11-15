@@ -39,7 +39,7 @@ export type Category = 'singer' | 'software';
 
 export interface DataManifestEntry {
   file: string; // e.g. 'h.json'
-  ts: number; // unix epoch ms
+  hash: string; // sha256 hash of file content
 }
 
 export interface DataManifest {
