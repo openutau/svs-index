@@ -1,0 +1,235 @@
+[
+  {
+    "id": "kasane-teto",
+    "names": {
+      "en": "Kasane Teto",
+      "ja": "重音テト",
+      "zh": "重音Teto"
+    },
+    "owners": [
+      "TWINDRILL"
+    ],
+    "authors": [
+      "小山乃舞世 (Oyamano Mayo)",
+      "線 (Sen)"
+    ],
+    "variants": [
+      {
+        "id": "kasane-teto-openutau",
+        "names": {
+          "en": "OpenUTAU Japanese library set",
+          "ja": "OpenUTAU用日本語統合ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-OUset240323.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "all voice colors"
+        ]
+      },
+      {
+        "id": "kasane-teto-standard",
+        "names": {
+          "en": "Standard voice",
+          "ja": "通常音源 ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/tandoku/TETO-tandoku-100619.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single \"default\" voicebank"
+        ]
+      },
+      {
+        "id": "kasane-teto-whisper",
+        "names": {
+          "en": "Whisper voice",
+          "ja": "囁き音源 ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-sasayakitan-100925.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-extra-voice",
+        "names": {
+          "en": "Extra voice",
+          "ja": "エクストラライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-extra-100619.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "extras"
+        ]
+      },
+      {
+        "id": "kasane-teto-rikimi",
+        "names": {
+          "en": "RIKIMI voice",
+          "ja": "力み音源ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-rikimitan-120930.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-sakebi",
+        "names": {
+          "en": "SAKEBI voice",
+          "ja": "叫び音源ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-sakebi-120930.zip",
+        "download_page_url": null
+      },
+      {
+        "id": "kasane-teto-weak",
+        "names": {
+          "en": "Weak voice",
+          "ja": "弱音源ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-jakuongen210725.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-edge",
+        "names": {
+          "en": "Edge voice",
+          "ja": "エッジ音源ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-edgeongen211010.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-smooth",
+        "names": {
+          "en": "滑らか音源ライブラリー",
+          "ja": "滑らか音源ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/extra/TETO-namerakaongen211125.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-english",
+        "names": {
+          "en": "English voice",
+          "ja": "英語音源ライブラリー"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/english/TETO-English-150401.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "english",
+          "single voicebank"
+        ]
+      },
+      {
+        "id": "kasane-teto-csev",
+        "names": {
+          "en": "Continuous Sound Experimental Version (DeepL)",
+          "ja": "連続音実験版"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/past/TETO-renzokubeta-091020.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "old voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-nl",
+        "names": {
+          "en": "New Lite (DeepL)",
+          "ja": "新Lite"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/past/TETOLite081222.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "old voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-2r6",
+        "names": {
+          "en": "2R6",
+          "ja": "2R6"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/past/tetovoice-2R6.zip",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "old voice color"
+        ]
+      },
+      {
+        "id": "kasane-teto-20080731",
+        "names": {
+          "en": "Ameya Adjustment Version 20080731",
+          "ja": "飴屋調整版20080731"
+        },
+        "file_url": "https://kasaneteto.jp/ongendl/index.cgi/past/TETO-ameya-20080731.zip",
+        "download_page_url": null
+      },
+      {
+        "id": "kasane-teto-asmr",
+        "names": {
+          "en": "ASMR",
+          "ja": "ASMR"
+        },
+        "file_url": "https://drive.google.com/file/d/1YgipQAQsvhdxYVlwe69o1g-4BJPAtVUX/view?usp=sharing",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "not up on website / archive"
+        ]
+      },
+      {
+        "id": "kasane-teto-deepvocal",
+        "names": {
+          "en": "DeepVocal"
+        },
+        "file_url": "https://drive.google.com/file/d/16usEAswhu919SvktXi56s9DofkdTrtyx/view?usp=sharing",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "not up on website",
+          "unofficial"
+        ]
+      }
+    ],
+    "homepage_url": "https://kasaneteto.jp/utau/",
+    "profile_image_url": "https://kasanete.to/imgcompress/keyart/1.avif"
+  }
+]
