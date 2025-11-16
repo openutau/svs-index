@@ -2,6 +2,12 @@ import './style.css';
 import type { Category, Singer, Software } from './types';
 import { getSingerById, getSoftwareById } from './db';
 import { loadCategory } from './data';
+import {
+  getCurrentLanguage,
+  setLanguage,
+  getTranslations,
+  createLanguageSelector,
+} from './i18n';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
@@ -22,6 +28,7 @@ function formatAllNames(names: Record<string, string>): string {
 }
 
 function renderSinger(s: Singer) {
+  const t = getTranslations();
   const namesList = Object.entries(s.names)
     .map(([k, v]) => `<div><strong>${k}</strong></div><div>${v}</div>`)
     .join('');
@@ -33,9 +40,9 @@ function renderSinger(s: Singer) {
         <div class="variant-card-header">${vName}</div>
         ${vAllNames ? `<div class="variant-card-all-names">${vAllNames}</div>` : ''}
         <div class="variant-meta">
-          ${v.tags && v.tags.length ? `<div class="variant-meta-item">Tags: ${v.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
-          ${v.download_page_url ? `<div class="variant-meta-item">Download page: ${link(v.download_page_url)}</div>` : ''}
-          ${v.file_url ? `<div class="variant-meta-item">Direct download: ${link(v.file_url)}</div>` : ''}
+          ${v.tags && v.tags.length ? `<div class="variant-meta-item">${t.tags}: ${v.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
+          ${v.download_page_url ? `<div class="variant-meta-item">${t.downloadPage}: ${link(v.download_page_url)}</div>` : ''}
+          ${v.file_url ? `<div class="variant-meta-item">${t.directDownload}: ${link(v.file_url)}</div>` : ''}
         </div>
       </div>`;
     })
@@ -43,8 +50,11 @@ function renderSinger(s: Singer) {
 
   app.innerHTML = `
     <header class="container detail-header">
+      <div class="detail-header-top">
+        <a href="./" class="back-link">${t.backToIndex}</a>
+        <div id="language-selector-container"></div>
+      </div>
       <h1>${s.names.en || s.id} <span class="card-id">@${s.id}</span></h1>
-      <a href="./" class="back-link">← Back to Index</a>
     </header>
     <section class="container">
       ${
@@ -55,54 +65,81 @@ function renderSinger(s: Singer) {
           : ''
       }
       <div class="detail-card">
-        <h3>Details</h3>
+        <h3>${t.details}</h3>
         <div class="kv-list">
-          <div><strong>Homepage</strong></div><div>${link(s.homepage_url)}</div>
-          <div><strong>Owners</strong></div><div>${s.owners.join(', ')}</div>
-          <div><strong>Authors</strong></div><div>${s.authors.join(', ')}</div>
+          <div><strong>${t.homepage}</strong></div><div>${link(s.homepage_url)}</div>
+          <div><strong>${t.owners}</strong></div><div>${s.owners.join(', ')}</div>
+          <div><strong>${t.authors}</strong></div><div>${s.authors.join(', ')}</div>
         </div>
       </div>
       <div class="detail-card">
-        <h3>Names</h3>
+        <h3>${t.names}</h3>
         <div class="kv-list">${namesList}</div>
       </div>
-      <h3>Variants</h3>
+      <h3>${t.variants}</h3>
       ${variants}
     </section>
   `;
+
+  // Add language selector
+  const langContainer = document.getElementById('language-selector-container')!;
+  langContainer.appendChild(
+    createLanguageSelector((lang) => {
+      setLanguage(lang);
+      boot();
+    })
+  );
 }
 
 function renderSoftware(s: Software) {
+  const t = getTranslations();
   const namesList = Object.entries(s.names)
     .map(([k, v]) => `<div><strong>${k}</strong></div><div>${v}</div>`)
     .join('');
   app.innerHTML = `
     <header class="container detail-header">
+      <div class="detail-header-top">
+        <a href="./" class="back-link">${t.backToIndex}</a>
+        <div id="language-selector-container"></div>
+      </div>
       <h1>${s.names.en || s.id} <span class="card-id">@${s.id}</span></h1>
-      <a href="./" class="back-link">← Back to Index</a>
     </header>
     <section class="container">
       <div class="detail-card">
-        <h3>Details</h3>
+        <h3>${t.details}</h3>
         <div class="kv-list">
-          <div><strong>Homepage</strong></div><div>${link(s.homepage_url)}</div>
-          <div><strong>Category</strong></div><div>${s.category}</div>
-          <div><strong>Developers</strong></div><div>${s.developers.join(', ')}</div>
-          ${s.tags?.length ? `<div><strong>Tags</strong></div><div>${s.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
-          ${s.download_page_url ? `<div><strong>Download page: </strong></div><div>${link(s.download_page_url)}</div>` : ''}
-          ${s.file_url ? `<div><strong>Direct download: </strong></div><div>${link(s.file_url)}</div>` : ''}
+          <div><strong>${t.homepage}</strong></div><div>${link(s.homepage_url)}</div>
+          <div><strong>${t.category}</strong></div><div>${s.category}</div>
+          <div><strong>${t.developers}</strong></div><div>${s.developers.join(', ')}</div>
+          ${s.tags?.length ? `<div><strong>${t.tags}</strong></div><div>${s.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
+          ${s.download_page_url ? `<div><strong>${t.downloadPage}: </strong></div><div>${link(s.download_page_url)}</div>` : ''}
+          ${s.file_url ? `<div><strong>${t.directDownload}: </strong></div><div>${link(s.file_url)}</div>` : ''}
         </div>
       </div>
       <div class="detail-card">
-        <h3>Names</h3>
+        <h3>${t.names}</h3>
         <div class="kv-list">${namesList}</div>
       </div>
     </section>
   `;
+
+  // Add language selector
+  const langContainer = document.getElementById('language-selector-container')!;
+  langContainer.appendChild(
+    createLanguageSelector((lang) => {
+      setLanguage(lang);
+      boot();
+    })
+  );
 }
 
 async function boot() {
+  // Set language
+  setLanguage(getCurrentLanguage());
+
   const { category, id } = getParams();
+  const t = getTranslations();
+
   if (!id) {
     app.innerHTML = '<p class="container">Missing id.</p>';
     return;
@@ -127,7 +164,7 @@ async function boot() {
     }
   } catch (e) {
     console.error(e);
-    app.innerHTML = '<p class="container">Failed to load detail.</p>';
+    app.innerHTML = `<p class="container">${t.loadFailed}</p>`;
   }
 }
 

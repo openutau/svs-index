@@ -1,4 +1,10 @@
 import './style.css';
+import {
+  getCurrentLanguage,
+  setLanguage,
+  getTranslations,
+  createLanguageSelector,
+} from './i18n';
 
 // --- Singer Data ---
 interface SingerNames {
@@ -35,22 +41,21 @@ async function loadExistingSingerIds() {
 }
 
 function validateSingerId(): { valid: boolean; messages: string[] } {
+  const t = getTranslations();
   const messages: string[] = [];
   const pattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
   if (!singerId) {
-    messages.push('Singer ID is required.');
+    messages.push(t.singerIdRequired);
   } else {
-    if (singerId.length < 5) messages.push('Must be at least 5 characters.');
-    if (!pattern.test(singerId))
-      messages.push('Use lowercase letters, numbers, hyphen separated.');
-    if (existingSingerIds.has(singerId))
-      messages.push('This ID already exists. Pick another.');
+    if (singerId.length < 5) messages.push(t.singerIdMinLength);
+    if (!pattern.test(singerId)) messages.push(t.singerIdPattern);
+    if (existingSingerIds.has(singerId)) messages.push(t.singerIdExists);
   }
   const valid = messages.length === 0;
   const statusEl = document.getElementById('singer-id-status');
   if (statusEl) {
     statusEl.innerHTML = valid
-      ? '<span class="status-valid">✓ Singer ID is valid & available</span>'
+      ? `<span class="status-valid">${t.singerIdValid}</span>`
       : `<span class="status-invalid">✗ Singer ID issues:</span><ul>${messages
           .map((m) => `<li>${escapeHtml(m)}</li>`)
           .join('')}</ul>`;
@@ -744,12 +749,13 @@ async function copyToClipboard(): Promise<void> {
   });
 
   const json = JSON.stringify(singer, null, 2);
+  const t = getTranslations();
 
   try {
     await navigator.clipboard.writeText(json);
     const btn = document.getElementById('copy-json') as HTMLButtonElement;
     const originalText = btn.textContent;
-    btn.textContent = '✓ Copied!';
+    btn.textContent = t.jsonCopied;
     setTimeout(() => {
       btn.textContent = originalText;
     }, 2000);
@@ -873,8 +879,98 @@ function addAuthor(): void {
   });
 }
 
+// Update UI text based on current language
+function updateUIText() {
+  const t = getTranslations();
+
+  // Header
+  const h1 = document.querySelector('header h1');
+  if (h1) h1.textContent = t.singerEditor;
+
+  const subtitle = document.querySelector('header .subtitle');
+  if (subtitle) subtitle.textContent = t.singerEditorSubtitle;
+
+  const backLink = document.querySelector('header a[href="index.html"]');
+  if (backLink) backLink.textContent = t.backToIndex;
+
+  const resetBtn = document.getElementById('reset-form');
+  if (resetBtn) resetBtn.textContent = t.resetForm;
+
+  // Step 1
+  const step1Title = document.querySelector('#step-1 h2');
+  if (step1Title) step1Title.textContent = t.step1Title;
+
+  const step1Intro = document.querySelector('#step-1 .step-intro');
+  if (step1Intro) step1Intro.textContent = t.step1Intro;
+
+  // Step 1 labels
+  const singerIdLabel = document.querySelector('label[for="singer-id"]');
+  if (singerIdLabel) {
+    singerIdLabel.innerHTML = `${t.singerIdLabel} <span class="required">*</span>`;
+  }
+
+  const singerIdHint = document.querySelector('label[for="singer-id"]')
+    ?.nextElementSibling?.nextElementSibling;
+  if (singerIdHint && singerIdHint.tagName === 'SMALL') {
+    singerIdHint.textContent = t.singerIdHint;
+  }
+
+  // Update other labels and text as needed
+  const addNameBtn = document.getElementById('add-singer-name');
+  if (addNameBtn) addNameBtn.textContent = t.addName;
+
+  const addOwnerBtn = document.getElementById('add-owner');
+  if (addOwnerBtn) addOwnerBtn.textContent = t.addOwner;
+
+  const addAuthorBtn = document.getElementById('add-author');
+  if (addAuthorBtn) addAuthorBtn.textContent = t.addAuthor;
+
+  // Step 2
+  const step2Title = document.querySelector('#step-2 h2');
+  if (step2Title) step2Title.textContent = t.step2Title;
+
+  const step2Intro = document.querySelector('#step-2 .step-intro');
+  if (step2Intro) step2Intro.textContent = t.step2Intro;
+
+  const addVariantBtn = document.getElementById('add-variant');
+  if (addVariantBtn) addVariantBtn.textContent = t.addVariant;
+
+  // Step 3
+  const step3Title = document.querySelector('#step-3 h2');
+  if (step3Title) step3Title.textContent = t.step3Title;
+
+  const step3Intro = document.querySelector('#step-3 .step-intro');
+  if (step3Intro) step3Intro.textContent = t.step3Intro;
+
+  const copyBtn = document.getElementById('copy-json');
+  if (copyBtn && !copyBtn.textContent?.includes('✓')) {
+    copyBtn.textContent = t.copyJson;
+  }
+
+  // Revalidate to update validation messages
+  validateSingerId();
+  updateOutput();
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+  // Set language
+  setLanguage(getCurrentLanguage());
+
+  // Update UI text
+  updateUIText();
+
+  // Add language selector
+  const langContainer = document.getElementById('language-selector-container');
+  if (langContainer) {
+    langContainer.appendChild(
+      createLanguageSelector((lang) => {
+        setLanguage(lang);
+        updateUIText();
+      })
+    );
+  }
+
   // Singer ID input listener
   const singerIdInput = document.getElementById(
     'singer-id'

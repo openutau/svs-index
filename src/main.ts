@@ -1,6 +1,12 @@
 import './style.css';
 import type { Category, Singer, Software } from './types';
 import { loadAllData } from './data';
+import {
+  getCurrentLanguage,
+  setLanguage,
+  getTranslations,
+  createLanguageSelector,
+} from './i18n';
 
 type State = {
   category: Category;
@@ -11,46 +17,67 @@ type State = {
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 
-app.innerHTML = `
-  <header class="container header-main">
-    <div class="header-content">
-      <h1>SVS Index</h1>
-      <p class="subtitle">Community maintained index of Singing Voice Synthesis singers and softwares</p>
-      <div class="header-links">
-        <a href="submit.html">Submit Singer</a>
-        <span class="separator">|</span>
-        <a href="https://github.com/openutau/svs-index/issues/new?template=software-submission.yml" target="_blank">Submit Software</a>
-      </div>
-    </div>
-  </header>
-  <section class="container controls">
-    <div class="category-selector">
-      <button data-category="singer" class="active">Singers</button>
-      <button data-category="software">Softwares</button>
-    </div>
-    <div class="search-control">
-      <input id="search" type="search" placeholder="Type to filter by id, names, tags" autocomplete="off" />
-    </div>
-  </section>
-  <section class="container">
-    <div id="status" class="status">Loading data…</div>
-    <div id="results" class="results"></div>
-  </section>
-`;
-
-const categorySelector = document.querySelector(
-  '.category-selector'
-) as HTMLDivElement;
-const searchEl = document.getElementById('search') as HTMLInputElement;
-const statusEl = document.getElementById('status') as HTMLDivElement;
-const resultsEl = document.getElementById('results') as HTMLDivElement;
-
 const state: State = {
   category: 'singer',
   singers: [],
   softwares: [],
   query: '',
 };
+
+function renderApp() {
+  const t = getTranslations();
+
+  // Check if data is already loaded
+  const dataLoaded = state.singers.length > 0 || state.softwares.length > 0;
+  const statusText = dataLoaded
+    ? t.statusLoadedTemplate
+        .replace('{0}', state.singers.length.toString())
+        .replace('{1}', state.softwares.length.toString())
+    : t.loading;
+
+  app.innerHTML = `
+    <header class="container header-main">
+      <div class="header-content">
+        <h1>${t.appTitle}</h1>
+        <p class="subtitle">${t.appSubtitle}</p>
+        <div class="header-links">
+          <a href="submit.html">${t.submitSinger}</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/openutau/svs-index/issues/new?template=software-submission.yml" target="_blank">${t.submitSoftware}</a>
+        </div>
+      </div>
+      <div id="language-selector-container"></div>
+    </header>
+    <section class="container controls">
+      <div class="category-selector">
+        <button data-category="singer" class="active">${t.singers}</button>
+        <button data-category="software">${t.softwares}</button>
+      </div>
+      <div class="search-control">
+        <input id="search" type="search" placeholder="${t.searchPlaceholder}" autocomplete="off" />
+      </div>
+    </section>
+    <section class="container">
+      <div id="status" class="status">${statusText}</div>
+      <div id="results" class="results"></div>
+    </section>
+  `;
+
+  // Add language selector
+  const langContainer = document.getElementById('language-selector-container')!;
+  langContainer.appendChild(
+    createLanguageSelector((lang) => {
+      setLanguage(lang);
+      renderApp();
+      wireEvents();
+      render();
+    })
+  );
+}
+
+// Initial render
+setLanguage(getCurrentLanguage());
+renderApp();
 
 function normalize(str: string): string {
   return str.toLowerCase();
@@ -95,6 +122,7 @@ function softwareMatches(s: Software, q: string): boolean {
 }
 
 function render() {
+  const resultsEl = document.getElementById('results') as HTMLDivElement;
   const q = normalize(state.query);
   if (state.category === 'singer') {
     const filtered = state.singers.filter((s) => singerMatches(s, q));
@@ -156,10 +184,17 @@ function render() {
 }
 
 function wireEvents() {
+  const categorySelector = document.querySelector(
+    '.category-selector'
+  ) as HTMLDivElement;
+  const searchEl = document.getElementById('search') as HTMLInputElement;
+
   const categoryButtons = categorySelector.querySelectorAll('button');
-  categoryButtons.forEach((button) => {
+  categoryButtons.forEach((button: HTMLButtonElement) => {
     button.addEventListener('click', () => {
-      categoryButtons.forEach((btn) => btn.classList.remove('active'));
+      categoryButtons.forEach((btn: HTMLButtonElement) =>
+        btn.classList.remove('active')
+      );
       button.classList.add('active');
       state.category = button.dataset.category as Category;
       render();
@@ -173,15 +208,19 @@ function wireEvents() {
 }
 
 async function boot() {
+  const t = getTranslations();
   wireEvents();
+  const statusEl = document.getElementById('status') as HTMLDivElement;
   try {
     const { singers, softwares } = await loadAllData();
     state.singers = singers;
     state.softwares = softwares;
-    statusEl.textContent = `${singers.length} singers, ${softwares.length} softwares loaded.`;
+    statusEl.textContent = t.statusLoadedTemplate
+      .replace('{0}', singers.length.toString())
+      .replace('{1}', softwares.length.toString());
     render();
   } catch (e) {
-    statusEl.textContent = 'Failed to load data.';
+    statusEl.textContent = t.loadFailed;
     console.error(e);
   }
 }

@@ -189,6 +189,77 @@ header h1 {
   }
 }
 
+/* Language Selector */
+.language-selector {
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.language-selector button {
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  color: var(--fg);
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+  min-width: 32px;
+}
+
+.language-selector button.active {
+  background: #f0f0f0;
+  color: var(--fg);
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: dark) {
+  .language-selector button.active {
+    background: #2c2c2e;
+  }
+}
+
+.language-selector button:hover:not(.active) {
+  background: #f0f0f0;
+  opacity: 0.5;
+}
+
+@media (prefers-color-scheme: dark) {
+  .language-selector button:hover:not(.active) {
+    background: #2c2c2e;
+  }
+}
+
+.header-main {
+  position: relative;
+}
+
+.header-main .header-content {
+  padding-right: 80px;
+}
+
+#language-selector-container {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+
+.detail-header {
+  position: relative;
+}
+
+.detail-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.detail-header #language-selector-container {
+  flex-shrink: 0;
+}
+
 .controls .grow {
   flex: 1 1 auto;
 }
@@ -301,9 +372,6 @@ header h1 {
 /* Detail page */
 
 .detail-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-bottom: 20px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--border);
@@ -317,6 +385,7 @@ header h1 {
   display: flex;
   align-items: baseline;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .detail-header h1 .card-id {
@@ -451,6 +520,17 @@ header {
   margin: 0 auto 32px;
   padding: 32px 16px 16px;
   border-bottom: 1px solid var(--border);
+}
+
+.submit-header {
+  position: relative;
+  padding-right: 90px;
+}
+
+.submit-header #language-selector-container {
+  position: absolute;
+  top: 32px;
+  right: 16px;
 }
 
 header h1 {
@@ -903,6 +983,18 @@ section {
 
 /* Responsive */
 @media (max-width: 640px) {
+  .detail-header h1 {
+    font-size: 24px;
+  }
+
+  .detail-header h1 .card-id {
+    font-size: 14px;
+  }
+
+  .detail-header-top {
+    margin-bottom: 12px;
+  }
+
   .name-pair {
     grid-template-columns: 80px 1fr auto;
   }
