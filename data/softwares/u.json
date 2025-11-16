@@ -1,0 +1,18 @@
+[
+  {
+    "id": "utau",
+    "names": {
+      "en": "UTAU"
+    },
+    "category": "host",
+    "developers": [
+      "飴屋／菖蒲 (Ameya/Ayame)"
+    ],
+    "homepage_url": "https://utau2008.xrea.jp/",
+    "download_page_url": "https://utau2008.xrea.jp/",
+    "tags": [
+      "host",
+      "free"
+    ]
+  }
+]
