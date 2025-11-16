@@ -41,5 +41,58 @@
     ],
     "homepage_url": "https://hatsune39.neocities.org/taokha",
     "profile_image_url": "https://i.ibb.co/M49qPpZ/Image.png"
+  },
+  {
+    "id": "tarou-iwata",
+    "names": {
+      "en": "Tarou Iwata",
+      "ja": "岩田太郎"
+    },
+    "owners": [
+      "raccoonbutler"
+    ],
+    "authors": [
+      "raccoonbutler"
+    ],
+    "variants": [
+      {
+        "id": "tarou-iwata-amalgamation",
+        "names": {
+          "en": "Tarou Iwata",
+          "ja": "岩田太郎"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1HS1xie3kqcgOx090ncSryKqVOw1IyVsQ/view?usp=drive_link"
+      },
+      {
+        "id": "tarou-iwata-flustered",
+        "names": {
+          "en": "Tarou Iwata",
+          "ja": "岩田太郎"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1TfPhjkxOqmBhwvtqZbQeNkyDvro8ZyGJ/view?usp=drive_link"
+      },
+      {
+        "id": "tarou-iwata-arpasing",
+        "names": {
+          "en": "Tarou Iwata",
+          "ja": "岩田太郎"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1IliJoQWiD3gEC51tvypcvzYO4-hW9MDc/view?usp=drive_link"
+      },
+      {
+        "id": "tarou-iwata-minecraft",
+        "names": {
+          "en": "Tarou Iwata",
+          "ja": "岩田太郎"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1WeWocsyJD75UMCFwkQyt-p4Cm6DFZe_d/view?usp=drive_link"
+      }
+    ],
+    "homepage_url": "http://utau.wikidot.com/utau:tarou-iwata",
+    "profile_image_url": "https://i.postimg.cc/yNWQPYRy/Gq-H7qtf-Xg-AAZ7D8.jpg"
   }
 ]
