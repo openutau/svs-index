@@ -114,5 +114,39 @@
     ],
     "homepage_url": "https://www.canon-voice.com/",
     "profile_image_url": "https://www.canon-voice.com/wp-content/uploads/2023/04/kikunoji.jpg"
+  },
+  {
+    "id": "reo02",
+    "names": {
+      "en": "Reo"
+    },
+    "owners": [
+      "Team Brapa",
+      "Fuka"
+    ],
+    "authors": [
+      "Fuka"
+    ],
+    "variants": [
+      {
+        "id": "reo02-beta",
+        "names": {
+          "en": "Reo Beta"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.teambrapa.com.br/beta",
+        "tags": [
+          "diffsinger",
+          "openutau",
+          "portuguese",
+          "english",
+          "japanese",
+          "spanish",
+          "male"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.teambrapa.com.br/reo#voicebanks",
+    "profile_image_url": "https://static.wixstatic.com/media/ca7bab_da870238b26c4885a0b9993ce2707d47~mv2.jpg/v1/fill/w_360,h_360,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/pic_voice_reo_ds.jpg"
   }
 ]
