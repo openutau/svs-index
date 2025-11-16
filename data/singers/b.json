@@ -1,0 +1,33 @@
+[
+  {
+    "id": "bara-buru",
+    "names": {
+      "en": "Bara Buru",
+      "ja": "薔薇ブルー",
+      "zh": "Pala Pulu"
+    },
+    "owners": [
+      "Patiu"
+    ],
+    "authors": [
+      "Patiu"
+    ],
+    "variants": [
+      {
+        "id": "bara-buru-anchor",
+        "names": {
+          "en": "Bara Buru Anchor",
+          "ja": "薔薇ブルー アンカー"
+        },
+        "file_url": null,
+        "download_page_url": "https://wwwpatiu.wixsite.com/patiu/bara-buru",
+        "tags": [
+          "utau",
+          "openutau"
+        ]
+      }
+    ],
+    "homepage_url": "https://wwwpatiu.wixsite.com/patiu/bara-buru",
+    "profile_image_url": "https://static.wikia.nocookie.net/vsynthbr/images/2/22/Bara_Buru_Anchor.png/revision/latest/scale-to-width-down/1000?cb=20220724172540&path-prefix=pt-br"
+  }
+]
