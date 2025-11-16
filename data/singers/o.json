@@ -1,0 +1,31 @@
+[
+  {
+    "id": "otoyuki-shoya",
+    "names": {
+      "en": "Otoyuki Shoya",
+      "ja": "音雪ショウヤ"
+    },
+    "owners": [
+      "Otoyuki Shoya Project"
+    ],
+    "authors": [
+      "dummyboi_ (phuctranz)"
+    ],
+    "variants": [
+      {
+        "id": "otoyuki-shoya-vcv",
+        "names": {
+          "en": "Otoyuki Shoya VCV",
+          "ja": "音雪ショウヤVCV"
+        },
+        "file_url": "https://drive.google.com/file/d/1Yj_qzD4DjYDDMpjIy3dt-IEtPKStSsW4/view?usp=sharing",
+        "download_page_url": "https://sites.google.com/view/otoyukishoya/vb/jpn-vcv?authuser=0",
+        "tags": [
+          "VCV"
+        ]
+      }
+    ],
+    "homepage_url": "https://sites.google.com/view/otoyukishoya/",
+    "profile_image_url": "https://lh3.googleusercontent.com/sitesv/AAzXCkc2aTAz0GFQ1BWABRrFdwY95QKULdSCL1Rco8lFgPUna8uh5djmYiswxSff2fCYap2ZSnSkj_ddQCRdEpo8bEbbzQ95IFGowV6XsYxwagtyrj4lsYfpsE9_fhJmOg2Q1r6BiWOEZOcuxXc6-u1b3B3bjZvMMfEApA__gdxkMsYoNN4WENbMcKhbz4QqZTqEnTeoRVqsRSp79LWMXEV2_YYg73_BtbuSKZN0GaA=w1280"
+  }
+]
