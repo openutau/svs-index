@@ -1,0 +1,29 @@
+[
+  {
+    "id": "dominic-schoepfer",
+    "names": {
+      "en": "Dominic Schoepfer"
+    },
+    "owners": [
+      "Adlez27"
+    ],
+    "authors": [
+      "Adlez27"
+    ],
+    "variants": [
+      {
+        "id": "dominic-schoepfer-electric-eng",
+        "names": {
+          "en": "Dominic ELECTRIC ENG"
+        },
+        "file_url": null,
+        "download_page_url": "https://klad.tubs.wtf/vb/dominic/electric-eng",
+        "tags": [
+          "utau",
+          "english"
+        ]
+      }
+    ],
+    "homepage_url": "https://klad.tubs.wtf/vb/dominic/"
+  }
+]
