@@ -1,0 +1,38 @@
+[
+  {
+    "id": "umidaji",
+    "names": {
+      "en": "Umidaji",
+      "ja": "海ダージ"
+    },
+    "owners": [
+      "Team Brapa",
+      "Patiu"
+    ],
+    "authors": [
+      "Patiu"
+    ],
+    "variants": [
+      {
+        "id": "umidaji-beta",
+        "names": {
+          "en": "Umidaji Beta",
+          "ja": "海ダージBETA"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.teambrapa.com.br/beta",
+        "tags": [
+          "diffsinger",
+          "openutau",
+          "portuguese",
+          "english",
+          "japanese",
+          "spanish",
+          "female"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.teambrapa.com.br/umidaji#voicebanks",
+    "profile_image_url": "https://static.wixstatic.com/media/ca7bab_8c365f2038ff4f749d82a1cbd467813d~mv2.png/v1/fill/w_360,h_360,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pic_voice_umidaji-ds.png"
+  }
+]
