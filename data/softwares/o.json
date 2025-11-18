@@ -1,0 +1,24 @@
+[
+  {
+    "id": "openutau",
+    "names": {
+      "en": "OpenUtau"
+    },
+    "category": "host",
+    "developers": [
+      "Stakira"
+    ],
+    "homepage_url": "http://openutau.com/",
+    "download_page_url": "https://github.com/stakira/OpenUtau/releases",
+    "tags": [
+      "openutau",
+      "utau",
+      "vogen",
+      "enunu",
+      "diffsinger",
+      "windows",
+      "mac",
+      "linux"
+    ]
+  }
+]
