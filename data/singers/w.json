@@ -1,0 +1,31 @@
+[
+  {
+    "id": "wakae-sota",
+    "names": {
+      "en": "Wakae Sota",
+      "ja": "若詠喪太"
+    },
+    "owners": [
+      "GRAVEKIND"
+    ],
+    "authors": [
+      "GRAVEKIND"
+    ],
+    "variants": [
+      {
+        "id": "wakae-sota-cvvc",
+        "names": {
+          "en": "Wakae Sota CVVC",
+          "ja": "若詠喪太 CVVC"
+        },
+        "file_url": "https://storage-file-download-common.bowlroll.cloud/storage/eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3NjM0NTI2NTQsInB1YmxpYyI6ZmFsc2UsImJ1Y2tldCI6ImZpbGUiLCJkaXNwb3NpdGlvbiI6IkF0dGFjaG1lbnQiLCJyZXNvdXJjZS1pZCI6IjM0Mjk5OSIsInJldmlzaW9uIjoxfQ.frR41Y1EUOBk1rquN5wBbJ98y-tSmkYZiDfEItqPZubFhPNLrqN5Auc1_T-gJNWdp74wjc4wLSEa4lnyELAbwQ",
+        "download_page_url": "https://bowlroll.net/file/342999",
+        "tags": [
+          "utau, multipitch, cvvc, ja, male, tenor"
+        ]
+      }
+    ],
+    "homepage_url": "https://bowlroll.net/file/342999",
+    "profile_image_url": "https://ibb.co/QvbcLjTS"
+  }
+]
