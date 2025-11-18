@@ -265,5 +265,280 @@
     ],
     "homepage_url": "https://www.teambrapa.com.br/kyoumishii#voicebanks",
     "profile_image_url": "https://static.wixstatic.com/media/ca7bab_3b55c652ea714f2ca83dab9a024f2bb9~mv2.png/v1/fill/w_360,h_360,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pic_voice_kyoumishii.png"
+  },
+  {
+    "id": "kazehiki",
+    "names": {
+      "en": "kazehiki",
+      "ja": "カゼヒキ"
+    },
+    "owners": [
+      "kuzutokaze"
+    ],
+    "authors": [
+      "kurukuru2suuzi"
+    ],
+    "variants": [
+      {
+        "id": "kazehiki-basic",
+        "names": {
+          "en": "kazehiki",
+          "ja": "​カゼヒキ"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/100267",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-tablets",
+        "names": {
+          "en": "kazehiki-tablets-",
+          "ja": "カゼヒキ-錠剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/100268",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-capsules",
+        "names": {
+          "en": "Kazehiki-capsules-",
+          "ja": "カゼヒキ-カプセル剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/121780",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-injection",
+        "names": {
+          "en": "Kazehiki-injection-",
+          "ja": "カゼヒキ-注射-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/158096",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-anesthesia",
+        "names": {
+          "en": "Kazehiki-anesthesia-",
+          "ja": "カゼヒキ-麻酔-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/158738",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-painkiller",
+        "names": {
+          "en": "Kazehiki-painkiller-",
+          "ja": "カゼヒキ-鎮痛剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/181905",
+        "tags": [
+          "utau",
+          "multipitch",
+          "vcv",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-placebo",
+        "names": {
+          "ja": "カゼヒキ-偽薬-",
+          "en": "Kazehiki-placebo-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/206583",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-drip",
+        "names": {
+          "en": "Kazehiki-drip-",
+          "ja": "カゼヒキ-点滴-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/212915",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-liquid-medicine",
+        "names": {
+          "en": "Kazehiki-Liquid Medicine-",
+          "ja": "カゼヒキ-水薬-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/244169",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-aprodisiac",
+        "names": {
+          "en": "Kazehiki-Aphrodisiac-",
+          "ja": "カゼヒキ-媚薬-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/223097",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-sleeping-pills",
+        "names": {
+          "en": "Kazehiki-Sleeping Pills-",
+          "ja": "カゼヒキ-眠剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/297220",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-chinese-medicine",
+        "names": {
+          "en": "Kazehiki-chinese medicine-",
+          "ja": "カゼヒキ-漢方-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/342070",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch",
+          "kana aliased",
+          "despite the name this is NOT a chinese voicebank"
+        ]
+      },
+      {
+        "id": "kazehiki-granules",
+        "names": {
+          "en": "Kazehiki-granules-",
+          "ja": "カゼヒキ-顆粒-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/192604",
+        "tags": [
+          "utau",
+          "vcv",
+          "kana aliased",
+          "whisper vb"
+        ]
+      },
+      {
+        "id": "kazehiki-lozenges",
+        "names": {
+          "en": "Kazehiki-lozenges-",
+          "ja": "カゼヒキ-トローチ-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/164172",
+        "tags": [
+          "utau",
+          "cvvc",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "kazehiki-powder-medicine-revisit",
+        "names": {
+          "en": "Kazehiki-powder medicine-【revisit】",
+          "ja": "カゼヒキ-粉薬【再診】"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/142697",
+        "tags": [
+          "utau",
+          "cv",
+          "monopitch",
+          "kana aliased",
+          "beginner friendly"
+        ]
+      },
+      {
+        "id": "kazehiki-english",
+        "names": {
+          "en": "Kazehiki-English-",
+          "ja": "カゼヒキ-English-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/139483",
+        "tags": [
+          "utau",
+          "vccv english",
+          "monopitch",
+          "english"
+        ]
+      },
+      {
+        "id": "kazehiki-medicine-box",
+        "names": {
+          "en": "Kazehiki-medicine box-",
+          "ja": "カゼヒキ-薬箱-"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1R5EcP6PHhHkFTb0qTB-DwGK8Y7xX1wsC/view",
+        "tags": [
+          "utau",
+          "integration voicebank",
+          "mostly multipitch",
+          "vcv",
+          "vcv with breathless consonant endings",
+          "large file"
+        ]
+      }
+    ],
+    "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E3%82%AB%E3%82%BC%E3%83%92%E3%82%ADdl?lang=en"
   }
 ]
