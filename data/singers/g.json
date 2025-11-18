@@ -1,0 +1,216 @@
+[
+  {
+    "id": "gekiyaku",
+    "names": {
+      "en": "Gekiyaku",
+      "ja": "​ゲキヤク"
+    },
+    "owners": [
+      "kuzutokaze"
+    ],
+    "authors": [
+      "kurukuru2suuzi"
+    ],
+    "variants": [
+      {
+        "id": "gekiyaku-intravenous-drip",
+        "names": {
+          "en": "Gekiyaku-Intravenous drip-",
+          "ja": "ゲキヤク-点滴-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/136826",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-placebo",
+        "names": {
+          "en": "Gekiyaku-Placebo-",
+          "ja": "ゲキヤク-偽薬-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/149338",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-anestesia",
+        "names": {
+          "en": "Gekiyaku-Anestesia",
+          "ja": "ゲキヤク-麻酔-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/150754",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-anxiety-mediciation",
+        "names": {
+          "en": "Gekiyaku-Anxiety medication-",
+          "ja": "ゲキヤク-不安薬-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/157265",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-painkiller",
+        "names": {
+          "en": "Gekiyaku-Painkiller-",
+          "ja": "ゲキヤク-鎮痛剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/181904",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-antipyretic",
+        "names": {
+          "en": "Gekiyaku-Antipyretic-",
+          "ja": "ゲキヤク-解熱剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/194663",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-disinfection",
+        "names": {
+          "en": "Gekiyaku-Disinfection",
+          "ja": "ゲキヤク-消毒-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/167026",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-aphrodisiac",
+        "names": {
+          "en": "Gekiyaku-Aphrodisiac",
+          "ja": "ゲキヤク-媚薬-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/193908",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-pills",
+        "names": {
+          "en": "Gekiyaku-Pills-",
+          "ja": "ゲキヤク-丸薬-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/222965",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-capsules",
+        "names": {
+          "en": "Gekiyaku-Capsules-",
+          "ja": "ゲキヤク-カプセル剤-"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1_8heO_TmFYVy3GP8WF0FJ40SgA3gt9fj/view",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-injection",
+        "names": {
+          "en": "Gekiyaku-Injection-",
+          "ja": "ゲキヤク-注射-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/140403",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "kana aliased"
+        ]
+      },
+      {
+        "id": "gekiyaku-granules",
+        "names": {
+          "en": "Gekiyaku-Granules-",
+          "ja": "ゲキヤク-顆粒-"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/193355",
+        "tags": [
+          "utau",
+          "vcv",
+          "monopitch(?)",
+          "kana aliased",
+          "whisper voicebank"
+        ]
+      },
+      {
+        "id": "gekiyaku-instantaneous-medication",
+        "names": {
+          "en": "Gekiyaku-Instantaneous medication-",
+          "ja": "ゲキヤク-頓服-"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1dEcA3cWdGkQQKNque3OMKvW2IBz_h2dr/view",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "integration voicebank",
+          "possible name mistranslation when translated from japanese to english"
+        ]
+      }
+    ],
+    "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E3%82%B2%E3%82%AD%E3%83%A4%E3%82%AFdl?lang=en",
+    "profile_image_url": "file:///C:/Users/SittingDragon/Downloads/20240107%E3%82%B2%E3%82%AD%E3%83%A4%E3%82%AF.png"
+  }
+]
