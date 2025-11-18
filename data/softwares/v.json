@@ -1,18 +1,34 @@
 [
-    {
-        "id": "vocaloid4",
-        "names": {
-            "en": "Vocaloid4"
-        },
-        "category": "host",
-        "developers": [
-            "Crypton Future Media, INC."
-        ],
-        "homepage_url": "https://www.vocaloid.com/",
-        "file_url": null,
-        "download_page_url": null,
-        "tags": [
-            "host"
-        ]
-    }
+  {
+    "id": "vocaloid4",
+    "names": {
+      "en": "Vocaloid4"
+    },
+    "category": "host",
+    "developers": [
+      "Crypton Future Media, INC."
+    ],
+    "homepage_url": "https://www.vocaloid.com/",
+    "file_url": null,
+    "download_page_url": null,
+    "tags": [
+      "host"
+    ]
+  },
+  {
+    "id": "vogen",
+    "names": {
+      "en": "Vogen"
+    },
+    "category": "host",
+    "developers": [
+      "Doaz"
+    ],
+    "homepage_url": "https://github.com/aqtq314/Vogen.Client",
+    "download_page_url": "https://github.com/aqtq314/Vogen.Client/releases",
+    "tags": [
+      "vogen",
+      "windows"
+    ]
+  }
 ]
