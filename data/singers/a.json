@@ -1,0 +1,30 @@
+[
+  {
+    "id": "argon-shikuon",
+    "names": {
+      "en": "Argon Shikuon",
+      "ja": "紫空音アルゴン"
+    },
+    "owners": [
+      "sushii-p, Team Cipstik"
+    ],
+    "authors": [
+      "sushii-p"
+    ],
+    "variants": [
+      {
+        "id": "argon-shikuon-flare",
+        "names": {
+          "en": "Argon Shikuon FLARE",
+          "ja": "紫空音アルゴンFLARE"
+        },
+        "file_url": "https://drive.google.com/file/d/1g461JC8Cd2ked-kAlxXHEVD4pUEUMBdQ/view?usp=sharing",
+        "download_page_url": "https://satiresushi.wixsite.com/sushii-dump/download",
+        "tags": [
+          "japanese",
+          "cvvc"
+        ]
+      }
+    ]
+  }
+]
