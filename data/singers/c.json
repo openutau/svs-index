@@ -25,8 +25,7 @@
         "tags": [
           "utau",
           "vcv",
-          "multipitch",
-          "caseoh"
+          "multipitch"
         ]
       },
       {
@@ -39,9 +38,7 @@
         "tags": [
           "utau",
           "vcv",
-          "multipitch",
-          "caseoh",
-          "lower quality samples compared to classic"
+          "multipitch"
         ]
       },
       {
@@ -54,9 +51,7 @@
         "tags": [
           "utau",
           "cv",
-          "monopitch",
-          "caseoh",
-          "beginner friendly"
+          "monopitch"
         ]
       },
       {
@@ -68,10 +63,9 @@
         "download_page_url": "https://www.mediafire.com/file/d1ohsp7cl6acl9z/CASE+(NATIVE).zip/file",
         "tags": [
           "utau",
-          "ARPAsing",
-          "english",
-          "monopitch",
-          "caseoh"
+          "arpasing",
+          "lang:en",
+          "monopitch"
         ]
       }
     ],

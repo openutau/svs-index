@@ -21,7 +21,12 @@
         "file_url": "https://storage-file-download-common.bowlroll.cloud/storage/eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE3NjM0NTI2NTQsInB1YmxpYyI6ZmFsc2UsImJ1Y2tldCI6ImZpbGUiLCJkaXNwb3NpdGlvbiI6IkF0dGFjaG1lbnQiLCJyZXNvdXJjZS1pZCI6IjM0Mjk5OSIsInJldmlzaW9uIjoxfQ.frR41Y1EUOBk1rquN5wBbJ98y-tSmkYZiDfEItqPZubFhPNLrqN5Auc1_T-gJNWdp74wjc4wLSEa4lnyELAbwQ",
         "download_page_url": "https://bowlroll.net/file/342999",
         "tags": [
-          "utau, multipitch, cvvc, ja, male, tenor"
+          "utau",
+          "multipitch",
+          "cvvc",
+          "lang:ja",
+          "male",
+          "tenor"
         ]
       }
     ],

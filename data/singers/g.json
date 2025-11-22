@@ -24,7 +24,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -39,7 +39,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -54,7 +54,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -69,7 +69,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -84,7 +84,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -99,7 +99,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -114,7 +114,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -129,7 +129,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -144,7 +144,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -159,7 +159,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -174,7 +174,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -189,8 +189,8 @@
           "utau",
           "vcv",
           "monopitch(?)",
-          "kana aliased",
-          "whisper voicebank"
+          "kana",
+          "whisper"
         ]
       },
       {
@@ -205,8 +205,7 @@
           "utau",
           "vcv",
           "multipitch",
-          "integration voicebank",
-          "possible name mistranslation when translated from japanese to english"
+          "bundle"
         ]
       }
     ],

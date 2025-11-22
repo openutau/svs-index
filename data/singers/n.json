@@ -24,8 +24,7 @@
           "utau",
           "monopitch",
           "vcv",
-          "vcv with vc's",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -40,8 +39,7 @@
           "utau",
           "monopitch",
           "vcv",
-          "vcv + b whatever that means",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -56,8 +54,7 @@
           "utau",
           "monopitch",
           "vcv",
-          "vcv + vc",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -72,8 +69,7 @@
           "utau",
           "monopitch",
           "vcv",
-          "vcv + b whatever that means",
-          "kana aliased"
+          "kana"
         ]
       },
       {
@@ -88,7 +84,7 @@
           "utau",
           "multipitch",
           "cvvc",
-          "kana aliased"
+          "kana"
         ]
       }
     ],

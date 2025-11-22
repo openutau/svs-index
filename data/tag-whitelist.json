@@ -1,5 +1,6 @@
 {
   "tags": [
+    "deprecated",
     "male",
     "female",
     "vocaloid",
@@ -11,6 +12,8 @@
     "cvvc",
     "vcv",
     "vccv",
-    "arpasing"
+    "arpasing",
+    "multipitch",
+    "monopitch"
   ]
 }
