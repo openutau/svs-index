@@ -1,0 +1,81 @@
+[
+  {
+    "id": "caseohloid",
+    "names": {
+      "en": "CaseOh",
+      "ja": "ケース"
+    },
+    "owners": [
+      "Near"
+    ],
+    "authors": [
+      "CaseOh (RVC)",
+      "Boss (Illustrator)",
+      "Allen Void (KEI mimicing illustrator)",
+      "MothyBea (Designer)"
+    ],
+    "variants": [
+      {
+        "id": "caseohloid-classinc",
+        "names": {
+          "en": "Classic"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.mediafire.com/file/zqqso0ogol3lt0v/CASE+(CLASSIC).zip/file",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "caseoh"
+        ]
+      },
+      {
+        "id": "caseohloid-debut",
+        "names": {
+          "en": "CASE (DEBUT)"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.mediafire.com/file/2opvjwhzaagf8gb/CASE+(DEBUT).zip/file",
+        "tags": [
+          "utau",
+          "vcv",
+          "multipitch",
+          "caseoh",
+          "lower quality samples compared to classic"
+        ]
+      },
+      {
+        "id": "caseohloid-easy-mode",
+        "names": {
+          "en": "CASE (EASY MODE)"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.mediafire.com/file/ov0zn3e3i0nnskj/CASE+(EASY+MODE).zip/file",
+        "tags": [
+          "utau",
+          "cv",
+          "monopitch",
+          "caseoh",
+          "beginner friendly"
+        ]
+      },
+      {
+        "id": "caseohloid-native",
+        "names": {
+          "en": "CASE (NATIVE)"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.mediafire.com/file/d1ohsp7cl6acl9z/CASE+(NATIVE).zip/file",
+        "tags": [
+          "utau",
+          "ARPAsing",
+          "english",
+          "monopitch",
+          "caseoh"
+        ]
+      }
+    ],
+    "homepage_url": "https://utau.fandom.com/wiki/CASE#Etymology",
+    "profile_image_url": "https://static.wikia.nocookie.net/utau/images/1/1a/CASE_DISPLAY.png/revision/latest?cb=20250309071648"
+  }
+]
