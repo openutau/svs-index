@@ -1,0 +1,414 @@
+[
+  {
+    "id": "momo-momone",
+    "names": {
+      "en": "Momo Momone",
+      "ja": "桃音モモ"
+    },
+    "owners": [
+      "Momoko Fujimoto/藤本萌々子"
+    ],
+    "authors": [
+      "Momoko Fujimoto/藤本萌々子",
+      "momomomo-P/ももももP"
+    ],
+    "variants": [
+      {
+        "id": "momo-momone-cs",
+        "names": {
+          "en": "Momo Momone Continuous Soft (G4)",
+          "ja": "桃音モモ連続音Soft（ソフト）(2011)"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/153.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-cw",
+        "names": {
+          "en": "Momo Momone Continuous Whisper (F4)",
+          "ja": "桃音モモ連続音Whisper（ウィスパー）(2011)"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/153.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-cm",
+        "names": {
+          "en": "Momo Momone Continuous Mellow (F4)",
+          "ja": "桃音モモ連続音Mellow（メロウ）(2011)"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/153.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-cc",
+        "names": {
+          "en": "Momo Momone Continuous Cute (F4)",
+          "ja": "桃音モモ連続音Cute（キュート）(2011)"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/153.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-cntnspssn",
+        "names": {
+          "en": "Momo Momone Continuous Passion (A4)",
+          "ja": "桃音モモ連続音Passion（パッション）(2011)"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/153.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-tcs",
+        "names": {
+          "en": "Momo Momone Tripitch Continuous Sound",
+          "ja": "桃音モモ連続音3段階 (Aug 2009)"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/87.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-mcpmlss",
+        "names": {
+          "en": "Momo Momone Monopitch Continuous plus Monopitch lite Single Sound",
+          "ja": "連続音＆単独音Liteセット/F4 (July 2009)"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-sss",
+        "names": {
+          "en": "Momo Momone Soft Single Sound",
+          "ja": "桃音モモ(soft)-単独音/柔らかめの発声/F4/Oct2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-wss",
+        "names": {
+          "en": "Momo Momone Whisper Single Sound",
+          "ja": "桃音モモ(whisper)-単独音/ウィスパーボイス/ロングトーン/F4/Oct2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-fss",
+        "names": {
+          "en": "Momo Momone falsetto Single Sound",
+          "ja": "桃音モモ(falsetto)-単独音/ファルセット(裏声)/C5/Oct2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-strght",
+        "names": {
+          "en": "Momo Momone Straight (F4)",
+          "ja": "桃音モモ(straight)-単独音/通常の発声/ロングトーン/F4/Oct2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-sa4ss",
+        "names": {
+          "en": "Momo Momone Straight (A4) Single Sound",
+          "ja": "桃音モモ(straight)-単独音/通常の発声/ロングトーン/A4/Oct2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-ssl",
+        "names": {
+          "en": "Momo Momone Single Sound Lite",
+          "ja": "桃音モモLite2009 (単独音/F4)"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color"
+        ]
+      },
+      {
+        "id": "momo-momone-ss5s",
+        "names": {
+          "en": "Momo Momone Single Sound 5 Step",
+          "ja": "桃音モモ単独音5段階セット2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "momo-momone-ss6s",
+        "names": {
+          "en": "Momo Momone Single Sound 6 Step",
+          "ja": "桃音モモ単独音6段階セット2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "momo-momone-ss18pfs",
+        "names": {
+          "en": "Momo Momone Single Sound 18 pitch Full Set",
+          "ja": "桃音モモ 単独音/音程18段階 (A#3～G4)フルセット2009"
+        },
+        "file_url": "https://w.atwiki.jp/momonemomo/pages/50.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "multipitch",
+          "broken download"
+        ]
+      },
+      {
+        "id": "momo-momone-ssaav",
+        "names": {
+          "en": "Momo Momone Single Sound Ameya Adjusted Version",
+          "ja": "音ライブラリ UTAU用調整版"
+        },
+        "file_url": "https://utau2008.xrea.jp/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "adjusted by ameya",
+          "scroll down to momoneA.zip in utau2008.xrea.jp to get the download"
+        ]
+      },
+      {
+        "id": "momo-momone-cmmcs",
+        "names": {
+          "en": "Chibi Momo Momone Continuous Sound",
+          "ja": "連続音チビモモ(chibi)2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-cmmcsp",
+        "names": {
+          "en": "Chibi Momo Momone Continuous Sound Plus",
+          "ja": "連続音チビモモ+(chibi plus)+2010"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice colors",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-sswng",
+        "names": {
+          "en": "Momo Momone Single Sound Whistling",
+          "ja": "単独音口笛2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-ncs",
+        "names": {
+          "en": "Momo Momone Number Counting Set",
+          "ja": "数字カウント素材2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-sas",
+        "names": {
+          "en": "Momo Momone Sound Assortment Set",
+          "ja": "いろいろつめあわせセット2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-fscs",
+        "names": {
+          "en": "Momo Momone Fighting Scene Set",
+          "ja": "格闘シーン用ボイスセット2010"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-brs",
+        "names": {
+          "en": "Momo Momone Breath Set",
+          "ja": "ブレス素材2011"
+        },
+        "file_url": "https://momolabo2406.blogspot.com/2011/09/blog-post_21.html",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives",
+          "broken download"
+        ]
+      },
+      {
+        "id": "momo-momone-hss",
+        "names": {
+          "en": "Momo Momone Humming Single Sound.",
+          "ja": "桃音モモ単独音ハミング(hanauta)2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-ssc",
+        "names": {
+          "en": "Momo Momone Single Sound Chorus.",
+          "ja": "桃音モモ単独音コーラス用素材(Ha＆Fu) 2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      },
+      {
+        "id": "momo-momone-ssds",
+        "names": {
+          "en": "Momo Momone Strong Sounds",
+          "ja": "桃音モモ促音付五十音単独音C5ド_2009"
+        },
+        "file_url": "http://st-zako.la.coocan.jp/momomirror/",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "japanese",
+          "single voice color",
+          "derivatives"
+        ]
+      }
+    ],
+    "homepage_url": "https://momonemomo.com/",
+    "profile_image_url": "https://files.catbox.moe/r7n8to.png"
+  }
+]
