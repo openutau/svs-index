@@ -1,0 +1,31 @@
+[
+  {
+    "id": "jihehong",
+    "names": {
+      "en": "Jihehong",
+      "zh": "霁何虹"
+    },
+    "owners": [
+      "里哀Ria"
+    ],
+    "authors": [
+      "里哀Ria"
+    ],
+    "variants": [
+      {
+        "id": "jihehong-diffsinger",
+        "names": {
+          "en": "Jihehong DiffSinger",
+          "zh": "霁何虹 DiffSinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.123pan.com/s/dDu9jv-BRcQH.html",
+        "tags": [
+          "diffsinger",
+          "lang:zh"
+        ]
+      }
+    ],
+    "profile_image_url": "https://cloud.zhibin.club/uploads/images/20240131/2024013122531596b3f1383.png"
+  }
+]
