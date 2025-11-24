@@ -1,0 +1,20 @@
+[
+  {
+    "id": "deepvocal",
+    "names": {
+      "en": "DeepVocal"
+    },
+    "category": "host",
+    "developers": [
+      "Boxstar"
+    ],
+    "homepage_url": "https://deep-vocal.com/#/",
+    "download_page_url": "https://deep-vocal.com/#/Product",
+    "tags": [
+      "host",
+      "free",
+      "windows",
+      "deepvocal"
+    ]
+  }
+]
