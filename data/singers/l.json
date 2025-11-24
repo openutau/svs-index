@@ -132,5 +132,34 @@
       }
     ],
     "homepage_url": "https://github.com/yousa-ling-official-production"
+  },
+  {
+    "id": "linli",
+    "names": {
+      "en": "Linli",
+      "zh": "霖漓"
+    },
+    "owners": [
+      "人衣大人"
+    ],
+    "authors": [
+      "人衣大人"
+    ],
+    "variants": [
+      {
+        "id": "linli-diffsinger",
+        "names": {
+          "en": "Linli DiffSinger",
+          "zh": "霖漓 DiffSinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.123pan.com/s/dDu9jv-fRcQH.html",
+        "tags": [
+          "diffsinger",
+          "lang:zh"
+        ]
+      }
+    ],
+    "profile_image_url": "https://cloud.zhibin.club/uploads/images/20250412/20250412200550862df4970.png"
   }
 ]
