@@ -13,6 +13,7 @@
     "download_page_url": null,
     "tags": [
       "host",
+      "commercial",
       "vocaloid",
       "windows"
     ]
@@ -30,6 +31,7 @@
     "download_page_url": "https://github.com/aqtq314/Vogen.Client/releases",
     "tags": [
       "host",
+      "open-source",
       "vogen",
       "windows"
     ]
