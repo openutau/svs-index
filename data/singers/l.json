@@ -161,5 +161,36 @@
       }
     ],
     "profile_image_url": "https://cloud.zhibin.club/uploads/images/20250412/20250412200550862df4970.png"
+  },
+  {
+    "id": "lu-li",
+    "names": {
+      "en": "Lu Li",
+      "zh": "露黎"
+    },
+    "owners": [
+      "雲晚灵"
+    ],
+    "authors": [
+      "雲晚灵"
+    ],
+    "variants": [
+      {
+        "id": "lu-li-diffsinger",
+        "names": {
+          "zh": "露黎 DiffSinger",
+          "en": "Lu Li DiffSinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.123912.com/s/dDu9jv-KevEH",
+        "tags": [
+          "diffsinger",
+          "lang:zh",
+          "lang:en",
+          "lang:ja"
+        ]
+      }
+    ],
+    "profile_image_url": "https://cloud.zhibin.club/uploads/images/20251010/20251010011700fcf3f6857.png"
   }
 ]
