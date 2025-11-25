@@ -1,0 +1,31 @@
+[
+  {
+    "id": "penny",
+    "names": {
+      "en": "Penny"
+    },
+    "owners": [
+      "footlongdingledong"
+    ],
+    "authors": [
+      "footlongdingledong"
+    ],
+    "variants": [
+      {
+        "id": "penny-1",
+        "names": {
+          "en": "Penny"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/drive/folders/1EYDywga7w1khSi1ilawkA7siRFNfyVPm",
+        "tags": [
+          "utau",
+          "lang:en",
+          "lang:ja",
+          "cv"
+        ]
+      }
+    ],
+    "profile_image_url": "https://f2.toyhou.se/file/f2-toyhou-se/images/110452041_SpAIkFGzF53i57l.png"
+  }
+]
