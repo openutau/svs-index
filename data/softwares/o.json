@@ -22,5 +22,25 @@
       "mac",
       "linux"
     ]
+  },
+  {
+    "id": "openutau-mobile",
+    "names": {
+      "en": "OpenUtau mobile"
+    },
+    "category": "host",
+    "developers": [
+      "vocoder712"
+    ],
+    "homepage_url": "https://github.com/vocoder712/OpenUtauMobile/",
+    "download_page_url": "https://github.com/vocoder712/OpenUtauMobile/releases",
+    "tags": [
+      "host",
+      "android",
+      "windows",
+      "utau",
+      "diffsinger",
+      "open-source"
+    ]
   }
 ]
