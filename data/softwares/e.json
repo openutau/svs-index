@@ -1,0 +1,18 @@
+[
+  {
+    "id": "enunu",
+    "names": {
+      "en": "ENUNU"
+    },
+    "category": "host",
+    "developers": [
+      "crazy_toho"
+    ],
+    "homepage_url": "https://linktr.ee/enunu",
+    "tags": [
+      "host",
+      "windows",
+      "open-source"
+    ]
+  }
+]
