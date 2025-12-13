@@ -686,5 +686,87 @@
     ],
     "homepage_url": "https://studiovo.xyz/voices/kikyuune-aiko/",
     "profile_image_url": "https://studiovo.xyz/wp-content/uploads/2023/12/aiko2022-609x1024.png"
+  },
+  {
+    "id": "kaito",
+    "names": {
+      "en": "KAITO",
+      "ja": "KAITO"
+    },
+    "owners": [
+      "Crypton Future Medua"
+    ],
+    "authors": [
+      "Naoto Fuuga"
+    ],
+    "variants": [
+      {
+        "id": "kaito-v1",
+        "names": {
+          "en": "KAITO",
+          "ja": "KAITO"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.amazon.com/Cry-8321-Vocaloid-Kaito-Japan-Import/dp/B000FCUTZY",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kaito-v3-straight",
+        "names": {
+          "en": "KAITO V3 Straight"
+        },
+        "file_url": null,
+        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kaito-v3-soft",
+        "names": {
+          "en": "KAITO V3 Soft"
+        },
+        "file_url": null,
+        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kaito-v3-whisper",
+        "names": {
+          "en": "KAITO V3 Whisper"
+        },
+        "file_url": null,
+        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kaito-v3-english",
+        "names": {
+          "en": "KAITO V3 English"
+        },
+        "file_url": null,
+        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "tags": [
+          "vocaloid",
+          "lang: en",
+          "male"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wikia.nocookie.net/vocaloid/images/8/82/KAITO_SP.png/revision/latest?cb=20241025030728"
   }
 ]
