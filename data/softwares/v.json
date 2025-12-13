@@ -47,5 +47,20 @@
     ],
     "homepage_url": "https://www.vocaloid.com/",
     "tags": []
+  },
+  {
+    "id": "vocaloid1",
+    "names": {
+      "en": "VOCALOID 1"
+    },
+    "category": "host",
+    "developers": [
+      "Yamaha Corporation"
+    ],
+    "tags": [
+      "vocaloid",
+      "en",
+      "ja"
+    ]
   }
 ]
