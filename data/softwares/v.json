@@ -62,5 +62,20 @@
       "en",
       "ja"
     ]
+  },
+  {
+    "id": "vocaloid2",
+    "names": {
+      "en": "VOCALOID 2"
+    },
+    "category": "host",
+    "developers": [
+      "Yamaha Corporation"
+    ],
+    "homepage_url": "https://www.vocaloid.com/",
+    "tags": [
+      "commercial",
+      "vocaloid"
+    ]
   }
 ]
