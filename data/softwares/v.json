@@ -35,5 +35,17 @@
       "vogen",
       "windows"
     ]
+  },
+  {
+    "id": "vocaloid3",
+    "names": {
+      "en": "VOCALOID 3"
+    },
+    "category": "host",
+    "developers": [
+      "Yamaha Corporation"
+    ],
+    "homepage_url": "https://www.vocaloid.com/",
+    "tags": []
   }
 ]
