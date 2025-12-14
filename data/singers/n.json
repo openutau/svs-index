@@ -89,5 +89,37 @@
       }
     ],
     "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E5%90%8D%E5%89%8D%E3%82%B7%E3%83%AC%E3%82%BAdl?lang=en"
+  },
+  {
+    "id": "nevio-vecoli",
+    "names": {
+      "en": "Nevio Vecoli"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "nevio-vecoli-graytalian",
+        "names": {
+          "en": "Nevio Vecoli GrayTalian"
+        },
+        "file_url": "https://www.dropbox.com/scl/fi/wiy798m5k99vb4ff98xsv/Nevio-Vecoli-GrayTalian.zip?rlkey=az2s1ek2ezkzobpqyy29jd88n&dl=0",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "male",
+          "multipitch",
+          "lang:it",
+          "x-sampa"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_ca7987469fbe48debbf00500dde92242~mv2.jpg/v1/crop/x_0,y_16,w_428,h_428/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Nevio%20Vecoli%20Ref%20Sheet_edited.jpg"
   }
 ]
