@@ -1,111 +1,159 @@
 [
-    {
-        "id": "hatsune-miku",
+  {
+    "id": "hatsune-miku",
+    "names": {
+      "en": "Hatsune Miku",
+      "ja": "初音ミク",
+      "zh": "初音未来"
+    },
+    "owners": [
+      "Crypton Future Media, INC."
+    ],
+    "authors": [
+      "Crypton Future Media, INC."
+    ],
+    "homepage_url": "https://piapro.net/",
+    "profile_image_url": "https://piapro.net/intl/images/btn_miku.jpg",
+    "variants": [
+      {
+        "id": "hatsune-miku-v4-chinese",
         "names": {
-            "en": "Hatsune Miku",
-            "ja": "初音ミク",
-            "zh": "初音未来"
+          "en": "HATSUNE MIKU V4 CHINESE",
+          "ja": "初音ミク V4 CHINESE",
+          "zh": "初音未来 V4 CHINESE"
         },
-        "owners": [
-            "Crypton Future Media, INC."
-        ],
-        "authors": [
-            "Crypton Future Media, INC."
-        ],
-        "homepage_url": "https://piapro.net/",
-        "profile_image_url": "https://piapro.net/intl/images/btn_miku.jpg",
-        "variants": [
-            {
-                "id": "hatsune-miku-v4-chinese",
-                "names": {
-                    "en": "HATSUNE MIKU V4 CHINESE",
-                    "ja": "初音ミク V4 CHINESE",
-                    "zh": "初音未来 V4 CHINESE"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v4x",
-                "names": {
-                    "en": "HATSUNE MIKU V4X",
-                    "ja": "初音ミク V4X",
-                    "zh": "初音未来 V4X"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v4x-english",
-                "names": {
-                    "en": "HATSUNE MIKU V4X ENGLISH",
-                    "ja": "初音ミク V4X ENGLISH",
-                    "zh": "初音未来 V4X ENGLISH"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v3",
-                "names": {
-                    "en": "HATSUNE MIKU V3",
-                    "ja": "初音ミク V3",
-                    "zh": "初音未来 V3"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v3-english",
-                "names": {
-                    "en": "HATSUNE MIKU V3 ENGLISH",
-                    "ja": "初音ミク V3 ENGLISH",
-                    "zh": "初音未来 V3 ENGLISH"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-append",
-                "names": {
-                    "en": "HATSUNE MIKU Append",
-                    "ja": "初音ミク Append",
-                    "zh": "初音未来 Append"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "vocaloide2-hatsune-miku",
-                "names": {
-                    "en": "VOCALOID2 HATSUNE MIKU",
-                    "ja": "VOCALOID2 初音ミク",
-                    "zh": "VOCALOID2 初音未来"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            }
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
         ]
-    }
+      },
+      {
+        "id": "hatsune-miku-v4x",
+        "names": {
+          "en": "HATSUNE MIKU V4X",
+          "ja": "初音ミク V4X",
+          "zh": "初音未来 V4X"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-v4x-english",
+        "names": {
+          "en": "HATSUNE MIKU V4X ENGLISH",
+          "ja": "初音ミク V4X ENGLISH",
+          "zh": "初音未来 V4X ENGLISH"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-v3",
+        "names": {
+          "en": "HATSUNE MIKU V3",
+          "ja": "初音ミク V3",
+          "zh": "初音未来 V3"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-v3-english",
+        "names": {
+          "en": "HATSUNE MIKU V3 ENGLISH",
+          "ja": "初音ミク V3 ENGLISH",
+          "zh": "初音未来 V3 ENGLISH"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-append",
+        "names": {
+          "en": "HATSUNE MIKU Append",
+          "ja": "初音ミク Append",
+          "zh": "初音未来 Append"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "vocaloide2-hatsune-miku",
+        "names": {
+          "en": "VOCALOID2 HATSUNE MIKU",
+          "ja": "VOCALOID2 初音ミク",
+          "zh": "VOCALOID2 初音未来"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hareff-linohai",
+    "names": {
+      "en": "Hareff Linohai"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "hareff-linohai-vcv",
+        "names": {
+          "en": "Hareff Linohai VCV"
+        },
+        "file_url": "https://www.mediafire.com/file/anmwgw3rrnw7f42/Hareff_Linohai_VCV.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "female",
+          "multipitch",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "hareff-linohai-eng",
+        "names": {
+          "en": "Hareff Linohai English"
+        },
+        "file_url": "https://www.mediafire.com/file/apxn5altz8s11hb/Hareff_Linohai_GG2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "lang:en",
+          "cvvc",
+          "x-sampa",
+          "multipitch",
+          "female"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_2bded09f5c5e4ffdafb360773750c4f1~mv2.png/v1/crop/x_1435,y_56,w_746,h_748/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hareff%20Linohai%20Reference%20Sheet.png"
+  }
 ]
