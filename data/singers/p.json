@@ -27,5 +27,53 @@
       }
     ],
     "profile_image_url": "https://f2.toyhou.se/file/f2-toyhou-se/images/110452041_SpAIkFGzF53i57l.png"
+  },
+  {
+    "id": "paris-carlisle",
+    "names": {
+      "en": "Paris Carlisle"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "paris-carlisle-vcv",
+        "names": {
+          "en": "Paris Carlisle VCV"
+        },
+        "file_url": "https://www.mediafire.com/file/3uyzamnyw92jkkz/Paris_Carlisle_VCV.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "male",
+          "multipitch",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "paris-carlisle-eng",
+        "names": {
+          "en": "Paris Carlisle English"
+        },
+        "file_url": "https://www.mediafire.com/file/q4bcxcwh0avjsel/Paris_Carlisle_GG2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "lang:en",
+          "cvvc",
+          "x-sampa",
+          "male",
+          "multipitch"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_24c6773ff1ba45e9be968b76b43d4686~mv2.png/v1/crop/x_1576,y_23,w_592,h_594/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Paris%20Ref%20Sheet.png"
   }
 ]
