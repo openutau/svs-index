@@ -768,5 +768,56 @@
       }
     ],
     "profile_image_url": "https://static.wikia.nocookie.net/vocaloid/images/8/82/KAITO_SP.png/revision/latest?cb=20241025030728"
+  },
+  {
+    "id": "kagyakune-souma",
+    "names": {
+      "en": "Kagyakune Souma",
+      "ja": "加虐音颯真"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "kagyakune-souma-vcv",
+        "names": {
+          "en": "Kagyakune Souma VCV",
+          "ja": "加虐音颯真 VCV"
+        },
+        "file_url": "https://www.mediafire.com/file/9gbs6eixavfqbm1/Kagyakune_Souma_VCV.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "male",
+          "multipitch",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kagyakune-souma-eng",
+        "names": {
+          "en": "Kagyakune Souma English",
+          "ja": "加虐音颯真 ENG"
+        },
+        "file_url": "https://www.mediafire.com/file/q3zmm6a8jrh2jpi/Kagyakune_Souma_GG2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "lang:en",
+          "cvvc",
+          "x-sampa",
+          "multipitch",
+          "male"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_f9449d9c5c4749939976562a473c98f5~mv2.png/v1/crop/x_345,y_4,w_335,h_335/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Kagyakune%20Souma%20Reference%20Sheet.png"
   }
 ]
