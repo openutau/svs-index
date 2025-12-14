@@ -410,5 +410,37 @@
     ],
     "homepage_url": "https://momonemomo.com/",
     "profile_image_url": "https://files.catbox.moe/r7n8to.png"
+  },
+  {
+    "id": "moony",
+    "names": {
+      "en": "MOONY"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "moony-main",
+        "names": {
+          "en": "MOONY"
+        },
+        "file_url": "https://www.mediafire.com/file/3bvt487rylmyrv2/Moony_V1.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "female",
+          "monopitch",
+          "vcv",
+          "joke"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_79edb4c70d044e338607a97f7e2158d8~mv2.png/v1/crop/x_1193,y_57,w_608,h_608/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Moony%20Ref%20Sheet.png"
   }
 ]
