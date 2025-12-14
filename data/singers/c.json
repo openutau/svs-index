@@ -71,5 +71,54 @@
     ],
     "homepage_url": "https://utau.fandom.com/wiki/CASE#Etymology",
     "profile_image_url": "https://static.wikia.nocookie.net/utau/images/1/1a/CASE_DISPLAY.png/revision/latest?cb=20250309071648"
+  },
+  {
+    "id": "cherilee",
+    "names": {
+      "en": "Cherilee",
+      "ja": "チェリリー"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "cherilee-cvvc",
+        "names": {
+          "en": "Cherilee CVVC"
+        },
+        "file_url": "https://www.mediafire.com/file/udo0p2gqx0jxy8q/Cherilee_JPN.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "female",
+          "multipitch",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "cherilee-eng",
+        "names": {
+          "en": "Cherilee English"
+        },
+        "file_url": "https://www.mediafire.com/file/we8kb4oemzgcdyp/Cherilee_ENG.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "lang:en",
+          "x-sampa",
+          "multipitch",
+          "female",
+          "cvvc"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_13b5c870765c44a291003c0ef1c436dc~mv2.png/v1/crop/x_1077,y_94,w_389,h_389/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Cherilee%20Eng%20Ref%20Sheet.png"
   }
 ]
