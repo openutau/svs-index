@@ -410,5 +410,39 @@
     ],
     "homepage_url": "https://momonemomo.com/",
     "profile_image_url": "https://files.catbox.moe/r7n8to.png"
+  },
+  {
+    "id": "masago-miura",
+    "names": {
+      "en": "Masago Miura",
+      "ja": "真砂三浦"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "masago-miura-cv",
+        "names": {
+          "en": "Masago Miura CV",
+          "ja": "真砂三浦 CV"
+        },
+        "file_url": "https://www.mediafire.com/file/pnoctckrsljdsjg/Masago_Miura_VIKURA.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cv",
+          "female",
+          "monopitch",
+          "lang:ja",
+          "screamo"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_4e2d8454f7924a188fd96c8c143a1f7e~mv2.jpg/v1/crop/x_97,y_0,w_267,h_267/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Masago%20Ref%20Sheet%20full_edited.jpg"
   }
 ]
