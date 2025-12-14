@@ -1,111 +1,162 @@
 [
-    {
-        "id": "hatsune-miku",
+  {
+    "id": "hatsune-miku",
+    "names": {
+      "en": "Hatsune Miku",
+      "ja": "初音ミク",
+      "zh": "初音未来"
+    },
+    "owners": [
+      "Crypton Future Media, INC."
+    ],
+    "authors": [
+      "Crypton Future Media, INC."
+    ],
+    "homepage_url": "https://piapro.net/",
+    "profile_image_url": "https://piapro.net/intl/images/btn_miku.jpg",
+    "variants": [
+      {
+        "id": "hatsune-miku-v4-chinese",
         "names": {
-            "en": "Hatsune Miku",
-            "ja": "初音ミク",
-            "zh": "初音未来"
+          "en": "HATSUNE MIKU V4 CHINESE",
+          "ja": "初音ミク V4 CHINESE",
+          "zh": "初音未来 V4 CHINESE"
         },
-        "owners": [
-            "Crypton Future Media, INC."
-        ],
-        "authors": [
-            "Crypton Future Media, INC."
-        ],
-        "homepage_url": "https://piapro.net/",
-        "profile_image_url": "https://piapro.net/intl/images/btn_miku.jpg",
-        "variants": [
-            {
-                "id": "hatsune-miku-v4-chinese",
-                "names": {
-                    "en": "HATSUNE MIKU V4 CHINESE",
-                    "ja": "初音ミク V4 CHINESE",
-                    "zh": "初音未来 V4 CHINESE"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v4x",
-                "names": {
-                    "en": "HATSUNE MIKU V4X",
-                    "ja": "初音ミク V4X",
-                    "zh": "初音未来 V4X"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v4x-english",
-                "names": {
-                    "en": "HATSUNE MIKU V4X ENGLISH",
-                    "ja": "初音ミク V4X ENGLISH",
-                    "zh": "初音未来 V4X ENGLISH"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v3",
-                "names": {
-                    "en": "HATSUNE MIKU V3",
-                    "ja": "初音ミク V3",
-                    "zh": "初音未来 V3"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-v3-english",
-                "names": {
-                    "en": "HATSUNE MIKU V3 ENGLISH",
-                    "ja": "初音ミク V3 ENGLISH",
-                    "zh": "初音未来 V3 ENGLISH"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "hatsune-miku-append",
-                "names": {
-                    "en": "HATSUNE MIKU Append",
-                    "ja": "初音ミク Append",
-                    "zh": "初音未来 Append"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            },
-            {
-                "id": "vocaloide2-hatsune-miku",
-                "names": {
-                    "en": "VOCALOID2 HATSUNE MIKU",
-                    "ja": "VOCALOID2 初音ミク",
-                    "zh": "VOCALOID2 初音未来"
-                },
-                "file_url": null,
-                "download_page_url": null,
-                "tags": [
-                    "vocaloid"
-                ]
-            }
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
         ]
-    }
+      },
+      {
+        "id": "hatsune-miku-v4x",
+        "names": {
+          "en": "HATSUNE MIKU V4X",
+          "ja": "初音ミク V4X",
+          "zh": "初音未来 V4X"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-v4x-english",
+        "names": {
+          "en": "HATSUNE MIKU V4X ENGLISH",
+          "ja": "初音ミク V4X ENGLISH",
+          "zh": "初音未来 V4X ENGLISH"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-v3",
+        "names": {
+          "en": "HATSUNE MIKU V3",
+          "ja": "初音ミク V3",
+          "zh": "初音未来 V3"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-v3-english",
+        "names": {
+          "en": "HATSUNE MIKU V3 ENGLISH",
+          "ja": "初音ミク V3 ENGLISH",
+          "zh": "初音未来 V3 ENGLISH"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "hatsune-miku-append",
+        "names": {
+          "en": "HATSUNE MIKU Append",
+          "ja": "初音ミク Append",
+          "zh": "初音未来 Append"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      },
+      {
+        "id": "vocaloide2-hatsune-miku",
+        "names": {
+          "en": "VOCALOID2 HATSUNE MIKU",
+          "ja": "VOCALOID2 初音ミク",
+          "zh": "VOCALOID2 初音未来"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vocaloid"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hayate-nori-masara",
+    "names": {
+      "en": "Hayate Nori Masara",
+      "ja": "颯儀マサラ"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "hayate-nori-masara-vcv",
+        "names": {
+          "en": "Hayate Nori Masara VCV",
+          "ja": "颯儀マサラ VCV"
+        },
+        "file_url": "https://www.mediafire.com/file/4v9uprthli3wef4/Hayate_Nori_Masara_VCV.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "lang:ja",
+          "male",
+          "bipitch"
+        ]
+      },
+      {
+        "id": "hayate-nori-masara-eng",
+        "names": {
+          "en": "Hayate Nori Masara English",
+          "ja": "颯儀マサラ ENG"
+        },
+        "file_url": "https://www.mediafire.com/file/ge45um9jseeb6sr/Hayate_Nori_Masara_GG2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "bipitch",
+          "male",
+          "cvvc",
+          "lang:en",
+          "x-sampa"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_b8cd2bd9e7c14cfcb5141e005be58274~mv2.jpg/v1/crop/x_116,y_0,w_399,h_399/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hayate%20Nori%20Masara%20ref%20sheet_edited.jpg"
+  }
 ]
