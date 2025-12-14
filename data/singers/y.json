@@ -1,0 +1,53 @@
+[
+  {
+    "id": "yuina-harune",
+    "names": {
+      "en": "Yuina Harune",
+      "ja": "結菜はる音"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "yuina-harune-vcv",
+        "names": {
+          "en": "Yuina Harune VCV",
+          "ja": "結菜はる音 VCV"
+        },
+        "file_url": "https://www.mediafire.com/file/qdmks5eykii6yc3/Yuina_Harune_VCV.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "lang:ja",
+          "female",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "yuina-harune-eng",
+        "names": {
+          "en": "Yuina Harune English",
+          "ja": "結菜はる音 ENG"
+        },
+        "file_url": "https://www.mediafire.com/file/4o80hjpwfxziea8/Yuina_Harune_ENG.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "multipitch",
+          "female",
+          "cvvc",
+          "lang:en",
+          "x-sampa"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_05520ffd54a14319bea0d2f892bd353f~mv2.png/v1/crop/x_0,y_89,w_1380,h_1380/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Yuina%20Harune%20new%20uta%20icon.png"
+  }
+]
