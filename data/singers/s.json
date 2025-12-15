@@ -74,5 +74,33 @@
     ],
     "homepage_url": "https://cadlaxa.github.io/Shizuma-Saito-site/",
     "profile_image_url": "https://drive.google.com/file/d/1EWji1o3GlDdQtzz7OGIB4xeiWSyeGv7Z/view?usp=drive_link"
+  },
+  {
+    "id": "sweet-ann",
+    "names": {
+      "en": "Sweet Ann"
+    },
+    "owners": [
+      "PowerFX"
+    ],
+    "authors": [
+      "Jody/JODIE"
+    ],
+    "variants": [
+      {
+        "id": "sweet-ann-v2",
+        "names": {
+          "en": "Sweet Ann"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/29890",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/PFXV1.jpg"
   }
 ]
