@@ -410,5 +410,35 @@
     ],
     "homepage_url": "https://momonemomo.com/",
     "profile_image_url": "https://files.catbox.moe/r7n8to.png"
+  },
+  {
+    "id": "miriam",
+    "names": {
+      "en": "MIRIAM",
+      "ja": "ミリアム"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Miriam Stockley"
+    ],
+    "variants": [
+      {
+        "id": "miriam-v1",
+        "names": {
+          "en": "MIRIAM",
+          "ja": "ミリアム"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/24930",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV3.jpg"
   }
 ]
