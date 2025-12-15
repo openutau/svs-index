@@ -192,5 +192,35 @@
       }
     ],
     "profile_image_url": "https://cloud.zhibin.club/uploads/images/20251010/20251010011700fcf3f6857.png"
+  },
+  {
+    "id": "leon-vocaloid",
+    "names": {
+      "en": "LEON",
+      "ja": "レオン"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "leon-vocaloid-v1",
+        "names": {
+          "en": "LEON",
+          "ja": "レオン"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/24910",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:en"
+        ]
+      }
+    ],
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV1.jpg"
   }
 ]
