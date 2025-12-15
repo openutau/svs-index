@@ -691,10 +691,10 @@
     "id": "kaito",
     "names": {
       "en": "KAITO",
-      "ja": "KAITO"
+      "ja": "カイト"
     },
     "owners": [
-      "Crypton Future Medua"
+      "Crypton Future Media"
     ],
     "authors": [
       "Naoto Fuuga"
@@ -704,10 +704,10 @@
         "id": "kaito-v1",
         "names": {
           "en": "KAITO",
-          "ja": "KAITO"
+          "ja": "カイト"
         },
         "file_url": null,
-        "download_page_url": "https://www.amazon.com/Cry-8321-Vocaloid-Kaito-Japan-Import/dp/B000FCUTZY",
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/27720",
         "tags": [
           "vocaloid",
           "male",
@@ -717,10 +717,10 @@
       {
         "id": "kaito-v3-straight",
         "names": {
-          "en": "KAITO V3 Straight"
+          "en": "KAITO V3 STRAIGHT"
         },
         "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/kaitov3",
         "tags": [
           "vocaloid",
           "male",
@@ -730,10 +730,10 @@
       {
         "id": "kaito-v3-soft",
         "names": {
-          "en": "KAITO V3 Soft"
+          "en": "KAITO V3 SOFT"
         },
         "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/kaitov33",
         "tags": [
           "vocaloid",
           "male",
@@ -743,10 +743,10 @@
       {
         "id": "kaito-v3-whisper",
         "names": {
-          "en": "KAITO V3 Whisper"
+          "en": "KAITO V3 WHISPER"
         },
         "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/kaitov3",
         "tags": [
           "vocaloid",
           "male",
@@ -756,10 +756,10 @@
       {
         "id": "kaito-v3-english",
         "names": {
-          "en": "KAITO V3 English"
+          "en": "KAITO V3 ENGLISH"
         },
         "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/kaitov3",
         "tags": [
           "vocaloid",
           "lang: en",
@@ -767,6 +767,6 @@
         ]
       }
     ],
-    "profile_image_url": "https://static.wikia.nocookie.net/vocaloid/images/8/82/KAITO_SP.png/revision/latest?cb=20241025030728"
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/CRV2.jpg"
   }
 ]
