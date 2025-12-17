@@ -707,7 +707,7 @@
           "ja": "KAITO"
         },
         "file_url": null,
-        "download_page_url": "https://www.amazon.com/Cry-8321-Vocaloid-Kaito-Japan-Import/dp/B000FCUTZY",
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/27720",
         "tags": [
           "vocaloid",
           "male",
@@ -715,38 +715,12 @@
         ]
       },
       {
-        "id": "kaito-v3-straight",
+        "id": "kaito-v3",
         "names": {
-          "en": "KAITO V3 Straight"
+          "en": "KAITO V3"
         },
         "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
-        "tags": [
-          "vocaloid",
-          "male",
-          "lang:ja"
-        ]
-      },
-      {
-        "id": "kaito-v3-soft",
-        "names": {
-          "en": "KAITO V3 Soft"
-        },
-        "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
-        "tags": [
-          "vocaloid",
-          "male",
-          "lang:ja"
-        ]
-      },
-      {
-        "id": "kaito-v3-whisper",
-        "names": {
-          "en": "KAITO V3 Whisper"
-        },
-        "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/kaitov33",
         "tags": [
           "vocaloid",
           "male",
@@ -759,7 +733,7 @@
           "en": "KAITO V3 English"
         },
         "file_url": null,
-        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/kaitov3",
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/kaitov3",
         "tags": [
           "vocaloid",
           "lang: en",
