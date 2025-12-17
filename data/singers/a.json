@@ -26,5 +26,38 @@
         ]
       }
     ]
+  },
+  {
+    "id": "adachi-rei",
+    "names": {
+      "en": "Adachi Rei",
+      "ja": "足立レイ",
+      "zh": "足立零",
+      "ko": "아다치 레이"
+    },
+    "owners": [
+      "missile39"
+    ],
+    "authors": [
+      "missile39"
+    ],
+    "variants": [
+      {
+        "id": "adachi-rei-cv",
+        "names": {
+          "en": "Adachi Rei UTAU",
+          "ja": "足立レイUTAU音源"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.dropbox.com/scl/fi/8z9corxo32gwgqyv5z92a/ver3.5.0.zip?rlkey=53n6e60cozvp3c9nvwyz6odxx&st=i56dcl9d&dl=0",
+        "tags": [
+          "utau",
+          "lang:ja",
+          "cv"
+        ]
+      }
+    ],
+    "homepage_url": "https://mechanicalgirl.jp/adachi-rei/",
+    "profile_image_url": "https://mechanicalgirl.jp/_astro/adachi-rei.DRp-Lp4r_ZvHos6.webp"
   }
 ]
