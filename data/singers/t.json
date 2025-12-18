@@ -123,5 +123,36 @@
       }
     ],
     "profile_image_url": "https://storage-file-image.bowlroll.net/storage/eyJhbGciOiJIUzUxMiJ9.eyJidWNrZXQiOiJmaWxlLWltYWdlIiwicHVibGljIjp0cnVlLCJyZXNvdXJjZS1pZCI6IjMxODE2MCIsImRpc3Bvc2l0aW9uIjoiSW5saW5lIiwicmV2aXNpb24iOjExNDg3MH0.rA3277JTdwXtxh2Q7eVE3Y95KXZAyXpmp8tz3-y0O6j4il1Pbbkpf8wouy2BUqY5pk3N2-Tqjfq_xrdiyKs5Cw"
+  },
+  {
+    "id": "tonio",
+    "names": {
+      "en": "TONIO",
+      "ja": "トニオ"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "tonio-v2",
+        "names": {
+          "en": "TONIO",
+          "ja": "トニオ"
+        },
+        "file_url": null,
+        "download_page_url": "http://www.zero-g.co.uk/store/vocaloid-tonio-p488.php",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:en"
+        ]
+      }
+    ],
+    "homepage_url": "http://www.zero-g.co.uk/store/vocaloid-tonio-p488.php",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/390"
   }
 ]
