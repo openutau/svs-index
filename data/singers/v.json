@@ -1,0 +1,57 @@
+[
+  {
+    "id": "vy2-vocaloid",
+    "names": {
+      "en": "VY2"
+    },
+    "owners": [
+      "Yamaha"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "vy2-vocaloid-v2",
+        "names": {
+          "en": "VY2"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/lineup/vocaloid3/vy2.html",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "vy2-vocaloid-v3",
+        "names": {
+          "en": "VY2V3"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/products/show/v3l_vy2v3",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "vy2-vocaloid-v5",
+        "names": {
+          "en": "VY2V5"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v5vb_vy2_en",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.vocaloid.com/en/products/show/v5vb_vy2_en",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/118"
+  }
+]
