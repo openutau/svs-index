@@ -26,5 +26,36 @@
         ]
       }
     ]
+  },
+  {
+    "id": "aoki-lapis",
+    "names": {
+      "en": "Aoki Lapis",
+      "ja": "蒼姫ラピス"
+    },
+    "owners": [
+      "i-style Project"
+    ],
+    "authors": [
+      "Eguchi Nako (江口菜子)"
+    ],
+    "variants": [
+      {
+        "id": "aoki-lapis-v3",
+        "names": {
+          "en": "Aoki Lapis",
+          "ja": "蒼姫ラピス"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v3l_aoki_lapis_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "http://i-style.surpara.com/character",
+    "profile_image_url": "https://vocadb.net/Artist/Picture/156"
   }
 ]
