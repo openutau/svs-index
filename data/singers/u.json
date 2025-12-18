@@ -34,5 +34,36 @@
     ],
     "homepage_url": "https://www.teambrapa.com.br/umidaji#voicebanks",
     "profile_image_url": "https://static.wixstatic.com/media/ca7bab_8c365f2038ff4f749d82a1cbd467813d~mv2.png/v1/fill/w_360,h_360,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/pic_voice_umidaji-ds.png"
+  },
+  {
+    "id": "utatane-piko",
+    "names": {
+      "en": "Utatane Piko",
+      "ja": "歌手音ピコ"
+    },
+    "owners": [
+      "Ki/oon Records"
+    ],
+    "authors": [
+      "PIKO (ピコ)"
+    ],
+    "variants": [
+      {
+        "id": "utatane-piko-v2",
+        "names": {
+          "en": "Utatane Piko",
+          "ja": "歌手音ピコ"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.kioon.com/vocaloid/piko/",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.kioon.com/vocaloid/piko/",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/248"
   }
 ]
