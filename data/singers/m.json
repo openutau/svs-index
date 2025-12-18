@@ -410,5 +410,36 @@
     ],
     "homepage_url": "https://momonemomo.com/",
     "profile_image_url": "https://files.catbox.moe/r7n8to.png"
+  },
+  {
+    "id": "mayu-vocaloid",
+    "names": {
+      "en": "MAYU",
+      "ja": "マユ"
+    },
+    "owners": [
+      "EXIT TUNES"
+    ],
+    "authors": [
+      "Mayumi Morinaga (森永真由美)"
+    ],
+    "variants": [
+      {
+        "id": "mayu-vocaloid-v3",
+        "names": {
+          "en": "MAYU",
+          "ja": "マユ"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v3l_mayu_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "http://mayusan.jp/",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/1766"
   }
 ]
