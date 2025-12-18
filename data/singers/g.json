@@ -211,5 +211,36 @@
     ],
     "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E3%82%B2%E3%82%AD%E3%83%A4%E3%82%AFdl?lang=en",
     "profile_image_url": "file:///C:/Users/SittingDragon/Downloads/20240107%E3%82%B2%E3%82%AD%E3%83%A4%E3%82%AF.png"
+  },
+  {
+    "id": "galaco",
+    "names": {
+      "en": "galaco",
+      "ja": "ギャラ子"
+    },
+    "owners": [
+      "Stardust Records"
+    ],
+    "authors": [
+      "Kou Shibasaki (柴咲コウ)"
+    ],
+    "variants": [
+      {
+        "id": "galaco-v3",
+        "names": {
+          "en": "galaco",
+          "ja": "ギャラ子"
+        },
+        "file_url": null,
+        "download_page_url": "https://en.wikipedia.org/wiki/Galaco",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://piapro.jp/characters/galaco",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/1777"
   }
 ]
