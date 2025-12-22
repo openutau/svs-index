@@ -768,5 +768,50 @@
       }
     ],
     "profile_image_url": "https://static.wikia.nocookie.net/vocaloid/images/8/82/KAITO_SP.png/revision/latest?cb=20241025030728"
+  },
+  {
+    "id": "kaai-yuki",
+    "names": {
+      "en": "Kaai Yuki",
+      "ja": "愛ユキ"
+    },
+    "owners": [
+      "AH-Software"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "kaai-yuki-v2",
+        "names": {
+          "en": "Kaai Yuki",
+          "ja": "愛ユキ"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/vocaloid/yuki_v2/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kaai-yuki-v4",
+        "names": {
+          "en": "Kaai Yuki V4",
+          "ja": "愛ユキ V4"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/vocaloid/yuki/",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.ah-soft.com/vocaloid/yuki_v2/index.html",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/191"
   }
 ]
