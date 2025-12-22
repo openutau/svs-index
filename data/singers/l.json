@@ -300,5 +300,62 @@
       }
     ],
     "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV2.jpg"
+  },
+  {
+    "id": "lily-vocaloid",
+    "names": {
+      "en": "Lily",
+      "ja": "リリィ"
+    },
+    "owners": [
+      "Anim.o.v.e"
+    ],
+    "authors": [
+      "Masuda Yuri (益田祐里)"
+    ],
+    "variants": [
+      {
+        "id": "lily-vocaloid-v2",
+        "names": {
+          "en": "Lily",
+          "ja": "リリィ"
+        },
+        "file_url": null,
+        "download_page_url": "https://animove.jp/lily/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "lily-vocaloid-v3",
+        "names": {
+          "en": "V3 Lily",
+          "ja": "V3 リリィ"
+        },
+        "file_url": null,
+        "download_page_url": "https://animove.jp/lily/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "lily-vocaloid-v3-native",
+        "names": {
+          "en": "Lily V3 (Native)",
+          "ja": "V3 リリィ (Native)"
+        },
+        "file_url": null,
+        "download_page_url": "https://animove.jp/lily/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ]
   }
 ]
