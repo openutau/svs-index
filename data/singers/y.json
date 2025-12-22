@@ -49,5 +49,39 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_05520ffd54a14319bea0d2f892bd353f~mv2.png/v1/crop/x_0,y_89,w_1380,h_1380/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Yuina%20Harune%20new%20uta%20icon.png"
+  },
+  {
+    "id": "yamako",
+    "names": {
+      "en": "Yamako",
+      "ja": "病子"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "yamako-cvvc",
+        "names": {
+          "en": "Yamako CVVC",
+          "ja": "病子 CVVC"
+        },
+        "file_url": "https://www.mediafire.com/file/0b7no4yt7c44cj5/Yamako_CVVC.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "female",
+          "monopitch",
+          "lang:ja",
+          "joke"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_d6e659e082d544c79b14401edb0d7511~mv2.jpg/v1/crop/x_146,y_0,w_504,h_504/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Yamako%20Ref%20Sheet_edited.jpg"
   }
 ]
