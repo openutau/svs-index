@@ -122,5 +122,51 @@
     ],
     "homepage_url": "https://mechanicalgirl.jp/adachi-rei/",
     "profile_image_url": "https://mechanicalgirl.jp/_astro/adachi-rei.DRp-Lp4r_ZvHos6.webp"
+  },
+  {
+    "id": "azuki-masaoka",
+    "names": {
+      "en": "Azuki Masaoka",
+      "ja": "正岡小豆"
+    },
+    "owners": [
+      "SEGA"
+    ],
+    "authors": [
+      "Yuka Ootsubo (正岡小豆)"
+    ],
+    "variants": [
+      {
+        "id": "azuki-masaoka-v2",
+        "names": {
+          "en": "Masaoka Azuki",
+          "ja": "正岡小豆"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v4l_azuki_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "azuki-masaoka-v4",
+        "names": {
+          "en": "Masaoka Azuki V4",
+          "ja": "正岡小豆 V4",
+          "zh": "AZUKI"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v4l_azuki_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.vocaloid.com/en/products/show/v4l_azuki_en",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/16982"
   }
 ]
