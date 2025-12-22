@@ -154,5 +154,50 @@
     ],
     "homepage_url": "http://www.zero-g.co.uk/store/vocaloid-tonio-p488.php",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/390"
+  },
+  {
+    "id": "tone-rion",
+    "names": {
+      "en": "Tone Rion",
+      "ja": "兎眠りおん"
+    },
+    "owners": [
+      "DEARSTAGE Inc."
+    ],
+    "authors": [
+      "Yumemi Nemu (夢眠ねむ)"
+    ],
+    "variants": [
+      {
+        "id": "tone-rion-v3",
+        "names": {
+          "en": "Tone Rion",
+          "ja": "兎眠りおん"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v4l_tone_rion_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "tone-rion-v4",
+        "names": {
+          "en": "Tone Rion V4",
+          "ja": "兎眠りおんV4"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v4l_tone_rion_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "http://nemurion.com/",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/380"
   }
 ]
