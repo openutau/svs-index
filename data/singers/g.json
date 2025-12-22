@@ -301,5 +301,48 @@
     ],
     "homepage_url": "https://www.ssw.co.jp/products/vocal/gackpoid/index.html",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/12"
+  },
+  {
+    "id": "gachapoid-ryuto",
+    "names": {
+      "en": "Ryuuto",
+      "ja": "リュウト"
+    },
+    "owners": [
+      "INTERNET Co., Ltd"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "gachapoid-ryuto-v2",
+        "names": {
+          "en": "Ryuuto",
+          "ja": "リュウト"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ssw.co.jp/products/vocal/gachapoid/",
+        "tags": [
+          "vocaloid",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "gachapoid-ryuto-v3",
+        "names": {
+          "en": "Ryuuto V3",
+          "ja": "リュウト V3"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ssw.co.jp/products/vocal3/gachapoid/",
+        "tags": [
+          "vocaloid",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.ssw.co.jp/products/vocal/gachapoid/",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/247"
   }
 ]
