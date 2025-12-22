@@ -132,5 +132,56 @@
         ]
       }
     ]
+  },
+  {
+    "id": "seiji-masara",
+    "names": {
+      "en": "Seiji Masara",
+      "ja": "誠二マサラ"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "seiji-masara-cvvc",
+        "names": {
+          "en": "Seiji Masara CVVC Japanese",
+          "ja": "誠二マサラ CVVC"
+        },
+        "file_url": "https://www.mediafire.com/file/jlsz98fi66z360a/Seiji_Masara_CVVC_Ver2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "lang:ja",
+          "male",
+          "monopitch"
+        ]
+      },
+      {
+        "id": "seiji-masara-eng",
+        "names": {
+          "en": "Seiji Masara English",
+          "ja": "誠二マサラ ENG"
+        },
+        "file_url": "https://www.mediafire.com/file/v4dx28ix5ajqbv4/Seiji_Masara_ENG.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "bipitch",
+          "male",
+          "cvvc",
+          "lang:en",
+          "x-sampa"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_d1dbf4bfaf674a408cd406ece8c6e4a9~mv2.png/v1/crop/x_564,y_0,w_643,h_642/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Seiji%20kimi%20no%20taion%20thumb%20small.png"
   }
 ]
