@@ -441,5 +441,71 @@
     ],
     "homepage_url": "http://mayusan.jp/",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/1766"
+  },
+  {
+    "id": "miyuki-masara",
+    "names": {
+      "en": "Miyuki Masara",
+      "ja": "美幸マサラ"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "miyuki-masara-jpn-deluxe",
+        "names": {
+          "en": "Miyuki Masara JPN DELUXE",
+          "ja": "美幸マサラ DELUXE"
+        },
+        "file_url": "https://www.mediafire.com/file/rrcvob4ysp4iij6/Miyuki_Masara_JPN_DELUXE.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "cvvc",
+          "lang:ja",
+          "utau",
+          "female",
+          "openutau",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "miyuki-masara-eng",
+        "names": {
+          "en": "Miyuki Masara ENG"
+        },
+        "file_url": "https://www.mediafire.com/file/kn18i3ocd4pq4n4/Miyuki_Masara_English_Final_Update.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "female",
+          "multipitch",
+          "cvvc",
+          "x-sampa"
+        ]
+      },
+      {
+        "id": "miyuki-masara-zecersonian",
+        "names": {
+          "en": "Miyuki Masara Zecersonian",
+          "ja": "美幸マサラ ZCN"
+        },
+        "file_url": "https://www.mediafire.com/file/fq6z0pex2y23eg8/Miyuki_Masara_Zecersonian.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "conlang",
+          "cvvc",
+          "multipitch"
+        ]
+      }
+    ],
+    "homepage_url": "https://assbackwardsp.wixsite.com/utaubackwards",
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_c4d31bc9f7474c339477edd685e16333~mv2.png/v1/crop/x_3069,y_102,w_1360,h_1359/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Miyuki%20Zecersonian%20Ref%20Sheet.png"
   }
 ]
