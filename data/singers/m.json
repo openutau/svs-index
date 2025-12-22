@@ -701,5 +701,35 @@
     ],
     "homepage_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3MEIKO",
     "profile_image_url": "https://ec.crypton.co.jp/img/box_l/CRV1.jpg"
+  },
+  {
+    "id": "miriam",
+    "names": {
+      "en": "MIRIAM",
+      "ja": "ミリアム"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Miriam Stockley"
+    ],
+    "variants": [
+      {
+        "id": "miriam-v1",
+        "names": {
+          "en": "MIRIAM",
+          "ja": "ミリアム"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/24930",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV3.jpg"
   }
 ]
