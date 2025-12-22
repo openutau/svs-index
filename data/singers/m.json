@@ -764,5 +764,50 @@
     ],
     "homepage_url": "http://i-style.surpara.com/character",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/2113"
+  },
+  {
+    "id": "matcha-kobayashi",
+    "names": {
+      "en": "Matcha Kobauashi",
+      "ja": "小林抹茶"
+    },
+    "owners": [
+      "SEGA"
+    ],
+    "authors": [
+      "Ayaka Oohashi (大橋彩香)"
+    ],
+    "variants": [
+      {
+        "id": "matcha-kobayashi-v2",
+        "names": {
+          "en": "Matcha Kobayashi",
+          "ja": "小林抹茶"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v4l_matcha_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "matcha-kobayashi-v4",
+        "names": {
+          "en": "MATCHA",
+          "ja": "小林抹茶 V4"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v4l_matcha_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.vocaloid.com/en/products/show/v4l_matcha_en",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/16983"
   }
 ]
