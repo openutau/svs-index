@@ -864,5 +864,83 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_f9449d9c5c4749939976562a473c98f5~mv2.png/v1/crop/x_345,y_4,w_335,h_335/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Kagyakune%20Souma%20Reference%20Sheet.png"
+  },
+  {
+    "id": "kagamine-rin",
+    "names": {
+      "en": "Kagamine Rin",
+      "ja": "鏡音リン",
+      "zh": "鏡音鈴",
+      "ko": "카가미네 린"
+    },
+    "owners": [
+      "Crypton Future Media"
+    ],
+    "authors": [
+      "Asami Shimoda (下田麻美)"
+    ],
+    "variants": [
+      {
+        "id": "kagamine-rin-v2",
+        "names": {
+          "en": "Kagamine Rin",
+          "ja": "鏡音リン",
+          "zh": "鏡音鈴",
+          "ko": "카가미네 린"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv02",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kagamine-rin-append",
+        "names": {
+          "en": "Kagamine Rin Append",
+          "ja": "鏡音リン Append"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv02a",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kagamine-rin-v4x",
+        "names": {
+          "en": "Kagamine Rin V4X",
+          "ja": "鏡音リン V4X"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/rinlenv4x",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "kagamine-rin-nt",
+        "names": {
+          "en": "Kagamine Rin NT",
+          "ja": "鏡音リン NT"
+        },
+        "file_url": null,
+        "download_page_url": "https://sonicwire.com/product/virtualsinger/special/rinlennt",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja",
+          "piapro"
+        ]
+      }
+    ],
+    "homepage_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv02",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/14"
   }
 ]
