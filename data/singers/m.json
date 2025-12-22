@@ -809,5 +809,56 @@
     ],
     "homepage_url": "https://www.vocaloid.com/en/products/show/v4l_matcha_en",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/16983"
+  },
+  {
+    "id": "megurine-luka",
+    "names": {
+      "en": "Megurine Luka",
+      "ja": "巡音ルカ",
+      "zh": "巡音流歌",
+      "ko": "메구리네 루카"
+    },
+    "owners": [
+      "Crypton Future Media"
+    ],
+    "authors": [
+      "Asakawa Yuu (浅川悠)"
+    ],
+    "variants": [
+      {
+        "id": "megurine-luka-v2",
+        "names": {
+          "en": "Megurine Luka",
+          "ja": "巡音ルカ",
+          "zh": "巡音流歌",
+          "ko": "메구리네 루카"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv03",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "megurine-luka-v4x",
+        "names": {
+          "en": "Megurine Luka V4X",
+          "ja": "巡音ルカ V4X"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/lukav4x",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja",
+          "lang:en"
+        ]
+      }
+    ],
+    "homepage_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv03",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/2"
   }
 ]
