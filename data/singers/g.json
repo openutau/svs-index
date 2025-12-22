@@ -242,5 +242,64 @@
     ],
     "homepage_url": "https://piapro.jp/characters/galaco",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/1777"
+  },
+  {
+    "id": "gackpoid",
+    "names": {
+      "en": "Gackpoid",
+      "ja": "がくっぽいど"
+    },
+    "owners": [
+      "INTERNET Co., Ltd"
+    ],
+    "authors": [
+      "Kamui Gakuto (神威楽斗) (GACKT)"
+    ],
+    "variants": [
+      {
+        "id": "gackpoid-v2",
+        "names": {
+          "en": "Gackpoid",
+          "ja": "がくっぽいど"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ssw.co.jp/products/vocal/gackpoid/index.html",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "gackpoid-v3",
+        "names": {
+          "en": "V3 Gackpoid",
+          "ja": "V3 がくっぽいど"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ssw.co.jp/products/vocal3/gackpoid/products/complete/index.html",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "gackpoid-v4",
+        "names": {
+          "en": "V4 Gackpoid",
+          "ja": "V4 がくっぽいど"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ssw.co.jp/products/vocaloid4/gackpoid/",
+        "tags": [
+          "vocaloid",
+          "male",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.ssw.co.jp/products/vocal/gackpoid/index.html",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/12"
   }
 ]
