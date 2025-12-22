@@ -74,5 +74,63 @@
     ],
     "homepage_url": "https://cadlaxa.github.io/Shizuma-Saito-site/",
     "profile_image_url": "https://drive.google.com/file/d/1EWji1o3GlDdQtzz7OGIB4xeiWSyeGv7Z/view?usp=drive_link"
+  },
+  {
+    "id": "sf-a2-miki",
+    "names": {
+      "en": "SF-A2 miki",
+      "ja": "SF-A2 開発コード miki"
+    },
+    "owners": [
+      "AH-Software"
+    ],
+    "authors": [
+      "Furukawa Miki (フルカワミキ/古川美季)"
+    ],
+    "variants": [
+      {
+        "id": "sf-a2-miki-v2",
+        "names": {
+          "en": "SF-A2 miki",
+          "ja": "SF-A2 開発コード miki"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/vocaloid/miki_v2/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "sf-a2-miki-v4-natural",
+        "names": {
+          "en": "SF-A2 miki V4 Natural",
+          "ja": "SF-A2 開発コード miki Natural"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/vocaloid/miki/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "sf-a2-miki-sv2",
+        "names": {
+          "en": "Synthesizer V 2 AI miki",
+          "ja": "Synthesizer V 2 AI SF-A2 開発コード miki"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/synth-v/miki2/#top",
+        "tags": [
+          "sv",
+          "female",
+          "lang:ja",
+          "lang:en"
+        ]
+      }
+    ]
   }
 ]
