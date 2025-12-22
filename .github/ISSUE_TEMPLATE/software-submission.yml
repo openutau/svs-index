@@ -8,6 +8,7 @@ body:
       value: |
         Thank you for contributing! Please fill out all required fields below.
         All submissions will be reviewed before merging.
+        This template is for simple software submissions. For detailed version info with mirrors and dependencies, please submit via a pull request directly.
 
   - type: input
     id: id

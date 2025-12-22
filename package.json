@@ -19,5 +19,8 @@
   },
   "dependencies": {
     "relaxed-json": "^1.0.3"
+  },
+  "volta": {
+    "node": "24.12.0"
   }
 }

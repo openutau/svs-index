@@ -19,6 +19,9 @@
             "names": {
                 "description": "Map of language codes (ISO 639-1) to the software's name.",
                 "type": "object",
+                "required": [
+                    "en"
+                ],
                 "minProperties": 1,
                 "additionalProperties": {
                     "type": "string"
@@ -45,16 +48,8 @@
                 "type": "string",
                 "format": "uri"
             },
-            "file_url": {
-                "description": "Direct link for official software download, or null if not applicable.",
-                "type": [
-                    "string",
-                    "null"
-                ],
-                "format": "uri"
-            },
             "download_page_url": {
-                "description": "Link to the file host page requiring manual user interaction for download, or null.",
+                "description": "Link to the file host page requiring manual user interaction for download, or null. For direct download links, use the 'versions' field.",
                 "type": [
                     "string",
                     "null"
@@ -66,6 +61,74 @@
                 "type": "array",
                 "items": {
                     "type": "string"
+                }
+            },
+            "versions": {
+                "description": "List of software versions with detailed download mirrors and dependencies.",
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": [
+                        "version",
+                        "mirrors"
+                    ],
+                    "properties": {
+                        "version": {
+                            "description": "Version number (e.g., 1.0.0, 2.1.0).",
+                            "type": "string"
+                        },
+                        "mirrors": {
+                            "description": "List of download mirrors for this version.",
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "url",
+                                    "hash"
+                                ],
+                                "properties": {
+                                    "url": {
+                                        "description": "Download URL for this mirror.",
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    "hash": {
+                                        "description": "SHA256 hash of the file for integrity verification, or null if not available.",
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        },
+                        "dependencies": {
+                            "description": "List of software version dependencies (other software required for this version).",
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "id",
+                                    "min_version"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "description": "ID of the required software.",
+                                        "type": "string",
+                                        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                                    },
+                                    "min_version": {
+                                        "description": "Required version or version constraint (e.g., 1.0.0, >=1.0.0, <2.0.0).",
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": false
+                            }
+                        }
+                    },
+                    "additionalProperties": false
                 }
             },
             "additionalProperties": false

@@ -481,7 +481,8 @@ header h1 {
   color: var(--muted);
 }
 
-.variant-card {
+.variant-card,
+.version-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -489,10 +490,59 @@ header h1 {
   margin-bottom: 12px;
 }
 
-.variant-card-header {
+.variant-card-header,
+.version-header {
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.version-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mirrors-section strong,
+.dependencies strong {
+  display: block;
   margin-bottom: 4px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.mirrors-section {
+  margin-bottom: 4px;
+}
+
+.mirror-item {
+  margin-bottom: 4px;
+}
+
+.mirror-url {
+  font-size: 14px;
+}
+
+.mirror-hash {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.dependencies ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.dependencies li {
+  font-size: 13px;
+}
+
+.dependencies li:not(:last-child)::after {
+  content: ',';
 }
 
 .variant-card-all-names {

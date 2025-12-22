@@ -33,9 +33,13 @@ We welcome contributions! The flow differs slightly for singers vs software.
 
 ### Software Submission Flow
 
-1. Click **Submit Software** from the index page (links directly to the GitHub issue form).
-2. Fill out all required fields (ID, names, category, developers, optional URLs and tags).
+**Basic Submission (via GitHub Issue):**
+1. Click **Submit Software** from the index page.
+2. Fill out basic information: ID, names, category, developers, download page URL, and tags.
 3. Submit the issue. Automation validates and opens a PR for review.
+
+**Advanced Details (via Pull Request):**
+For complex information like versioned downloads with mirrors, file hashes, and dependencies, submit a PR directly modifying the software JSON file.
 
 ### Automation
 

@@ -24,15 +24,31 @@ export interface Singer {
 
 export type SoftwareCategory = 'host' | 'host_extension' | 'utility';
 
+export interface SoftwareMirror {
+  url: string;
+  hash: string | null;
+}
+
+export interface SoftwareDependency {
+  id: string;
+  min_version: string;
+}
+
+export interface SoftwareVersion {
+  version: string;
+  mirrors: SoftwareMirror[];
+  dependencies?: SoftwareDependency[];
+}
+
 export interface Software {
   id: string;
-  names: NamesMap;
+  names: NamesMap; // must include 'en'
   category: SoftwareCategory;
   developers: string[];
   homepage_url?: string;
-  file_url?: string | null;
   download_page_url?: string | null;
   tags?: string[];
+  versions?: SoftwareVersion[];
 }
 
 export type Category = 'singer' | 'software';

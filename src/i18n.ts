@@ -38,6 +38,10 @@ export interface Translations {
   // Detail page - Software
   category: string;
   developers: string;
+  versions: string;
+  version: string;
+  mirrors: string;
+  dependencies: string;
 
   // Submit page
   singerEditor: string;
@@ -151,6 +155,10 @@ export const translations: Record<Language, Translations> = {
 
     category: 'Category',
     developers: 'Developers',
+    versions: 'Versions',
+    version: 'Version',
+    mirrors: 'Mirrors',
+    dependencies: 'Dependencies',
 
     singerEditor: 'Singer Editor',
     singerEditorSubtitle: 'Create complete singer JSON for submission',
@@ -265,6 +273,10 @@ export const translations: Record<Language, Translations> = {
 
     category: 'カテゴリ',
     developers: '開発者',
+    versions: 'バージョン',
+    version: 'バージョン',
+    mirrors: 'ミラー',
+    dependencies: '依存関係',
 
     singerEditor: '歌手エディター',
     singerEditorSubtitle: '投稿用の完全な歌手JSONを作成',
@@ -378,6 +390,10 @@ export const translations: Record<Language, Translations> = {
 
     category: '分类',
     developers: '开发者',
+    versions: '版本',
+    version: '版本',
+    mirrors: '镜像',
+    dependencies: '依赖',
 
     singerEditor: '歌手编辑器',
     singerEditorSubtitle: '创建完整的歌手JSON以提交',

@@ -96,6 +96,49 @@ function renderSoftware(s: Software) {
   const namesList = Object.entries(s.names)
     .map(([k, v]) => `<div><strong>${k}</strong></div><div>${v}</div>`)
     .join('');
+
+  // Render versions with mirrors (if available)
+  const versionsHtml =
+    s.versions && s.versions.length > 0
+      ? s.versions
+          .map((ver) => {
+            const mirrorsHtml = ver.mirrors
+              .map(
+                (mirror) => `
+          <div class="mirror-item">
+            <div class="mirror-url">${link(mirror.url)}</div>
+            ${mirror.hash ? `<div class="mirror-hash"><small>SHA256: ${mirror.hash}</small></div>` : ''}
+          </div>
+        `
+              )
+              .join('');
+
+            const depsHtml =
+              ver.dependencies && ver.dependencies.length > 0
+                ? `<div class="dependencies">
+             <strong>${t.dependencies}:</strong>
+             <ul>
+               ${ver.dependencies.map((dep) => `<li>${dep.id} (v${dep.min_version})</li>`).join('')}
+             </ul>
+           </div>`
+                : '';
+
+            return `
+        <div class="version-card">
+          <div class="version-header">${t.version} ${ver.version}</div>
+          <div class="version-content">
+            <div class="mirrors-section">
+              <strong>${t.mirrors}:</strong>
+              ${mirrorsHtml}
+            </div>
+            ${depsHtml}
+          </div>
+        </div>
+      `;
+          })
+          .join('')
+      : '';
+
   app.innerHTML = `
     <header class="container detail-header">
       <div class="detail-header-top">
@@ -112,14 +155,19 @@ function renderSoftware(s: Software) {
           <div><strong>${t.category}</strong></div><div>${s.category}</div>
           <div><strong>${t.developers}</strong></div><div>${s.developers.join(', ')}</div>
           ${s.tags?.length ? `<div><strong>${t.tags}</strong></div><div>${s.tags.map((t) => `<span class="tag">${t}</span>`).join(' ')}</div>` : ''}
-          ${s.download_page_url ? `<div><strong>${t.downloadPage}: </strong></div><div>${link(s.download_page_url)}</div>` : ''}
-          ${s.file_url ? `<div><strong>${t.directDownload}: </strong></div><div>${link(s.file_url)}</div>` : ''}
+          ${s.download_page_url ? `<div><strong>${t.downloadPage}</strong></div><div>${link(s.download_page_url)}</div>` : ''}
         </div>
       </div>
       <div class="detail-card">
         <h3>${t.names}</h3>
         <div class="kv-list">${namesList}</div>
       </div>
+      ${
+        versionsHtml
+          ? `<h3>${t.versions}</h3>
+      ${versionsHtml}`
+          : ''
+      }
     </section>
   `;
 
