@@ -606,5 +606,100 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_79edb4c70d044e338607a97f7e2158d8~mv2.png/v1/crop/x_1193,y_57,w_608,h_608/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Moony%20Ref%20Sheet.png"
+  },
+  {
+    "id": "meiko",
+    "names": {
+      "en": "MEIKO",
+      "ja": "メイコ"
+    },
+    "owners": [
+      "Crypton Future Media"
+    ],
+    "authors": [
+      "Meiko Haigō"
+    ],
+    "variants": [
+      {
+        "id": "meiko-v1",
+        "names": {
+          "en": "MEIKO V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/25220",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "meiko-v3-straight",
+        "names": {
+          "en": "MEIKO V3 STRAIGHT"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "meiko-v3-power",
+        "names": {
+          "en": "MEIKO V3 POWER"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "meiko-v3-dark",
+        "names": {
+          "en": "MEIKO V3 DARK"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "meiko-v3-whisper",
+        "names": {
+          "en": "MEIKO V3 WHISPER"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "meiko-v3-english",
+        "names": {
+          "en": "MEIKO V3 ENGLISH"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "homepage_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/meikov3MEIKO",
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/CRV1.jpg"
   }
 ]
