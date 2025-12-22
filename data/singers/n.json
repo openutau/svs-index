@@ -89,5 +89,69 @@
       }
     ],
     "homepage_url": "https://kurukuru2suuzi.wixsite.com/kuzutokaze/%E5%90%8D%E5%89%8D%E3%82%B7%E3%83%AC%E3%82%BAdl?lang=en"
+  },
+  {
+    "id": "nekomura-iroha",
+    "names": {
+      "en": "Nekomura Iroha",
+      "ja": "猫村いろは",
+      "zh": "猫村伊吕波",
+      "ko": "네코무라 이로하"
+    },
+    "owners": [
+      "AH-Software"
+    ],
+    "authors": [
+      "Yoshitate Kyounosuke (佳館杏ノ助)"
+    ],
+    "variants": [
+      {
+        "id": "nekomura-iroha-v2",
+        "names": {
+          "en": "Nekomura Iroha",
+          "ja": "猫村いろは"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/vocaloid/iroha_v2/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "nekomura-iroha-v4",
+        "names": {
+          "en": "Nekomura Iroha V4",
+          "ja": "猫村いろは V4"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/vocaloid/iroha/natural.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "nekomura-iroha-sv",
+        "names": {
+          "en": "Synthesizer V 2 AI Nekomura Iroha",
+          "ja": "Synthesizer V 2 AI 猫村いろは"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.ah-soft.com/synth-v/iroha2/",
+        "tags": [
+          "sv",
+          "female",
+          "lang:ja",
+          "lang:en",
+          "lang:zh",
+          "lang:ko"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.ah-soft.com/vocaloid/iroha_v2/index.html",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/77"
   }
 ]
