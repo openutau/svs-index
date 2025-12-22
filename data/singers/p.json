@@ -75,5 +75,34 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_24c6773ff1ba45e9be968b76b43d4686~mv2.png/v1/crop/x_1576,y_23,w_592,h_594/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Paris%20Ref%20Sheet.png"
+  },
+  {
+    "id": "prima",
+    "names": {
+      "en": "PRIMA"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "prima-v2",
+        "names": {
+          "en": "PRIMA"
+        },
+        "file_url": null,
+        "download_page_url": "https://zero-g.co.uk/collections/vocal/products/vocaloid2-prima",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "homepage_url": "https://zero-g.co.uk/collections/vocal/products/vocaloid2-prima",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/389"
   }
 ]
