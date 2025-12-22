@@ -60,5 +60,37 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_d47e347095d84adf9c9bd4c3b02209bc~mv2.png/v1/crop/x_989,y_148,w_875,h_875/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Bitcrush%20Bun%20design%20draft.png"
+  },
+  {
+    "id": "bolly-joel",
+    "names": {
+      "en": "Bolly Joel"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "bolly-joel-cvvc",
+        "names": {
+          "en": "Bolly Joel CVVC"
+        },
+        "file_url": "https://www.mediafire.com/file/p1kzuwq50zh07u0/Bolly_Joel_CVVC.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "animal",
+          "male",
+          "multipitch",
+          "joke"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_48a0c64f6d9d41408e7a1b4e53ab0c8b~mv2.jpg/v1/crop/x_220,y_0,w_1189,h_1188/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Bolly%20Joel%20new%20CVVC_edited.jpg"
   }
 ]
