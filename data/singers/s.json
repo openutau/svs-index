@@ -244,5 +244,36 @@
       }
     ],
     "profile_image_url": "https://ec.crypton.co.jp/img/box_l/PFXV1.jpg"
+  },
+  {
+    "id": "sonika",
+    "names": {
+      "en": "SONiKA",
+      "ja": "ソニカ"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "sonika-v2",
+        "names": {
+          "en": "SONiKA",
+          "ja": "ソニカ"
+        },
+        "file_url": null,
+        "download_page_url": "https://zero-g.co.uk/collections/vocaloid/products/sonika-vocaloid-2",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "homepage_url": "https://zero-g.co.uk/collections/vocaloid/products/sonika-vocaloid-2",
+    "profile_image_url": "https://zero-g.co.uk/cdn/shop/products/Sonika_0aa70a0b-b2b3-4de1-9fe4-29bebd318a80_345x@2x.jpg?v=1559646611"
   }
 ]
