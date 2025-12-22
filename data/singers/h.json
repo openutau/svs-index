@@ -257,5 +257,38 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_2bded09f5c5e4ffdafb360773750c4f1~mv2.png/v1/crop/x_1435,y_56,w_746,h_748/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hareff%20Linohai%20Reference%20Sheet.png"
+  },
+  {
+    "id": "hinaya-nurune",
+    "names": {
+      "en": "Hinaya Nurune",
+      "ja": "ひなやぬる音"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "hinaya-nurune-cvvc",
+        "names": {
+          "en": "Hinaya Nurune CVVC",
+          "ja": "ひなやぬる音 CVVC"
+        },
+        "file_url": "https://www.mediafire.com/file/mj2k9ylyb4uau40/Hinaya_Nurune_CVVC.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "male",
+          "multipitch",
+          "lang:ja"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_a2d84efd8311406d92c6e28c2902203d~mv2.png/v1/crop/x_1598,y_68,w_690,h_690/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Hinaya%20Nurune%20Reference%20Sheet.png"
   }
 ]
