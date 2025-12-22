@@ -731,5 +731,38 @@
       }
     ],
     "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV3.jpg"
+  },
+  {
+    "id": "merli",
+    "names": {
+      "en": "Merli",
+      "ja": "メルリ",
+      "ko": "메를리"
+    },
+    "owners": [
+      "i-style Project"
+    ],
+    "authors": [
+      "Kamata Misaki (鎌田美沙紀)"
+    ],
+    "variants": [
+      {
+        "id": "merli-v3",
+        "names": {
+          "en": "Merli",
+          "ja": "メルリ",
+          "ko": "메를리"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/products/show/v3l_merli",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "http://i-style.surpara.com/character",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/2113"
   }
 ]
