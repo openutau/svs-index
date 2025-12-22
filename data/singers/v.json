@@ -53,5 +53,87 @@
     ],
     "homepage_url": "https://www.vocaloid.com/en/products/show/v5vb_vy2_en",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/118"
+  },
+  {
+    "id": "vy1-vocaloid",
+    "names": {
+      "en": "VY1"
+    },
+    "owners": [
+      "Yamaha"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "vy1-vocaloid-v2",
+        "names": {
+          "en": "VY1"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/lineup/vocaloid3/vy1.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "vy1-vocaloid-v3",
+        "names": {
+          "en": "VY1V3"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/lineup/vocaloid3/vy1v3.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "vy1-vocaloid-v4",
+        "names": {
+          "en": "VY1V4"
+        },
+        "file_url": null,
+        "download_page_url": "https://web.archive.org/web/*/https://net.vocaloid.com/products/show/3",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "vy1-vocaloid-v5",
+        "names": {
+          "en": "VY1V5"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.vocaloid.com/en/products/show/v5vb_vy1_en",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "vy1-vocaloid-keyboard",
+        "names": {
+          "en": "VY1 (KB-100)"
+        },
+        "file_url": null,
+        "download_page_url": "https://jp.yamaha.com/products/music_production/synthesizers/vkb-100/index.html",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:ja",
+          "hardware"
+        ]
+      }
+    ],
+    "homepage_url": "https://www.vocaloid.com/en/products/show/v5vb_vy1_en",
+    "profile_image_url": "https://vocadb.net/Artist/PictureThumb/117"
   }
 ]
