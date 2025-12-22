@@ -270,5 +270,35 @@
       }
     ],
     "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV1.jpg"
+  },
+  {
+    "id": "lola-vocaloid",
+    "names": {
+      "en": "LOLA",
+      "ja": "ローラ"
+    },
+    "owners": [
+      "ZERO-G"
+    ],
+    "authors": [
+      "Unknown Voice Provider"
+    ],
+    "variants": [
+      {
+        "id": "lola-vocaloid-v1",
+        "names": {
+          "en": "LOLA",
+          "ja": "ローラ"
+        },
+        "file_url": null,
+        "download_page_url": "https://ec.crypton.co.jp/product/detail/24920",
+        "tags": [
+          "vocaloid",
+          "female",
+          "lang:en"
+        ]
+      }
+    ],
+    "profile_image_url": "https://ec.crypton.co.jp/img/box_l/ZGV2.jpg"
   }
 ]
