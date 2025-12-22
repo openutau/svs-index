@@ -197,5 +197,36 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_361c400838b94d05b6fd752e16bd153c~mv2.png/v1/crop/x_511,y_19,w_436,h_436/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Roselle%20Ref%20Sheet-0f0de8a936474981bebb12dc14a8d2a5.png"
+  },
+  {
+    "id": "rene-baudelaire",
+    "names": {
+      "en": "René Baudelaire"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "rene-baudelaire-fra",
+        "names": {
+          "en": "René Baudelaire FRA"
+        },
+        "file_url": "https://www.mediafire.com/file/re91mle3x10ltwc/Rene_Baudelaire_Update.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "male",
+          "multipitch",
+          "lang:fr"
+        ]
+      }
+    ],
+    "profile_image_url": "https://static.wixstatic.com/media/99456a_e20e0c05f5904bf09040dc9683a08880~mv2.png/v1/crop/x_67,y_0,w_584,h_584/fill/w_232,h_232,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rene%20Baudelaire%20new%20render_edited.png"
   }
 ]
