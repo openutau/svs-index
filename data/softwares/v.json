@@ -15,7 +15,8 @@
       "host",
       "commercial",
       "vocaloid",
-      "windows"
+      "windows",
+      "mac"
     ]
   },
   {
@@ -46,7 +47,12 @@
       "Yamaha Corporation"
     ],
     "homepage_url": "https://www.vocaloid.com/",
-    "tags": []
+    "tags": [
+      "host",
+      "commercial",
+      "vocaloid",
+      "windows"
+    ]
   },
   {
     "id": "vocaloid1",
@@ -75,7 +81,9 @@
     "homepage_url": "https://www.vocaloid.com/",
     "tags": [
       "commercial",
-      "vocaloid"
+      "vocaloid",
+      "host",
+      "windows"
     ]
   },
   {
@@ -88,7 +96,13 @@
       "Yamaha Corporation"
     ],
     "homepage_url": "https://www.vocaloid.com/",
-    "tags": []
+    "tags": [
+      "commercial",
+      "vocaloid",
+      "host",
+      "windows",
+      "mac"
+    ]
   },
   {
     "id": "vocaloid6",
@@ -100,6 +114,12 @@
       "Yamaha Corporation"
     ],
     "homepage_url": "https://www.vocaloid.com/",
-    "tags": []
+    "tags": [
+      "commercial",
+      "vocaloid",
+      "host",
+      "windows",
+      "mac"
+    ]
   }
 ]
