@@ -27,5 +27,48 @@
     ],
     "homepage_url": "https://sites.google.com/view/otoyukishoya/",
     "profile_image_url": "https://lh3.googleusercontent.com/sitesv/AAzXCkc2aTAz0GFQ1BWABRrFdwY95QKULdSCL1Rco8lFgPUna8uh5djmYiswxSff2fCYap2ZSnSkj_ddQCRdEpo8bEbbzQ95IFGowV6XsYxwagtyrj4lsYfpsE9_fhJmOg2Q1r6BiWOEZOcuxXc6-u1b3B3bjZvMMfEApA__gdxkMsYoNN4WENbMcKhbz4QqZTqEnTeoRVqsRSp79LWMXEV2_YYg73_BtbuSKZN0GaA=w1280"
+  },
+  {
+    "id": "oil-openutau",
+    "names": {
+      "en": "Oil"
+    },
+    "owners": [
+      "KougaP"
+    ],
+    "authors": [
+      "KougaP"
+    ],
+    "variants": [
+      {
+        "id": "oil-openutau-ja-cvvc-v2",
+        "names": {
+          "en": "OIL JA CVVC V2"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/oil/ja-cvvc-v2/",
+        "tags": [
+          "utau",
+          "lang:ja",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "oil-openutau-ds",
+        "names": {
+          "en": "OIL DiffSinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/oil/ds/",
+        "tags": [
+          "ds",
+          "neodiva",
+          "lang:en",
+          "lang:ja"
+        ]
+      }
+    ],
+    "homepage_url": "https://headhunter4621.github.io/singers/oil/",
+    "profile_image_url": "https://headhunter4621.github.io/assets/images/singer-icons/Oil-Icon.png"
   }
 ]
