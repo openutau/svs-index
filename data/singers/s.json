@@ -275,5 +275,188 @@
     ],
     "homepage_url": "https://zero-g.co.uk/collections/vocaloid/products/sonika-vocaloid-2",
     "profile_image_url": "https://zero-g.co.uk/cdn/shop/products/Sonika_0aa70a0b-b2b3-4de1-9fe4-29bebd318a80_345x@2x.jpg?v=1559646611"
+  },
+  {
+    "id": "suigin-koora",
+    "names": {
+      "en": "Suigin Koora",
+      "ja": "水銀コーラ"
+    },
+    "owners": [
+      "KougaP"
+    ],
+    "authors": [
+      "KougaP"
+    ],
+    "variants": [
+      {
+        "id": "suigin-koora-ja-cvvc-v2",
+        "names": {
+          "en": "Suigin Koora Japanese CVVC V2",
+          "ja": "水銀コーラ Japanese CVVC V2"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/ja-cvvc-v2/",
+        "tags": [
+          "utau",
+          "lang:ja",
+          "CVVC"
+        ]
+      },
+      {
+        "id": "suigin-koora-ja-vcv-v1",
+        "names": {
+          "en": "Suigin Koora JA VCV V1",
+          "ja": "水銀コーラ JA VCV V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/ja-vcv-v1/",
+        "tags": [
+          "lang:ja",
+          "vcv",
+          "utau"
+        ]
+      },
+      {
+        "id": "suigin-koora-en-s-cvvc-v1",
+        "names": {
+          "en": "Suigin Koora EN S-CVVC V1",
+          "ja": "水銀コーラ EN S-CVVC V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/en-s-cvvc-v1/",
+        "tags": [
+          "lang:en",
+          "utau",
+          "cvvc",
+          "s-cvvc"
+        ]
+      },
+      {
+        "id": "suigin-koora-en-grayglish-v1",
+        "names": {
+          "en": "Suigin Koora English GrayGlish V1",
+          "ja": "水銀コーラ English GrayGlish V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/en-grayglish-v1/",
+        "tags": [
+          "utau",
+          "lang:en",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "suigin-koora-ja-cvvc-v1",
+        "names": {
+          "en": "Suigin Koora Japanese CVVC V1",
+          "ja": "水銀コーラ Japanese CVVC V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/ja-cvvc-v1/",
+        "tags": [
+          "utau",
+          "lang:ja",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "suigin-koora-ds",
+        "names": {
+          "en": "Suigin Koora DiffSinger",
+          "ja": "水銀コーラ DiffSinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/ds/",
+        "tags": [
+          "ds",
+          "neodiva",
+          "lang:en",
+          "lang:ja",
+          "lang:th",
+          "lang:ko",
+          "lang:it",
+          "lang:es",
+          "lang:zh",
+          "lang:pt",
+          "lang:ro",
+          "lang:pl",
+          "lang:ru",
+          "lang:fr",
+          "lang:de",
+          "lang:tp"
+        ]
+      },
+      {
+        "id": "suigin-koora-ja-deepvocal-v1",
+        "names": {
+          "en": "Suigin Koora Japanese DeepVocal",
+          "ja": "水銀コーラ Japanese DeepVocal"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/ja-dv-v1/",
+        "tags": [
+          "dv",
+          "cvvc",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "suigin-koora-fr-cvvc-v1",
+        "names": {
+          "en": "Suigin Koora French CVVC V1",
+          "ja": "水銀コーラ French CVVC"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/fr-cvvc-v1/",
+        "tags": [
+          "utau",
+          "lang:fr",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "suigin-koora-es-vccv-v1",
+        "names": {
+          "en": "Suigin Koora Spanish VCCV V1",
+          "ja": "水銀コーラ Spanish VCCV V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/es-vccv-v1/",
+        "tags": [
+          "utau",
+          "lang:es",
+          "vccv"
+        ]
+      },
+      {
+        "id": "suigin-koora-tp-cvvc-v1",
+        "names": {
+          "en": "Suigin Koora Toki Pona CVVC V1",
+          "ja": "水銀コーラ Toki Pona CVVC V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/tp-cvvc-v1/",
+        "tags": [
+          "utau",
+          "lang:tp",
+          "cvvc"
+        ]
+      },
+      {
+        "id": "suigin-koora-lis-vcv-v1",
+        "names": {
+          "en": "Suigin Koora Lisatopian VCV V1",
+          "ja": "水銀コーラ Lisatopian VCV V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/suigin-koora/lis-vcv-v1/",
+        "tags": [
+          "utau",
+          "lang:lis",
+          "vcv"
+        ]
+      }
+    ]
   }
 ]
