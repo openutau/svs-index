@@ -1,0 +1,19 @@
+[
+  {
+    "id": "synth-v",
+    "names": {
+      "en": "Synthesizer V"
+    },
+    "category": "host",
+    "developers": [
+      "Dreamtonics Co., Ltd."
+    ],
+    "tags": [
+      "lang:ja",
+      "lang:zh",
+      "lang:en",
+      "commercial",
+      "synthv"
+    ]
+  }
+]
