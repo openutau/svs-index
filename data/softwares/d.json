@@ -16,5 +16,21 @@
       "windows",
       "deepvocal"
     ]
+  },
+  {
+    "id": "diffsinger",
+    "names": {
+      "en": "DiffSinger"
+    },
+    "category": "host",
+    "developers": [
+      "MoonInTheRiver",
+      "OpenVPI"
+    ],
+    "homepage_url": "https://github.com/openvpi/DiffSinger",
+    "tags": [
+      "open-source",
+      "ai"
+    ]
   }
 ]
