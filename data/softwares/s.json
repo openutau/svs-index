@@ -1,0 +1,20 @@
+[
+  {
+    "id": "sinsy",
+    "names": {
+      "en": "Sinsy",
+      "ja": "しぃんしぃ"
+    },
+    "category": "host",
+    "developers": [
+      "Nagoya Institute of Technology"
+    ],
+    "homepage_url": "https://www.sinsy.jp/",
+    "tags": [
+      "ai",
+      "lang:ja",
+      "lang:zh",
+      "lang:en"
+    ]
+  }
+]
