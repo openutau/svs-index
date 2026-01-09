@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cevioai",
+    "names": {
+      "en": "CeVIO AI"
+    },
+    "category": "host",
+    "developers": [
+      "Techno-Speech",
+      "V-Sync"
+    ],
+    "homepage_url": "https://cevio.jp/",
+    "download_page_url": "https://cevio.jp/downloads/cevio_ai/",
+    "tags": [
+      "commercial",
+      "windows",
+      "en",
+      "ja",
+      "cn"
+    ]
+  }
+]
