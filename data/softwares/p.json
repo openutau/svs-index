@@ -1,0 +1,20 @@
+[
+  {
+    "id": "piapro-studio",
+    "names": {
+      "en": "Piapro Studio",
+      "ja": "ピアプロスタジオ"
+    },
+    "category": "host",
+    "developers": [
+      "Crypton Future Media, Inc."
+    ],
+    "homepage_url": "https://piaprostudio.com/",
+    "tags": [
+      "lang:ja",
+      "commercial",
+      "windows",
+      "mac"
+    ]
+  }
+]
