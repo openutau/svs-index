@@ -199,5 +199,36 @@
     ],
     "homepage_url": "http://nemurion.com/",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/380"
+  },
+  {
+    "id": "tennaloid",
+    "names": {
+      "en": "Tennaloid"
+    },
+    "owners": [
+      "electrovoid"
+    ],
+    "authors": [
+      "Toby Fox"
+    ],
+    "variants": [
+      {
+        "id": "tennaloid-v2-3-1",
+        "names": {
+          "en": "Tennaloid v2.3.1"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/14zfJH7uaXf5qNEJBHB0jOCTj1D9uC5xJ/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "lang:en",
+          "c+v",
+          "openutau",
+          "jinriki"
+        ]
+      }
+    ],
+    "homepage_url": "https://drive.google.com/drive/folders/1JVmxSqyR09PoowWwC7IVh0vheSrQjOk4",
+    "profile_image_url": "https://vocadb.net/Artist/Picture/167836?v=10"
   }
 ]
