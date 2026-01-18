@@ -860,5 +860,34 @@
     ],
     "homepage_url": "https://ec.crypton.co.jp/pages/prod/virtualsinger/cv03",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/2"
+  },
+  {
+    "id": "mizuki-mae",
+    "names": {
+      "en": "Mizuki Mae",
+      "ja": "美月マエ"
+    },
+    "owners": [
+      "KougaP"
+    ],
+    "authors": [
+      "KougaP"
+    ],
+    "variants": [
+      {
+        "id": "mizuki-mae-ja-cvvc-v1",
+        "names": {
+          "en": "Mizuki Mae JA CVVC V1"
+        },
+        "file_url": null,
+        "download_page_url": "https://headhunter4621.github.io/singers/mizuki-mae/ja-cvvc-v1/",
+        "tags": [
+          "utau",
+          "lang:ja",
+          "cvvc"
+        ]
+      }
+    ],
+    "homepage_url": "https://headhunter4621.github.io/singers/mizuki-mae/"
   }
 ]
