@@ -107,7 +107,7 @@ function renderSoftware(s: Software) {
                 (mirror) => `
           <div class="mirror-item">
             <div class="mirror-url">${link(mirror.url)}</div>
-            ${mirror.hash ? `<div class="mirror-hash"><small>SHA256: ${mirror.hash}</small></div>` : ''}
+            ${mirror.hash ? `<div class="mirror-hash"><small>hash: ${mirror.hash}</small></div>` : ''}
           </div>
         `
               )
