@@ -1,0 +1,20 @@
+[
+  {
+    "id": "neutrino",
+    "names": {
+      "en": "NEUTRINO"
+    },
+    "category": "host",
+    "developers": [
+      "STUDIO NEUTRINO"
+    ],
+    "homepage_url": "https://studio-neutrino.com/",
+    "tags": [
+      "windows",
+      "mac",
+      "linux",
+      "commercial",
+      "ai"
+    ]
+  }
+]
