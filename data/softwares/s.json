@@ -16,5 +16,26 @@
       "lang:zh",
       "lang:en"
     ]
+  },
+  {
+    "id": "synth-v-studio-2",
+    "names": {
+      "en": "Synthesizer V Studio 2"
+    },
+    "category": "host",
+    "developers": [
+      "Dreamtonics, Co., Ltd."
+    ],
+    "homepage_url": "https://dreamtonics.com/synthesizerv/",
+    "tags": [
+      "lang:ja",
+      "lang:n",
+      "lang:zh",
+      "lang:es",
+      "lang:ko",
+      "ai",
+      "synthv",
+      "commercial"
+    ]
   }
 ]
