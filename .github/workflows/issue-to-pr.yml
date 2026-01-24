@@ -2,7 +2,7 @@ name: Process Submission Issue
 
 on:
   issues:
-    types: [opened, reopened]
+    types: [opened, reopened, labeled]
 
 permissions:
   contents: write
@@ -10,8 +10,11 @@ permissions:
   pull-requests: write
 
 jobs:
-  process:
-    if: contains(github.event.issue.labels.*.name, 'submission')
+  validate:
+    name: Validate submission (dry run)
+    if: |
+      (github.event.action == 'opened' || github.event.action == 'reopened') &&
+      contains(github.event.issue.labels.*.name, 'submission')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,24 +23,85 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24.12.0'
-          cache: 'npm'
+          node-version: "24.12.0"
+          cache: "npm"
 
       - name: Install dependencies
         run: |
           npm ci
           npm install --no-save ajv ajv-formats
 
-      - name: Process issue
+      - name: Dry-run Process issue (validate only)
         id: process
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRY_RUN: "1"
+        run: node scripts/process-issue.js
+        continue-on-error: true
+
+      - name: Comment on validation success
+        if: steps.process.outcome == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Validation passed for this submission. No pull request was created (dry-run). Add the "approved" label to create and merge the PR.'
+            })
+
+      - name: Comment on validation failure
+        if: steps.process.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ There was an error validating your submission. Please check the validation errors in the Actions log and update your submission.'
+            })
+
+  approve:
+    name: Create PR and merge when approved
+    if: |
+      github.event.action == 'labeled' &&
+      (github.event.label.name == 'approved' || contains(github.event.issue.labels.*.name, 'approved')) &&
+      contains(github.event.issue.labels.*.name, 'submission')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24.12.0"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: |
+          npm ci
+          npm install --no-save ajv ajv-formats
+
+      - name: Process issue (create files)
+        id: process
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/process-issue.js
         continue-on-error: true
 
       - name: Create Pull Request
+        id: create_pr
         if: steps.process.outcome == 'success'
         uses: peter-evans/create-pull-request@v6
         with:
@@ -47,13 +111,11 @@ jobs:
           body: |
             Auto-generated PR from issue #${{ github.event.issue.number }}
 
-            Please review the changes before merging.
-
             Closes #${{ github.event.issue.number }}
           labels: submission
 
-      - name: Comment on success
-        if: steps.process.outcome == 'success'
+      - name: Comment on success (PR created)
+        if: steps.create_pr && steps.create_pr.outcome == 'success'
         uses: actions/github-script@v7
         with:
           script: |
@@ -61,8 +123,38 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '✅ Thank you for your submission! A pull request has been created automatically. It will be reviewed shortly.'
+              body: '✅ A pull request has been created and will be merged automatically where possible.'
             })
+
+      - name: Attempt merge
+        if: steps.create_pr && steps.create_pr.outcome == 'success'
+        uses: actions/github-script@v7
+        env:
+          PR_NUMBER: ${{ steps.create_pr.outputs.pull-request-number }}
+        with:
+          script: |
+            const prNum = parseInt(process.env.PR_NUMBER, 10);
+            try {
+              await github.rest.pulls.merge({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: prNum,
+                merge_method: 'merge'
+              });
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `✅ Pull request #${prNum} merged successfully.`
+              });
+            } catch (e) {
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: `⚠️ Pull request #${prNum} could not be merged automatically: ${e.message}`
+              });
+            }
 
       - name: Comment on failure
         if: steps.process.outcome == 'failure'

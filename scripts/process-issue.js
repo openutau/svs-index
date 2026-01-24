@@ -8,6 +8,8 @@ import RJSON from 'relaxed-json';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const dryRun = process.env.DRY_RUN === '1' || process.env.DRY_RUN === 'true';
+
 // GitHub context from environment (with fallbacks from GITHUB_EVENT_PATH)
 let issueBody = process.env.ISSUE_BODY || '';
 let issueTitle = process.env.ISSUE_TITLE || '';
@@ -468,12 +470,17 @@ async function main() {
     }
   }
 
-  // Append and write
-  existing.push(obj);
-  fs.writeFileSync(targetFile, JSON.stringify(existing, null, 2) + '\n', 'utf8');
+  // Append and write (skip actual write in dry-run mode)
+  if (dryRun) {
+    console.log(`DRY RUN: would add ${category} "${obj.id}" to ${firstLetter}.json`);
+    console.log(JSON.stringify(obj, null, 2));
+  } else {
+    existing.push(obj);
+    fs.writeFileSync(targetFile, JSON.stringify(existing, null, 2) + '\n', 'utf8');
 
-  console.log(`✅ Successfully added ${category} "${obj.id}" to ${firstLetter}.json`);
-  console.log(JSON.stringify(obj, null, 2));
+    console.log(`✅ Successfully added ${category} "${obj.id}" to ${firstLetter}.json`);
+    console.log(JSON.stringify(obj, null, 2));
+  }
 }
 
 async function run() {
