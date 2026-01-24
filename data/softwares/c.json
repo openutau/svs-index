@@ -1,0 +1,21 @@
+[
+  {
+    "id": "cs7",
+    "names": {
+      "en": "CeVIO Creative Studio 7"
+    },
+    "category": "host",
+    "developers": [
+      "Techno-Speech",
+      "V-Sync"
+    ],
+    "homepage_url": "https://cevio.jp/",
+    "download_page_url": "https://cevio.jp/downloads/",
+    "tags": [
+      "commercial",
+      "windows",
+      "en",
+      "ja"
+    ]
+  }
+]
