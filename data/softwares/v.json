@@ -121,5 +121,22 @@
       "windows",
       "mac"
     ]
+  },
+  {
+    "id": "voisona",
+    "names": {
+      "en": "VoiSona"
+    },
+    "category": "host",
+    "developers": [
+      "Techno-Speech"
+    ],
+    "homepage_url": "https://voisona.com/song/",
+    "tags": [
+      "commercial",
+      "subscription",
+      "windows",
+      "mac"
+    ]
   }
 ]
