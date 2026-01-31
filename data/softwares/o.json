@@ -42,5 +42,61 @@
       "diffsinger",
       "open-source"
     ]
+  },
+  {
+    "id": "g2p-cmudict-07b",
+    "names": {
+      "en": "g2p-cmudict-07b"
+    },
+    "category": "host_extension",
+    "developers": [
+      "StAkira"
+    ],
+    "homepage_url": "https://github.com/openutau/g2p",
+    "download_page_url": null,
+    "tags": [
+      "openutau",
+      "oudep",
+      "g2p"
+    ],
+    "versions": [
+      {
+        "version": "1.0",
+        "mirrors": [
+          {
+            "url": "https://github.com/openutau/g2p/releases/download/1.0/g2p-cmudict-07b_v1.0.oudep",
+            "hash": "sha256:dbf4bcc1577c4c5640ba3db3bd299ab73057b4fdf33dde735596cb318f827e47"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "g2p-ds-cmudict-07b",
+    "names": {
+      "en": "g2p-ds-cmudict-07b"
+    },
+    "category": "host_extension",
+    "developers": [
+      "StAkira"
+    ],
+    "homepage_url": "https://github.com/openutau/g2p",
+    "download_page_url": null,
+    "tags": [
+      "openutau",
+      "oudep",
+      "g2p"
+    ],
+    "versions": [
+      {
+        "version": "1.0",
+        "mirrors": [
+          {
+            "url": "https://github.com/openutau/g2p/releases/download/1.0/g2p-ds-cmudict-07b_v1.0.oudep",
+            "hash": "sha256:bd721cb86b66a8e93b02aa071913e1204991f2e531fd45bdea23b47aa29a67e6"
+          }
+        ]
+      }
+    ]
   }
 ]
