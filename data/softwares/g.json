@@ -58,7 +58,7 @@
   {
     "id": "game",
     "names": {
-      "en": "Generative Adaptive MIDI Extractor."
+      "en": "GAME: Generative Adaptive MIDI Extractor"
     },
     "category": "host_extension",
     "developers": [
