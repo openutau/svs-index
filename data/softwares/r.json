@@ -1,0 +1,16 @@
+[
+  {
+    "id": "rmvpe",
+    "names": {
+      "en": "RMVPE: A Robust Model for Vocal Pitch Estimation in Polyphonic Music"
+    },
+    "category": "host_extension",
+    "developers": [
+      "Dream-High",
+      "yxlllc"
+    ],
+    "tags": [
+      "oudep"
+    ]
+  }
+]
