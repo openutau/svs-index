@@ -104,5 +104,95 @@
     ],
     "homepage_url": "https://zero-g.co.uk/collections/vocal/products/vocaloid2-prima",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/389"
+  },
+  {
+    "id": "pugwashloid",
+    "names": {
+      "en": "PugwashLoid"
+    },
+    "owners": [
+      "Pugwashno1fan"
+    ],
+    "authors": [
+      "Pugwashno1fan"
+    ],
+    "variants": [
+      {
+        "id": "pugwashloid-og-cv",
+        "names": {
+          "en": "PugwashLoid Original CV"
+        },
+        "file_url": "https://www.mediafire.com/file/7kvnz5gu1a3x3nk/PugwashLoid_CV2026-01-27T23_55_23.585Z.zip/file",
+        "download_page_url": "https://pugwashno1fansutausite.carrd.co/",
+        "tags": [
+          "CV",
+          "utau",
+          "lang:jp",
+          "romaji"
+        ]
+      },
+      {
+        "id": "pugwashloid-updated-cv",
+        "names": {
+          "en": "PugwashLoid Updated CV"
+        },
+        "file_url": "https://www.mediafire.com/file/7kvnz5gu1a3x3nk/PugwashLoid_CV2026-01-27T23_55_23.585Z.zip/file",
+        "download_page_url": "https://pugwashno1fansutausite.carrd.co/",
+        "tags": [
+          "CV",
+          "utau",
+          "lang:jp",
+          "romaji"
+        ]
+      },
+      {
+        "id": "pugwashloid-rentan",
+        "names": {
+          "en": "PugwashLoid Rentan CV"
+        },
+        "file_url": "https://www.mediafire.com/file/wb16if3d7ve0mqb/Pachan+Rentaan2026-02-27T02_21_26.823Z.zip/file",
+        "download_page_url": "https://pugwashno1fansutausite.carrd.co/",
+        "tags": [
+          "CV",
+          "rentanCV",
+          "rentan",
+          "utau",
+          "lang:jp",
+          "romaji"
+        ]
+      },
+      {
+        "id": "pugwashloid-cvvc",
+        "names": {
+          "en": "PugwashLoid CVVC"
+        },
+        "file_url": "https://www.mediafire.com/file/mpfliq9ply01w1k/pachan_cvvc_reoto.zip/file",
+        "download_page_url": "https://pugwashno1fansutausite.carrd.co/",
+        "tags": [
+          "CVVC",
+          "utau",
+          "lang:jp",
+          "romakana",
+          "kanaalis",
+          "romaenc"
+        ]
+      },
+      {
+        "id": "pugwashloid-en-c-plus-v",
+        "names": {
+          "en": "PugwashLoid C+V English"
+        },
+        "file_url": "https://www.mediafire.com/file/pxu09hgi1t9bqf1/pachan_c_%252B_v_english2026-03-17T09_45_25.191Z2026-03-17T11_24_07.452Z.zip/file",
+        "download_page_url": "https://pugwashno1fansutausite.carrd.co/",
+        "tags": [
+          "c+v",
+          "utau",
+          "lang:en",
+          "ARPAsing"
+        ]
+      }
+    ],
+    "homepage_url": "https://pugwashno1fansutausite.carrd.co/",
+    "profile_image_url": "https://static.wikia.nocookie.net/utau/images/0/0e/Pugwashloid1.png/revision/latest?cb=20260128002845"
   }
 ]
