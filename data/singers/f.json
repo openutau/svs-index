@@ -1,0 +1,31 @@
+[
+  {
+    "id": "franz",
+    "names": {
+      "en": "franz",
+      "ja": "フランシ"
+    },
+    "owners": [
+      "Franz (@franzsworld)"
+    ],
+    "authors": [
+      "Franz (@franzsworld)"
+    ],
+    "variants": [
+      {
+        "id": "franz-1",
+        "names": {
+          "en": "franz",
+          "ja": "フランシ"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1qGbFI61BG4V5j0gAfNre_JcCcRcZIqWF/view?usp=sharing",
+        "tags": [
+          "utau",
+          "male",
+          "openutau"
+        ]
+      }
+    ]
+  }
+]
