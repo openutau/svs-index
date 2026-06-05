@@ -68,11 +68,11 @@ test('variant id must start with the singer id prefix', () => {
   assert.equal(err.params.singerId, 'test-singer');
 });
 
-test('variant needs at least one non-null url', () => {
+test('a variant with no url is allowed', () => {
   const s = validSinger();
   s.variants[0].file_url = null;
   s.variants[0].download_page_url = null;
-  assert.ok(hasCode(validateSinger(s), 'variant.url.required'));
+  assert.deepEqual(validateSinger(s), []);
 });
 
 test('duplicate variant ids are rejected', () => {
@@ -81,20 +81,20 @@ test('duplicate variant ids are rejected', () => {
   assert.ok(hasCode(validateSinger(s), 'variant.id.duplicate'));
 });
 
-test('a long tag fails unless whitelisted', () => {
+test('a tag over 16 chars fails unless whitelisted', () => {
   const s = validSinger();
-  s.variants[0].tags = ['synthesizer-v'];
+  s.variants[0].tags = ['single-voice-color']; // 18 chars
   assert.ok(hasCode(validateSinger(s), 'tag.tooLong'));
 
   const whitelisted = validateSinger(s, {
-    tagWhitelist: new Set(['synthesizer-v']),
+    tagWhitelist: new Set(['single-voice-color']),
   });
   assert.ok(!hasCode(whitelisted, 'tag.tooLong'));
 });
 
-test('a short tag is always allowed', () => {
+test('a tag of 16 chars or fewer is always allowed', () => {
   const s = validSinger();
-  s.variants[0].tags = ['vocaloid'];
+  s.variants[0].tags = ['synthesizer-v', 'sixteen-char-tag']; // 13 and 16 chars
   assert.ok(!hasCode(validateSinger(s), 'tag.tooLong'));
 });
 

@@ -13,7 +13,7 @@
     ],
     "variants": [
       {
-        "id": "lem-v4-phascogale",
+        "id": "lem-shapeshifter-v4-phascogale",
         "names": {
           "en": "Lem V4 Phascogale",
           "ja": "澪夢レムV4★ファスコガーレ"
@@ -27,7 +27,7 @@
         ]
       },
       {
-        "id": "lem-v4-quoll",
+        "id": "lem-shapeshifter-v4-quoll",
         "names": {
           "en": "Lem V4 Quoll",
           "ja": "澪夢レムV4★フクロネコ"
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "id": "lem-v4-civet",
+        "id": "lem-shapeshifter-v4-civet",
         "names": {
           "en": "Lem V4 Civet",
           "ja": "澪夢レムV4★シベット"
@@ -55,7 +55,7 @@
         ]
       },
       {
-        "id": "lem-vccv-mongoose",
+        "id": "lem-shapeshifter-vccv-mongoose",
         "names": {
           "en": "Lem VCCV / CVVC Mongoose",
           "ja": "澪夢レムCVVC★マングース"
@@ -71,7 +71,7 @@
         ]
       },
       {
-        "id": "lem-v3-weasel",
+        "id": "lem-shapeshifter-v3-weasel",
         "names": {
           "en": "Lem V3 weasel",
           "ja": "澪夢レムV3★イイズナ"
@@ -86,7 +86,7 @@
         ]
       },
       {
-        "id": "lem-diffsinger-marten",
+        "id": "lem-shapeshifter-diffsinger-marten",
         "names": {
           "en": "Lem Diffsinger Marten",
           "ja": "澪夢レムDS★テン"

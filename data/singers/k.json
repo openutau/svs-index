@@ -203,8 +203,7 @@
         "download_page_url": null,
         "tags": [
           "utau",
-          "lang:ja",
-          "not up on website / archive"
+          "lang:ja"
         ]
       },
       {
@@ -217,7 +216,6 @@
         "tags": [
           "utau",
           "lang:ja",
-          "not up on website",
           "unofficial"
         ]
       }
@@ -450,7 +448,7 @@
           "vcv",
           "monopitch",
           "kana",
-          "despite the name this is NOT a chinese voicebank"
+          "lang:ja"
         ]
       },
       {
@@ -495,8 +493,7 @@
           "utau",
           "cv",
           "monopitch",
-          "kana",
-          "beginner friendly"
+          "kana"
         ]
       },
       {
@@ -524,11 +521,9 @@
         "download_page_url": "https://drive.google.com/file/d/1R5EcP6PHhHkFTb0qTB-DwGK8Y7xX1wsC/view",
         "tags": [
           "utau",
-          "integration voicebank",
-          "mostly multipitch",
-          "vcv",
-          "vcv with breathless consonant endings",
-          "large file"
+          "bundle",
+          "multipitch",
+          "vcv"
         ]
       }
     ],

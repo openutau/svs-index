@@ -19,7 +19,7 @@ We welcome contributions! The flow differs slightly for singers vs software.
 3. **Step 2 - Variants**: Add one or more voicebank variants:
    - Variant IDs must start with the singer ID (e.g., `singer-id-v1`, `singer-id-v2`)
    - Each variant needs names (English required, other languages optional)
-   - At least one of File URL or Download Page URL must be provided per variant
+   - Optional File URL and/or Download Page URL per variant
    - Optional tags (e.g., `vocaloid4`, `bilingual`)
 4. **Step 3 - Generate JSON**: Review validation and copy the complete singer JSON.
 5. Open the [GitHub Singer submission issue](https://github.com/openutau/svs-index/issues/new?template=singer-submission.yml) and paste the JSON into the single field.

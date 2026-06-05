@@ -1,10 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import Ajv from 'ajv';
-import addFormats from 'ajv-formats';
 import RJSON from 'relaxed-json';
 import { validateSinger } from '../shared/singer-validation.js';
+import { validateSoftware } from '../shared/software-validation.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -231,63 +230,6 @@ function buildSoftwareObject(data) {
   return obj;
 }
 
-function toDotPath(instancePath, params) {
-  // Convert Ajv instancePath "/names/en" to "names.en" and handle required
-  const base = (instancePath || '/')
-    .replace(/^\//, '')
-    .replace(/\//g, '.')
-    .trim();
-  if (params && params.missingProperty) {
-    return (base ? base + '.' : '') + params.missingProperty;
-  }
-  return base || '<root>';
-}
-
-function formatAjvErrors(errors) {
-  return (errors || [])
-    .map((err) => {
-      const path = toDotPath(err.instancePath, err.params);
-      const details = err.params ? ` (${JSON.stringify(err.params)})` : '';
-      return `- ${path}: ${err.message}${details}`;
-    })
-    .join('\n');
-}
-
-function validateSchema(obj, schemaPath) {
-  const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
-  const ajv = new Ajv({ strict: false });
-  addFormats(ajv);
-
-  // Validate single item against the schema's items definition
-  const itemSchema = schema.items || schema;
-  const validate = ajv.compile(itemSchema);
-  const valid = validate(obj);
-
-  if (!valid) {
-    const formatted = formatAjvErrors(validate.errors);
-    // Emit GitHub Actions annotations for each error
-    for (const err of validate.errors || []) {
-      const p = toDotPath(err.instancePath, err.params);
-      const msg = `${err.message}${err.params ? ' ' + JSON.stringify(err.params) : ''}`;
-      console.log(`::error title=Schema validation failed,path=${p}::${msg}`);
-    }
-    const err = new Error(
-      'Schema validation failed. Please correct the following:\n' +
-      formatted +
-      '\n\nSee the schema file and README for required fields.'
-    );
-    err.details = {
-      formatted,
-      errors: (validate.errors || []).map(e => ({
-        path: toDotPath(e.instancePath, e.params),
-        message: e.message,
-        params: e.params || {}
-      }))
-    };
-    throw err;
-  }
-}
-
 function loadTagWhitelist() {
   try {
     const p = path.join(__dirname, '..', 'data', 'tag-whitelist.json');
@@ -308,8 +250,6 @@ function singerErrorMessage(err) {
       return `Variant id must start with the singer id prefix "${p.singerId}-".`;
     case 'variant.id.duplicate':
       return `Duplicate variant id "${p.id}" within the singer.`;
-    case 'variant.url.required':
-      return 'Provide at least one of file_url or download_page_url (non-null).';
     case 'tag.tooLong':
       return `Tag "${p.tag}" exceeds ${p.max} characters and is not in the whitelist.`;
     default:
@@ -317,12 +257,24 @@ function singerErrorMessage(err) {
   }
 }
 
-// Wrap the shared module's structured errors in the Error shape the issue
+// English rendering of a structured Software error from the shared module.
+function softwareErrorMessage(err) {
+  const p = err.params || {};
+  switch (err.code) {
+    case 'software.id.exists':
+      return `Software id "${p.id}" already exists.`;
+    default:
+      return p.message || err.code;
+  }
+}
+
+// Wrap a shared module's structured errors in the Error shape the issue
 // reporter (run()) already knows how to render, plus GitHub annotations.
-function buildSingerValidationError(errors) {
+// `messageFor` maps a structured error to an English message.
+function buildValidationError(errors, messageFor) {
   const mapped = errors.map((e) => ({
     path: e.path,
-    message: singerErrorMessage(e),
+    message: messageFor(e),
     params: e.params || {},
   }));
   for (const e of mapped) {
@@ -394,7 +346,6 @@ async function detectCategory() {
 async function main() {
   const category = await detectCategory();
   const dataDir = path.join(__dirname, '..', 'data', `${category}s`);
-  const schemaPath = path.join(__dirname, '..', 'data', `${category}-schema.json`);
 
   const parsedData = parseIssueForm(issueBody);
   const obj = category === 'singer' ? buildSingerObject(parsedData) : buildSoftwareObject(parsedData);
@@ -511,12 +462,13 @@ async function main() {
       tagWhitelist: loadTagWhitelist(),
     });
     if (errors.length) {
-      throw buildSingerValidationError(errors);
+      throw buildValidationError(errors, singerErrorMessage);
     }
   } else {
-    validateSchema(obj, schemaPath);
-    if (existing.some((item) => item.id === obj.id)) {
-      throw new Error(`ID "${obj.id}" already exists in ${firstLetter}.json`);
+    const existingIds = new Set(existing.map((s) => s.id).filter(Boolean));
+    const errors = validateSoftware(obj, { existingIds });
+    if (errors.length) {
+      throw buildValidationError(errors, softwareErrorMessage);
     }
   }
 

@@ -37,7 +37,7 @@ package you also need `versions` and the `oudep` tag.
 
 | Field | Required | Notes |
 | --- | --- | --- |
-| `id` | yes | Lowercase, hyphen-separated (`^[a-z0-9]+(?:-[a-z0-9]+)*$`). Must be unique across all software. **Must equal the `id` inside the package's `oudep.yaml`.** |
+| `id` | yes | Lowercase alphanumeric segments joined by `-`, `_`, or `.` (`^[a-z0-9]+(?:[._-][a-z0-9]+)*$`). Must be unique across all software. **Must equal the `id` inside the package's `oudep.yaml`.** |
 | `names` | yes | Map of ISO 639-1 language code → name. `en` is required. |
 | `category` | yes | One of `host`, `host_extension`, `utility`. Dependencies are usually `host_extension`. |
 | `developers` | yes | Array of author / team names. |
@@ -140,8 +140,11 @@ installs that don't line up. Before opening the PR, confirm:
 1. Fork the repository and create a branch.
 2. Add or edit your entry in the matching `data/softwares/<letter>.json` file,
    keeping the file a valid JSON array.
-3. Validate the file against
-   [`data/software-schema.json`](../data/software-schema.json) and the
-   [contract](#the-package--entry-contract) above.
-4. Open a pull request. Automation validates the data; a maintainer reviews and
-   merges. Once merged and the registry rebuilds, OpenUtau will list the package.
+3. **Validate it before opening the PR**: run `npm run validate` (checks every data
+   file against [`data/software-schema.json`](../data/software-schema.json) and the
+   shared validation rules), and walk the
+   [contract](#the-package--entry-contract) above by hand — the schema can't check
+   the `oudep.yaml` ↔ entry match or the hash for you.
+4. Open a pull request. CI re-runs the validation on the data files you changed and
+   gates the PR; a maintainer then reviews and merges. On merge, the deploy build
+   rebuilds the registry and OpenUtau will list the package.

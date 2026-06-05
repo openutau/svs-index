@@ -36,7 +36,7 @@ async function loadTagWhitelist() {
     }
   } catch (err) {
     console.warn(
-      'Could not load tag whitelist; all tags will be subject to 8-character limit.',
+      'Could not load tag whitelist; all tags will be subject to 16-character limit.',
       err
     );
   }
@@ -79,8 +79,6 @@ function messageForError(err: SingerValidationError, t: Translations): string {
       return `${t.mustStartWith} "${String(p.singerId)}-"`;
     case 'variant.id.duplicate':
       return t.duplicate;
-    case 'variant.url.required':
-      return t.atLeastOne;
     case 'tag.tooLong':
       return `Tag "${String(p.tag)}" > ${String(p.max)} chars, not whitelisted`;
   }
@@ -294,7 +292,7 @@ function addVariantToDOM(index: number): void {
         <label>Tags</label>
         <div class="tags-container" data-index="${index}"></div>
         <button class="btn-small btn-add-tag" data-index="${index}">+ Add Tag</button>
-        <small>Optional tags (e.g., "vocaloid4", "lang:en"). Tags should be 8 characters or less unless <a href="https://github.com/openutau/svs-index/blob/main/data/tag-whitelist.json" target="_blank" rel="noopener noreferrer">whitelisted</a>.</small>
+        <small>Optional tags (e.g., "vocaloid4", "lang:en"). Tags should be 16 characters or less unless <a href="https://github.com/openutau/svs-index/blob/main/data/tag-whitelist.json" target="_blank" rel="noopener noreferrer">whitelisted</a>.</small>
       </div>
     </div>
   `;

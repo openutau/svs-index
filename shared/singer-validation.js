@@ -44,7 +44,7 @@ function toDotPath(instancePath, params) {
 }
 
 const ID_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const TAG_MAX_LENGTH = 8;
+const TAG_MAX_LENGTH = 16;
 
 /**
  * Validate a (possibly partial) Singer.
@@ -96,15 +96,6 @@ export function validateSinger(singer, ctx = {}) {
         });
       }
       seenVariantIds.add(vid);
-    }
-
-    // At least one of file_url / download_page_url must be non-null.
-    if (!v.file_url && !v.download_page_url) {
-      errors.push({
-        path: `variants.${index}`,
-        code: 'variant.url.required',
-        params: { index },
-      });
     }
 
     // Tags over the length limit must be whitelisted.
