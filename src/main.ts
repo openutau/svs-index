@@ -44,6 +44,8 @@ function renderApp() {
           <a href="submit.html">${t.submitSinger}</a>
           <span class="separator">|</span>
           <a href="https://github.com/openutau/svs-index/issues/new?template=software-submission.yml" target="_blank">${t.submitSoftware}</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/openutau/svs-index/blob/main/docs/oudep-packages.md" target="_blank">${t.submitOpenUtauPackage}</a>
         </div>
       </div>
       <div id="language-selector-container"></div>

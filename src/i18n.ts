@@ -13,6 +13,7 @@ export interface Translations {
   // Header links
   submitSinger: string;
   submitSoftware: string;
+  submitOpenUtauPackage: string;
 
   // Category selector
   singers: string;
@@ -135,6 +136,7 @@ export const translations: Record<Language, Translations> = {
 
     submitSinger: 'Submit Singer',
     submitSoftware: 'Submit Software',
+    submitOpenUtauPackage: 'Submit oudep',
 
     singers: 'Singers',
     softwares: 'Softwares',
@@ -253,6 +255,7 @@ export const translations: Record<Language, Translations> = {
 
     submitSinger: '歌手を投稿',
     submitSoftware: 'ソフトウェアを投稿',
+    submitOpenUtauPackage: 'oudepを投稿',
 
     singers: '歌手',
     softwares: 'ソフトウェア',
@@ -370,6 +373,7 @@ export const translations: Record<Language, Translations> = {
 
     submitSinger: '提交歌手',
     submitSoftware: '提交软件',
+    submitOpenUtauPackage: '提交 oudep',
 
     singers: '歌手',
     softwares: '软件',
