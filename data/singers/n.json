@@ -185,5 +185,62 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_ca7987469fbe48debbf00500dde92242~mv2.jpg/v1/crop/x_0,y_16,w_428,h_428/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Nevio%20Vecoli%20Ref%20Sheet_edited.jpg"
+  },
+  {
+    "id": "nishiren",
+    "names": {
+      "en": "Nishiren Gard",
+      "ja": "西蓮ガルド",
+      "zh": "西莲噶流斗"
+    },
+    "owners": [
+      "Gardanana"
+    ],
+    "authors": [
+      "Gardanana"
+    ],
+    "variants": [
+      {
+        "id": "nishiren-utau",
+        "names": {
+          "en": "Nishiren UTAU"
+        },
+        "file_url": null,
+        "download_page_url": "https://gardanana.nekoweb.org/download/",
+        "tags": [
+          "utau",
+          "openutau",
+          "cv",
+          "vcv",
+          "cvvc",
+          "monopitch",
+          "multipitch",
+          "lang:ja",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "nishiren-diffsinger",
+        "names": {
+          "en": "Nishiren Diffsinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://github.com/Gardanana/Nishiren-AI-Diffsinger",
+        "tags": [
+          "diffsinger",
+          "openutau",
+          "lang:ja",
+          "lang:en",
+          "lang:zh",
+          "lang:ko",
+          "lang:es",
+          "lag:it",
+          "lang:fr",
+          "lang:th"
+        ]
+      }
+    ],
+    "homepage_url": "https://gardanana.nekoweb.org/",
+    "profile_image_url": "https://gardanana.nekoweb.org/gallery/portrait-main.png"
   }
 ]
