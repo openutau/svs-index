@@ -5,6 +5,12 @@ import {
   getTranslations,
   createLanguageSelector,
 } from './i18n';
+import { validateSinger } from '../shared/singer-validation.js';
+import type {
+  SingerValidationError,
+  SingerValidationContext,
+} from '../shared/singer-validation.js';
+import type { Translations } from './i18n';
 
 // --- Singer Data ---
 interface SingerNames {
@@ -57,17 +63,46 @@ async function loadExistingSingerIds() {
   }
 }
 
+// Environment-bound inputs the shared validation module cannot read itself.
+function validationContext(): SingerValidationContext {
+  return { existingIds: existingSingerIds, tagWhitelist };
+}
+
+// Map one structured error from the shared module onto a localized message,
+// reusing the existing i18n keys.
+function messageForError(err: SingerValidationError, t: Translations): string {
+  const p = err.params || {};
+  switch (err.code) {
+    case 'singer.id.exists':
+      return t.singerIdExists;
+    case 'variant.id.prefix':
+      return `${t.mustStartWith} "${String(p.singerId)}-"`;
+    case 'variant.id.duplicate':
+      return t.duplicate;
+    case 'variant.url.required':
+      return t.atLeastOne;
+    case 'tag.tooLong':
+      return `Tag "${String(p.tag)}" > ${String(p.max)} chars, not whitelisted`;
+  }
+  if (err.code === 'schema.minLength' && err.path === 'id')
+    return t.singerIdMinLength;
+  if (err.code === 'schema.pattern') return t.singerIdPattern;
+  if (err.code === 'schema.required') {
+    if (err.path.endsWith('.en')) return t.required;
+    if (err.path === 'id' || err.path.endsWith('.id'))
+      return t.singerIdRequired;
+    return (p.message as string) || t.required;
+  }
+  if (err.code === 'schema.minItems') return t.atLeastOne;
+  return (p.message as string) || err.code;
+}
+
+// The live "Singer ID" tick: derive id-specific errors from the shared module.
 function validateSingerId(): { valid: boolean; messages: string[] } {
   const t = getTranslations();
-  const messages: string[] = [];
-  const pattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-  if (!singerId) {
-    messages.push(t.singerIdRequired);
-  } else {
-    if (singerId.length < 5) messages.push(t.singerIdMinLength);
-    if (!pattern.test(singerId)) messages.push(t.singerIdPattern);
-    if (existingSingerIds.has(singerId)) messages.push(t.singerIdExists);
-  }
+  const messages = validateSinger(buildSingerDraft(), validationContext())
+    .filter((e) => e.path === 'id')
+    .map((e) => messageForError(e, t));
   const valid = messages.length === 0;
   const statusEl = document.getElementById('singer-id-status');
   if (statusEl) {
@@ -93,14 +128,44 @@ interface Variant {
   tags?: string[];
 }
 
-interface ValidationError {
-  field: string;
-  message: string;
-}
-
 // State management
 let variants: Variant[] = [];
 let variantIdCounter = 0;
+
+// Assemble the current form state into a single Singer object, cleaned so the
+// shared validation module sees the same shape the pipeline will. This is both
+// the validation input and the JSON output.
+function buildSingerDraft(): Record<string, unknown> {
+  const names: Record<string, string> = {};
+  for (const [lang, value] of Object.entries(singerNames)) {
+    const v = (value || '').trim();
+    if (lang && v) names[lang] = v;
+  }
+
+  const cleanVariants = variants.map((v) => {
+    const variant: Record<string, unknown> = {
+      id: v.id,
+      names: v.names,
+      file_url: v.file_url,
+      download_page_url: v.download_page_url,
+    };
+    if (v.tags && v.tags.length) variant.tags = v.tags;
+    return variant;
+  });
+
+  const singer: Record<string, unknown> = {
+    names,
+    owners: owners.map((o) => o.trim()).filter(Boolean),
+    authors: authors.map((a) => a.trim()).filter(Boolean),
+    variants: cleanVariants,
+  };
+  if (singerId) singer.id = singerId;
+  if (homepageUrl && homepageUrl.trim())
+    singer.homepage_url = homepageUrl.trim();
+  if (profileImageUrl && profileImageUrl.trim())
+    singer.profile_image_url = profileImageUrl.trim();
+  return singer;
+}
 
 // Load saved state from localStorage
 function loadState(): void {
@@ -136,135 +201,6 @@ function saveState(): void {
       counter: variantIdCounter,
     })
   );
-}
-
-// Validate a single variant
-function validateVariant(
-  variant: Variant,
-  allVariants: Variant[]
-): ValidationError[] {
-  const errors: ValidationError[] = [];
-
-  // Singer ID dependency
-  const singerValidation = validateSingerId();
-  if (!singerValidation.valid) {
-    errors.push({
-      field: 'singer_id',
-      message: 'Choose a valid singer ID first.',
-    });
-  }
-
-  // Validate ID pattern
-  const idPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-  if (!variant.id) {
-    errors.push({ field: 'id', message: 'Variant ID is required' });
-  } else if (!idPattern.test(variant.id)) {
-    errors.push({
-      field: 'id',
-      message: 'ID must be lowercase letters and numbers separated by hyphens',
-    });
-  } else if (singerValidation.valid && !variant.id.startsWith(singerId + '-')) {
-    errors.push({
-      field: 'id',
-      message: `Variant ID must start with singer ID prefix "${singerId}-"`,
-    });
-  }
-
-  // Variant ID uniqueness among variants
-  if (variant.id) {
-    const dupCount = allVariants.filter((v) => v.id === variant.id).length;
-    if (dupCount > 1) {
-      errors.push({
-        field: 'id',
-        message: 'Variant ID must be unique among variants',
-      });
-    }
-  }
-
-  // Validate names
-  if (!variant.names || Object.keys(variant.names).length === 0) {
-    errors.push({ field: 'names', message: 'At least one name is required' });
-  } else if (!variant.names.en) {
-    errors.push({ field: 'names', message: 'English name (en) is required' });
-  }
-
-  // Validate URLs if provided (not null)
-  if (variant.file_url !== null && variant.file_url) {
-    try {
-      new URL(variant.file_url);
-    } catch {
-      errors.push({ field: 'file_url', message: 'Invalid URL format' });
-    }
-  }
-
-  if (variant.download_page_url !== null && variant.download_page_url) {
-    try {
-      new URL(variant.download_page_url);
-    } catch {
-      errors.push({
-        field: 'download_page_url',
-        message: 'Invalid URL format',
-      });
-    }
-  }
-
-  // Require at least one of file_url or download_page_url
-  if (!variant.file_url && !variant.download_page_url) {
-    errors.push({
-      field: 'urls',
-      message: 'Provide at least one of File URL or Download Page URL',
-    });
-  }
-
-  // Validate tags length
-  if (variant.tags && variant.tags.length > 0) {
-    variant.tags.forEach((tag) => {
-      if (tag.length > 8 && !tagWhitelist.has(tag)) {
-        errors.push({
-          field: 'tags',
-          message: `Tag "${tag}" exceeds 8 characters and is not in whitelist`,
-        });
-      }
-    });
-  }
-
-  return errors;
-}
-
-// Validate all variants
-function validateAllVariants(): {
-  isValid: boolean;
-  errors: ValidationError[];
-} {
-  if (variants.length === 0) {
-    return {
-      isValid: false,
-      errors: [
-        { field: 'general', message: 'At least one variant is required' },
-      ],
-    };
-  }
-
-  const allErrors: ValidationError[] = [];
-  variants.forEach((variant, index) => {
-    const errors = validateVariant(variant, variants);
-    errors.forEach((error) => {
-      allErrors.push({
-        ...error,
-        field: `Variant ${index + 1}: ${error.field}`,
-      });
-    });
-  });
-
-  // Include singer ID errors separately when not valid but variants attempted
-  const singerValidation = validateSingerId();
-  if (!singerValidation.valid) {
-    singerValidation.messages.forEach((m) =>
-      allErrors.unshift({ field: 'Singer ID', message: m })
-    );
-  }
-
-  return { isValid: allErrors.length === 0, errors: allErrors };
 }
 
 // Add a new variant
@@ -664,59 +600,16 @@ function updateOutput(): void {
   const outputEl = document.getElementById('json-output')!;
   const statusEl = document.getElementById('validation-status')!;
   const copyBtn = document.getElementById('copy-json') as HTMLButtonElement;
+  const t = getTranslations();
 
-  const singerValid = validateSingerId().valid;
-  const validation = validateAllVariants();
+  const draft = buildSingerDraft();
+  const errors = validateSinger(draft, validationContext());
 
-  // Validate singer-level fields
-  const singerErrors: string[] = [];
-  if (!singerNames.en || singerNames.en.trim() === '') {
-    singerErrors.push('English name is required');
-  }
-  if (owners.filter((o) => o.trim()).length === 0) {
-    singerErrors.push('At least one owner is required');
-  }
-  if (authors.filter((a) => a.trim()).length === 0) {
-    singerErrors.push('At least one author is required');
-  }
+  // Refresh the live singer-id tick.
+  validateSingerId();
 
-  const allValid =
-    validation.isValid && singerValid && singerErrors.length === 0;
-
-  if (allValid) {
-    // Build full singer object
-    const cleanVariants = variants.map((v) => {
-      const clean: any = { ...v };
-      if (clean.tags && clean.tags.length === 0) {
-        delete clean.tags;
-      }
-      return clean;
-    });
-
-    const singer: any = {
-      id: singerId,
-      names: { ...singerNames },
-      owners: owners.filter((o) => o.trim()),
-      authors: authors.filter((a) => a.trim()),
-      variants: cleanVariants,
-    };
-
-    // Add optional fields
-    if (homepageUrl && homepageUrl.trim()) {
-      singer.homepage_url = homepageUrl.trim();
-    }
-    if (profileImageUrl && profileImageUrl.trim()) {
-      singer.profile_image_url = profileImageUrl.trim();
-    }
-
-    // Clean up empty names
-    Object.keys(singer.names).forEach((key) => {
-      if (!singer.names[key] || singer.names[key].trim() === '') {
-        delete singer.names[key];
-      }
-    });
-
-    const json = JSON.stringify(singer, null, 2);
+  if (errors.length === 0) {
+    const json = JSON.stringify(draft, null, 2);
     outputEl.innerHTML = `<code>${escapeHtml(json)}</code>`;
     statusEl.innerHTML =
       '<span class="status-valid">✓ All fields valid - Ready to copy</span>';
@@ -724,14 +617,15 @@ function updateOutput(): void {
   } else {
     outputEl.innerHTML =
       '<code>// Fix validation errors to generate JSON</code>';
-    const allErrors = [...validation.errors];
-    singerErrors.forEach((err) =>
-      allErrors.unshift({ field: 'Singer info', message: err })
-    );
     statusEl.innerHTML = `
       <span class="status-invalid">✗ Validation errors:</span>
       <ul>
-        ${allErrors.map((err) => `<li>${escapeHtml(err.field)}: ${escapeHtml(err.message)}</li>`).join('')}
+        ${errors
+          .map(
+            (err) =>
+              `<li>${escapeHtml(err.path)}: ${escapeHtml(messageForError(err, t))}</li>`
+          )
+          .join('')}
       </ul>
     `;
     copyBtn.disabled = true;
@@ -747,37 +641,7 @@ function escapeHtml(text: string): string {
 
 // Copy JSON to clipboard
 async function copyToClipboard(): Promise<void> {
-  // Build full singer object
-  const cleanVariants = variants.map((v) => {
-    const clean: any = { ...v };
-    if (clean.tags && clean.tags.length === 0) {
-      delete clean.tags;
-    }
-    return clean;
-  });
-
-  const singer: any = {
-    id: singerId,
-    names: { ...singerNames },
-    owners: owners.filter((o) => o.trim()),
-    authors: authors.filter((a) => a.trim()),
-    variants: cleanVariants,
-  };
-
-  if (homepageUrl && homepageUrl.trim()) {
-    singer.homepage_url = homepageUrl.trim();
-  }
-  if (profileImageUrl && profileImageUrl.trim()) {
-    singer.profile_image_url = profileImageUrl.trim();
-  }
-
-  Object.keys(singer.names).forEach((key) => {
-    if (!singer.names[key] || singer.names[key].trim() === '') {
-      delete singer.names[key];
-    }
-  });
-
-  const json = JSON.stringify(singer, null, 2);
+  const json = JSON.stringify(buildSingerDraft(), null, 2);
   const t = getTranslations();
 
   try {

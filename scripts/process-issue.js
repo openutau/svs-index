@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import RJSON from 'relaxed-json';
+import { validateSinger } from '../shared/singer-validation.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,20 +110,8 @@ function buildSingerObject(data) {
   if (data.singer_json) {
     try {
       const cleaned = stripCodeFence(data.singer_json);
-      const obj = RJSON.parse(cleaned);
-      
-      // Validate required fields
-      if (!obj.id) {
-        throw new Error('Missing required field: id (Unique ID). Please provide a stable identifier.');
-      }
-      if (!obj.names || !obj.names.en) {
-        throw new Error('Missing required field: names.en (English name).');
-      }
-      if (!obj.variants || !Array.isArray(obj.variants) || obj.variants.length === 0) {
-        throw new Error('Missing required field: variants. Must be a non-empty array.');
-      }
-      
-      return obj;
+      // Parse only — validity is decided by the shared Singer-validation module.
+      return RJSON.parse(cleaned);
     } catch (e) {
       const err = new Error(
         'Invalid JSON in "Singer JSON" field. ' +
@@ -184,12 +173,7 @@ function buildSingerObject(data) {
     variants,
   };
 
-  if (!obj.id) {
-    throw new Error('Missing required field: id (Unique ID). Please provide a stable identifier.');
-  }
-  if (!obj.names || !obj.names.en) {
-    throw new Error('Missing required field: names.en (English name).');
-  }
+  // Required-field checks are owned by the shared Singer-validation module.
 
   const homepage = cleanOptional(data.homepage_url);
   if (homepage) obj.homepage_url = homepage;
@@ -302,6 +286,56 @@ function validateSchema(obj, schemaPath) {
     };
     throw err;
   }
+}
+
+function loadTagWhitelist() {
+  try {
+    const p = path.join(__dirname, '..', 'data', 'tag-whitelist.json');
+    const data = JSON.parse(fs.readFileSync(p, 'utf8'));
+    return new Set(Array.isArray(data.tags) ? data.tags : []);
+  } catch {
+    return new Set();
+  }
+}
+
+// English rendering of a structured error from the shared validation module.
+function singerErrorMessage(err) {
+  const p = err.params || {};
+  switch (err.code) {
+    case 'singer.id.exists':
+      return `Singer id "${p.id}" already exists.`;
+    case 'variant.id.prefix':
+      return `Variant id must start with the singer id prefix "${p.singerId}-".`;
+    case 'variant.id.duplicate':
+      return `Duplicate variant id "${p.id}" within the singer.`;
+    case 'variant.url.required':
+      return 'Provide at least one of file_url or download_page_url (non-null).';
+    case 'tag.tooLong':
+      return `Tag "${p.tag}" exceeds ${p.max} characters and is not in the whitelist.`;
+    default:
+      return p.message || err.code;
+  }
+}
+
+// Wrap the shared module's structured errors in the Error shape the issue
+// reporter (run()) already knows how to render, plus GitHub annotations.
+function buildSingerValidationError(errors) {
+  const mapped = errors.map((e) => ({
+    path: e.path,
+    message: singerErrorMessage(e),
+    params: e.params || {},
+  }));
+  for (const e of mapped) {
+    console.log(`::error title=Schema validation failed,path=${e.path}::${e.message}`);
+  }
+  const formatted = mapped.map((e) => `- ${e.path}: ${e.message}`).join('\n');
+  const err = new Error(
+    'Schema validation failed. Please correct the following:\n' +
+      formatted +
+      '\n\nSee the schema file and README for required fields.'
+  );
+  err.details = { formatted, errors: mapped };
+  return err;
 }
 
 async function postIssueComment(body) {
@@ -454,17 +488,33 @@ async function main() {
     }
   }
 
-  // Validate
-  validateSchema(obj, schemaPath);
+  // Determine target file from the id's first letter. The id may be missing or
+  // invalid here; validation reports that before we ever dereference it.
+  const firstLetter =
+    typeof obj.id === 'string' && obj.id ? obj.id[0].toLowerCase() : '';
+  const targetFile = firstLetter
+    ? path.join(dataDir, `${firstLetter}.json`)
+    : null;
 
-  // Determine target file
-  const firstLetter = obj.id[0].toLowerCase();
-  const targetFile = path.join(dataDir, `${firstLetter}.json`);
-
-  // Check if id already exists
   let existing = [];
-  if (fs.existsSync(targetFile)) {
+  if (targetFile && fs.existsSync(targetFile)) {
     existing = JSON.parse(fs.readFileSync(targetFile, 'utf8'));
+  }
+
+  // Validate. Singer goes through the shared module (the same authority the
+  // browser editor uses); uniqueness flows in via existingIds from the letter
+  // file. Software stays on the direct schema path.
+  if (category === 'singer') {
+    const existingIds = new Set(existing.map((s) => s.id).filter(Boolean));
+    const errors = validateSinger(obj, {
+      existingIds,
+      tagWhitelist: loadTagWhitelist(),
+    });
+    if (errors.length) {
+      throw buildSingerValidationError(errors);
+    }
+  } else {
+    validateSchema(obj, schemaPath);
     if (existing.some((item) => item.id === obj.id)) {
       throw new Error(`ID "${obj.id}" already exists in ${firstLetter}.json`);
     }

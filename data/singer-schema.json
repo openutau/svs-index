@@ -15,6 +15,7 @@
             "id": {
                 "description": "Unique hyphenated identifier for the singer (e.g., hatsune-miku).",
                 "type": "string",
+                "minLength": 5,
                 "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
             },
             "names": {
@@ -31,6 +32,7 @@
             "owners": {
                 "description": "List of owners for the singer.",
                 "type": "array",
+                "minItems": 1,
                 "items": {
                     "type": "string"
                 }
@@ -38,6 +40,7 @@
             "authors": {
                 "description": "List of authors for the singer.",
                 "type": "array",
+                "minItems": 1,
                 "items": {
                     "type": "string"
                 }
