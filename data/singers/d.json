@@ -58,5 +58,74 @@
       }
     ],
     "profile_image_url": "https://static.wixstatic.com/media/99456a_702462be981a4c2badc022a707eb3bf0~mv2.jpg/v1/crop/x_79,y_0,w_290,h_290/fill/w_232,h_232,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Daryl%20Murica%20Jones%20FREEDOM%20Reference%20Sheet_edited.jpg"
+  },
+  {
+    "names": {
+      "en": "Dillyloid",
+      "ja": "ディリロイド",
+      "zh": "迪利洛伊德"
+    },
+    "owners": [
+      "Qe-P"
+    ],
+    "authors": [
+      "Qe-P"
+    ],
+    "variants": [
+      {
+        "id": "dillyloid-cvvcappendact2",
+        "names": {
+          "en": "Dillyloid CVVC APPEND ACT2",
+          "ja": "ディリロイド CVVC APPEND ACT2",
+          "zh": "迪利洛伊德 CVVC APPEND ACT2"
+        },
+        "file_url": "https://www.mediafire.com/file/u4s63mxxjc8x14s/Dillyloid_CVVC_APPEND_ACT2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "monopitch",
+          "female"
+        ]
+      },
+      {
+        "id": "dillyloid-cvvcappendact1",
+        "names": {
+          "en": "Dillyloid CVVC APPEND",
+          "ja": "ディリロイド CVVC APPEND",
+          "zh": "迪利洛伊德 CVVC APPEND"
+        },
+        "file_url": "https://www.mediafire.com/file/6b60vu4naqk0vqh/kazoo.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "cvvc",
+          "monopitch",
+          "openutau",
+          "utau",
+          "female",
+          "deprecated"
+        ]
+      },
+      {
+        "id": "dillyloid-vcvact2",
+        "names": {
+          "en": "Dillyloid VCV ACT2",
+          "ja": "ディリロイド VCV ACT2",
+          "zh": "迪利洛伊德 VCV ACT2"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "vcv",
+          "openutau",
+          "utau",
+          "deprecated"
+        ]
+      }
+    ],
+    "id": "dillyloid",
+    "homepage_url": "https://utau.fandom.com/wiki/Dillyloid",
+    "profile_image_url": "https://i.imgur.com/7Vfo63Y.png"
   }
 ]
