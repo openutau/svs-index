@@ -27,5 +27,33 @@
       }
     ],
     "profile_image_url": "https://cloud.zhibin.club/uploads/images/20240131/2024013122531596b3f1383.png"
+  },
+  {
+    "names": {
+      "en": "Joule"
+    },
+    "owners": [
+      "CoolJoule"
+    ],
+    "authors": [
+      "CoolJoule"
+    ],
+    "variants": [
+      {
+        "id": "joule-english-cvvc",
+        "names": {
+          "en": "Joule English X-SAMPA CVVC beta"
+        },
+        "file_url": "https://github.com/CoolJoule/Joule-EN-CVVC-beta/releases/download/2025.05.02/Joule-EN-CVVC-beta.zip",
+        "download_page_url": "https://github.com/CoolJoule/Joule-EN-CVVC-beta",
+        "tags": [
+          "lang:en",
+          "utau",
+          "x-sampa"
+        ]
+      }
+    ],
+    "id": "joule",
+    "profile_image_url": "https://i.ibb.co/QFjW3xsc/portrait.png"
   }
 ]
