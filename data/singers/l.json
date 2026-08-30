@@ -357,5 +357,127 @@
         ]
       }
     ]
+  },
+  {
+    "names": {
+      "en": "LongWei",
+      "ja": "龙伟【ロンウェイ】",
+      "zh": "龙伟"
+    },
+    "owners": [
+      "deadbyte"
+    ],
+    "authors": [
+      "deadbyte"
+    ],
+    "variants": [
+      {
+        "id": "longwei-symphonia-english",
+        "names": {
+          "en": "LW_Symphonia_en"
+        },
+        "file_url": null,
+        "download_page_url": "https://lw-winery.carrd.co/#lw-symphonia-en",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:en",
+          "x-sampa",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "longwei-symphonia-japanese",
+        "names": {
+          "en": "LW_Symphonia_ja"
+        },
+        "file_url": null,
+        "download_page_url": "https://lw-winery.carrd.co/#lw-symphonia-ja",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:ja",
+          "vcv",
+          "cvvc",
+          "cv",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "longwei-symphonia-spanish",
+        "names": {
+          "en": "LW_Symphonia_es"
+        },
+        "file_url": null,
+        "download_page_url": "https://lw-winery.carrd.co/#lw-symphonia-es",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:es",
+          "vccv",
+          "njokis",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "longwei-symphonia-chinese",
+        "names": {
+          "en": "LW_Symphonia_zh"
+        },
+        "file_url": null,
+        "download_page_url": "https://lw-winery.carrd.co/#lw-symphonia-zh",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:zh",
+          "vccv",
+          "sanyinfa",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "longwei-legacy",
+        "names": {
+          "en": "LW_Legacy"
+        },
+        "file_url": null,
+        "download_page_url": "https://lw-winery.carrd.co/#lw-legacy",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:ja",
+          "lang:en",
+          "lang:es",
+          "cvvc",
+          "multipitch",
+          "multiexpression"
+        ]
+      },
+      {
+        "id": "longwei-symphonia-klingon",
+        "names": {
+          "en": "LW_Symphonia_tlh"
+        },
+        "file_url": null,
+        "download_page_url": "https://lw-winery.carrd.co/#lw-symphonia-tlh",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:tlh",
+          "cvvc",
+          "multipitch",
+          "joke"
+        ]
+      }
+    ],
+    "id": "longwei",
+    "homepage_url": "https://lw-winery.carrd.co/",
+    "profile_image_url": "https://lw-winery.carrd.co/assets/images/slideshow02-361ae519.png?v=42bbdf43"
   }
 ]
