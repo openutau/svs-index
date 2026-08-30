@@ -99,6 +99,8 @@ function messageFor(e) {
       return `variant id must start with the singer id prefix "${p.singerId}-"`;
     case 'variant.id.duplicate':
       return `duplicate variant id "${p.id}" within the singer`;
+    case 'fileUrl.webPage':
+      return `file_url ${p.url} is a file-host web page (host "${p.host}"); direct downloads only — use download_page_url instead`;
     case 'tag.tooLong':
       return `tag "${p.tag}" is ${p.tag ? p.tag.length : '?'} chars, over the ${p.max}-char limit, and is not in the tag whitelist (data/tag-whitelist.json)`;
     case 'letter.bucket':

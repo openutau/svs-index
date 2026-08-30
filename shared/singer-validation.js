@@ -16,6 +16,7 @@
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import schema from '../data/singer-schema.json' with { type: 'json' };
+import { fileUrlWebHost } from './file-url-validation.js';
 
 /**
  * @typedef {import('../src/types').Singer} Singer
@@ -96,6 +97,16 @@ export function validateSinger(singer, ctx = {}) {
         });
       }
       seenVariantIds.add(vid);
+    }
+
+    // file_url must be a direct download, not a file-host web page.
+    const fileUrlHost = fileUrlWebHost(v.file_url);
+    if (fileUrlHost) {
+      errors.push({
+        path: `variants.${index}.file_url`,
+        code: 'fileUrl.webPage',
+        params: { index, url: v.file_url, host: fileUrlHost },
+      });
     }
 
     // Tags over the length limit must be whitelisted.

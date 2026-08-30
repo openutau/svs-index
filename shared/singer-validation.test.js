@@ -98,6 +98,42 @@ test('a tag of 16 chars or fewer is always allowed', () => {
   assert.ok(!hasCode(validateSinger(s), 'tag.tooLong'));
 });
 
+test('a file-host web page in file_url is rejected', () => {
+  const badUrls = [
+    'https://drive.google.com/file/d/abc123/view?usp=sharing',
+    'https://bowlroll.net/file/12345',
+    'https://www.dropbox.com/scl/fi/xyz/file.zip?rlkey=abc&dl=0',
+    'https://w.atwiki.jp/somepage/pages/153.html',
+  ];
+  for (const url of badUrls) {
+    const s = validSinger();
+    s.variants[0].file_url = url;
+    const errors = validateSinger(s);
+    assert.ok(hasCode(errors, 'fileUrl.webPage'), `should reject ${url}`);
+    assert.ok(errors.some((e) => e.path === 'variants.0.file_url' && e.params.url === url));
+  }
+});
+
+test('direct download URLs in file_url are accepted', () => {
+  const goodUrls = [
+    'https://example.com/v1.zip',
+    'https://github.com/user/repo/releases/download/v1/v1.zip',
+    'https://www.dropbox.com/scl/fi/xyz/file.zip?rlkey=abc&dl=1',
+  ];
+  for (const url of goodUrls) {
+    const s = validSinger();
+    s.variants[0].file_url = url;
+    assert.ok(!hasCode(validateSinger(s), 'fileUrl.webPage'), `should accept ${url}`);
+  }
+});
+
+test('a file-host web page in download_page_url is fine', () => {
+  const s = validSinger();
+  s.variants[0].file_url = null;
+  s.variants[0].download_page_url = 'https://drive.google.com/file/d/abc123/view';
+  assert.ok(!hasCode(validateSinger(s), 'fileUrl.webPage'));
+});
+
 test('uniqueness fires only when the id is already published', () => {
   const s = validSinger();
   assert.ok(!hasCode(validateSinger(s, { existingIds: new Set(['other']) }), 'singer.id.exists'));

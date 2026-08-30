@@ -81,6 +81,8 @@ function messageForError(err: SingerValidationError, t: Translations): string {
       return t.duplicate;
     case 'tag.tooLong':
       return `Tag "${String(p.tag)}" > ${String(p.max)} chars, not whitelisted`;
+    case 'fileUrl.webPage':
+      return t.fileUrlIsPage;
   }
   if (err.code === 'schema.minLength' && err.path === 'id')
     return t.singerIdMinLength;

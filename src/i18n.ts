@@ -94,6 +94,7 @@ export interface Translations {
 
   fileUrlLabel: string;
   fileUrlHint: string;
+  fileUrlIsPage: string;
 
   downloadPageUrlLabel: string;
   downloadPageUrlHint: string;
@@ -215,6 +216,8 @@ export const translations: Record<Language, Translations> = {
     fileUrlLabel: 'File URL',
     fileUrlHint:
       'Direct download link. Leave null if unavailable. At least one of File URL or Download Page URL is required.',
+    fileUrlIsPage:
+      'That link is a file-host web page, not a direct download. Put it in Download Page URL instead.',
 
     downloadPageUrlLabel: 'Download Page URL',
     downloadPageUrlHint:
@@ -334,6 +337,8 @@ export const translations: Record<Language, Translations> = {
     fileUrlLabel: 'ファイルURL',
     fileUrlHint:
       '直接ダウンロードリンク。利用できない場合はnullのままにしてください。ファイルURLまたはダウンロードページURLの少なくとも1つが必要です。',
+    fileUrlIsPage:
+      'そのリンクはファイルホストのWebページであり、直接ダウンロードリンクではありません。ダウンロードページURLへ移動してください。',
 
     downloadPageUrlLabel: 'ダウンロードページURL',
     downloadPageUrlHint:
@@ -447,6 +452,7 @@ export const translations: Record<Language, Translations> = {
     fileUrlLabel: '文件URL',
     fileUrlHint:
       '直接下载链接。如果不可用，保留为null。文件URL或下载页面URL至少需要一个。',
+    fileUrlIsPage: '该链接是文件托管网页，不是直接下载链接。请改放到“下载页面URL”中。',
 
     downloadPageUrlLabel: '下载页面URL',
     downloadPageUrlHint:
