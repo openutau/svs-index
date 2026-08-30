@@ -352,5 +352,59 @@
     ],
     "homepage_url": "https://www.ah-soft.com/vocaloid/kiyoteru_v2/index.html",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/246"
+  },
+  {
+    "names": {
+      "en": "Hikaru Ye",
+      "ja": "緋歌留　夜",
+      "zh": "緋歌留 夜"
+    },
+    "owners": [
+      "XiaoyeP"
+    ],
+    "authors": [
+      "XiaoyeP"
+    ],
+    "variants": [
+      {
+        "id": "hikaru-ye-jacv",
+        "names": {
+          "en": "Hikaru Ye (Japanese CV)",
+          "ja": "緋歌留　夜（日本語 CV）",
+          "zh": "绯歌留 夜（日语 CV）"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/329057",
+        "tags": [
+          "male",
+          "utau",
+          "monopitch",
+          "lang:ja",
+          "CV",
+          "furry"
+        ]
+      },
+      {
+        "id": "hikaru-ye-javcv",
+        "names": {
+          "en": "Hikaru Ye (Japanese VCV)",
+          "ja": "緋歌留　夜（日本語 VCV）",
+          "zh": "绯歌留 夜（日语 VCV）"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/354841",
+        "tags": [
+          "male",
+          "utau",
+          "openutau",
+          "monopitch",
+          "lang:ja",
+          "VCV",
+          "furry"
+        ]
+      }
+    ],
+    "id": "hikaru-ye",
+    "homepage_url": "https://voskey.icalo.net/@HikaruYe"
   }
 ]
