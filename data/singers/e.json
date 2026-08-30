@@ -29,5 +29,96 @@
     ],
     "homepage_url": "https://headhunter4621.github.io/singers/en'ne-jeho/",
     "profile_image_url": "https://i.imgur.com/Fzn9vhe.png"
+  },
+  {
+    "names": {
+      "en": "eseph",
+      "ja": "エセフ"
+    },
+    "owners": [
+      "eseph-voice"
+    ],
+    "authors": [
+      "deadbyte",
+      "seram"
+    ],
+    "variants": [
+      {
+        "id": "eseph-colors-jp",
+        "names": {
+          "en": "eseph_COLORS_jp"
+        },
+        "file_url": null,
+        "download_page_url": "https://eseph-voice.carrd.co/",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:ja",
+          "vcv",
+          "cvvc",
+          "cv",
+          "multipitch",
+          "multiexpression"
+        ]
+      },
+      {
+        "id": "eseph-colors-en",
+        "names": {
+          "en": "eseph_COLORS_en"
+        },
+        "file_url": null,
+        "download_page_url": "https://eseph-voice.carrd.co/",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:en",
+          "ARPAsing",
+          "ARPAbet",
+          "cvvc",
+          "multipitch",
+          "multiexpression",
+          "x-sampa"
+        ]
+      },
+      {
+        "id": "eseph-jp",
+        "names": {
+          "en": "eseph_jp"
+        },
+        "file_url": null,
+        "download_page_url": "https://eseph-voice.carrd.co/",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "lang:jp",
+          "cvvc",
+          "multipitch"
+        ]
+      },
+      {
+        "id": "eseph-en",
+        "names": {
+          "en": "eseph_en"
+        },
+        "file_url": null,
+        "download_page_url": "https://eseph-voice.carrd.co/",
+        "tags": [
+          "utau",
+          "openutau",
+          "male",
+          "cvvc",
+          "ARPAsing",
+          "x-sampa",
+          "multipitch",
+          "lang:en"
+        ]
+      }
+    ],
+    "id": "eseph",
+    "homepage_url": "https://eseph-voice.carrd.co/",
+    "profile_image_url": "https://eseph-voice.carrd.co/assets/images/gallery06/cbf6d155_original.png?v=1c7bb0c8"
   }
 ]
