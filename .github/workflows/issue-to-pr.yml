@@ -139,7 +139,9 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number: prNum,
-                merge_method: 'merge'
+                merge_method: 'squash',
+                commit_title: `Add submission from issue #${context.issue.number}`,
+                commit_message: ''
               });
               github.rest.issues.createComment({
                 issue_number: context.issue.number,
