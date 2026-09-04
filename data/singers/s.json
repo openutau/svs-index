@@ -516,5 +516,131 @@
         ]
       }
     ]
+  },
+  {
+    "names": {
+      "en": "Shisakune Demo",
+      "ja": "試作音デモ",
+      "zh": "试作音Demo"
+    },
+    "owners": [
+      "UG"
+    ],
+    "authors": [
+      "UG",
+      "Hisaka",
+      "Vivi"
+    ],
+    "variants": [
+      {
+        "id": "shisakune-demo-diffsinger",
+        "names": {
+          "en": "Shisakune Demo DiffSinger",
+          "ja": "試作音デモ DiffSinger",
+          "zh": "试作音Demo DiffSinger"
+        },
+        "file_url": null,
+        "download_page_url": "https://github.com/tuskinekinase/shisakunedemo_ds",
+        "tags": [
+          "diffsinger",
+          "lang:en",
+          "lang:zh",
+          "lang:ja",
+          "openutau"
+        ]
+      },
+      {
+        "id": "shisakune-demo-cvvchn-smooth",
+        "names": {
+          "en": "Shisakune Demo CVVCHN-Smooth",
+          "ja": "試作音デモCVVCHN-Smooth",
+          "zh": "试作音Demo CVVCHN-Smooth"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1NTjH4re2kFK00Pg7H5uFVCBG4XBIsAJC/view?usp=sharing",
+        "tags": [
+          "utau",
+          "cvvc",
+          "lang:zh"
+        ]
+      },
+      {
+        "id": "shisakune-demo-cvvchn-solid",
+        "names": {
+          "en": "Shisakune Demo CVVCHN-Solid",
+          "ja": "試作音デモCVVCHN-Solid",
+          "zh": "试作音Demo CVVCHN-Solid"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1mZyN0oG45xn3j80jP0a4N-sQ-bQW9cp8/view?usp=sharing",
+        "tags": [
+          "utau",
+          "cvvc",
+          "lang:zh"
+        ]
+      },
+      {
+        "id": "shisakune-demo-english",
+        "names": {
+          "en": "Shisakune Demo English",
+          "ja": "試作音デモEnglish",
+          "zh": "试作音Demo English"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1G7ZO8zBKQGm7s64isAQuRRVde8rlAftQ/view?usp=sharing",
+        "tags": [
+          "utau",
+          "vccv",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "shisakune-demo-vcv-smooth",
+        "names": {
+          "en": "Shisakune Demo VCV-Smooth",
+          "ja": "試作音デモVCV-Smooth",
+          "zh": "试作音Demo VCV-Smooth"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1YiLemeSX4ZN3G18pMkveT6Oay0TION1_/view?usp=sharing",
+        "tags": [
+          "utau",
+          "vcv",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "shisakune-demo-vcv-solid",
+        "names": {
+          "en": "Shisakune Demo VCV-Solid",
+          "ja": "試作音デモVCV-Solid",
+          "zh": "试作音Demo VCV-Solid"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1Je8lcdTGzFV16X8ofzbdoaIuYPR0Ycpa/view?usp=sharing",
+        "tags": [
+          "utau",
+          "vcv",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "shisakune-demo-vcv-opera",
+        "names": {
+          "en": "Shisakune Demo Opera",
+          "ja": "試作音デモOpera",
+          "zh": "试作音Demo Opera"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1HU7frbMeq5rRXlr01E-Ejhn14uWyTHtb/view?usp=sharing",
+        "tags": [
+          "utau",
+          "vcv",
+          "lang:ja"
+        ]
+      }
+    ],
+    "id": "shisakune-demo",
+    "profile_image_url": "https://vocadb.net/Artist/Picture/15218?v=10"
   }
 ]
