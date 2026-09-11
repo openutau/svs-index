@@ -861,5 +861,38 @@
       }
     ],
     "homepage_url": "https://headhunter4621.github.io/singers/mizuki-mae/"
+  },
+  {
+    "names": {
+      "en": "Maru-ware Mokuba",
+      "ja": "モクバ マルウェア"
+    },
+    "owners": [
+      "Project: Fatal Override"
+    ],
+    "authors": [
+      "PrimaLotte05",
+      "Salmosquid",
+      "Meatbug1812",
+      "yelo"
+    ],
+    "variants": [
+      {
+        "id": "maru-ware-mokuba-cvvc",
+        "names": {
+          "en": "Maru-ware Mokuba JP CVVC"
+        },
+        "file_url": null,
+        "download_page_url": "https://bowlroll.net/file/360153",
+        "tags": [
+          "lang:jp",
+          "utau",
+          "cvvc"
+        ]
+      }
+    ],
+    "id": "maru-ware-mokuba",
+    "homepage_url": "https://projectfataloverride404.carrd.co/",
+    "profile_image_url": "https://i.imgur.com/1dMG0sv.png"
   }
 ]
