@@ -1,0 +1,28 @@
+[
+  {
+    "id": "hnsep_240512",
+    "names": {
+      "en": "HN-SEP: Harmonic/Noise Separation"
+    },
+    "category": "host_extension",
+    "developers": [
+      "yxlllc"
+    ],
+    "homepage_url": "https://github.com/yxlllc/vocal-remover",
+    "download_page_url": null,
+    "tags": [
+      "oudep"
+    ],
+    "versions": [
+      {
+        "version": "240512",
+        "mirrors": [
+          {
+            "url": "https://github.com/stakira/vocal-remover/releases/download/hnsep_240512-oudep/hnsep_240512.oudep",
+            "hash": "sha256:8f8c1046d0cacd40363e6f71d48bc1663e06a01d4625af0569055648d771ff92"
+          }
+        ]
+      }
+    ]
+  }
+]
