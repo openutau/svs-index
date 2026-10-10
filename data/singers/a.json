@@ -388,5 +388,93 @@
     ],
     "id": "aida-utsx",
     "homepage_url": "https://utau.sexy/aida_utau.html"
+  },
+  {
+    "names": {
+      "en": "AERIS",
+      "ja": "​多舌エリス"
+    },
+    "owners": [
+      "Violin"
+    ],
+    "authors": [
+      "Mariya"
+    ],
+    "variants": [
+      {
+        "id": "aeris-cvvc-kire",
+        "names": {
+          "en": "CV-VC English Divine (Kire 2.0)"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/TVUHBQYA#GVCbpTxy-jrJ3UgcLX_cKtaIn1RxAjmJ-CCuya5y2Yk",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "multipitch",
+          "multicolor",
+          "kire",
+          "extra phonemes",
+          "czsampa",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "aeris-jpn-natural2",
+        "names": {
+          "en": "CV-VC Japanese Natural 2.0"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/TENHTaLS#-9MCekPPsVOC6Zrk55Ya4cpgtOr30Qwsbth38CG2BhQ",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "multipitch",
+          "extra phonemes",
+          "english extras",
+          "breaths",
+          "lang:jp"
+        ]
+      },
+      {
+        "id": "aeris-cvc-rus",
+        "names": {
+          "en": "CVC Russian Kire"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/PI0UTY5J#UFzUCvdhbDEm_SqYyPudIYhkJrnZiRpLahOOXPjyJfY",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvc",
+          "multipitch",
+          "lang:rus"
+        ]
+      },
+      {
+        "id": "aeris-vccv-kire",
+        "names": {
+          "en": "VC-CV English Kire"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/eV9EASgB#wlTukOn2tKILnczQDe0zUfykHT50AqwvDowmvZLk6CU",
+        "tags": [
+          "utau",
+          "openutau",
+          "vccv",
+          "multipitch",
+          "multicolor",
+          "kire",
+          "extra phonemes",
+          "triphones",
+          "end breaths",
+          "lang:en"
+        ]
+      }
+    ],
+    "id": "aeris",
+    "homepage_url": "https://utau.sexy/aeris_utau.html"
   }
 ]
