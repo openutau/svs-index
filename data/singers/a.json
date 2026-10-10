@@ -235,5 +235,158 @@
     ],
     "id": "alemon",
     "profile_image_url": "https://vocadb.net/Artist/Picture/15219?v=7"
+  },
+  {
+    "names": {
+      "en": "AIDA",
+      "jp": "多舌アイダ"
+    },
+    "owners": [
+      "Violin"
+    ],
+    "authors": [
+      "Violin"
+    ],
+    "variants": [
+      {
+        "id": "aida-utsx-vccv2",
+        "names": {
+          "en": "VC-CV ENG Normal​ 2.5"
+        },
+        "file_url": null,
+        "download_page_url": "https://www.dropbox.com/scl/fi/cmh6muylqc9lb23eqphsm/AIDA-VC-CV-ENG-Normal-2.5-for-OpenUTAU.rar?rlkey=zi86dj1uzoctx3hi27jlfhjy7&e=1&dl=0",
+        "tags": [
+          "utau",
+          "openutau",
+          "vccv",
+          "multipitch",
+          "multicolor",
+          "power",
+          "falsetto",
+          "glottal stops",
+          "triphones",
+          "delta",
+          "delta english",
+          "xsampa",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "aida-utsx-sick",
+        "names": {
+          "en": "CV-VC SiCK"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/uItyCKJa#QrE6EAs0lbA59uIF4Xxs2wxkPIWkURi822ouT0E5Nv4",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "multipitch",
+          "male",
+          "extra phonemes",
+          "english extras",
+          "lang:jp"
+        ]
+      },
+      {
+        "id": "aida-utsx-vcv-real",
+        "names": {
+          "en": "VCV Real"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/fZk0WDSC#9WeScWRGtMDNXIXycsKoNRpGEGhj_vsfEQTfbwdkMaE",
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "male",
+          "8 mora",
+          "breaths",
+          "lang:jp"
+        ]
+      },
+      {
+        "id": "aida-utsx-sassy",
+        "names": {
+          "en": "CV-VC Sassy"
+        },
+        "file_url": null,
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "multipitch",
+          "multicolor",
+          "power",
+          "falsetto",
+          "lang:jp"
+        ]
+      },
+      {
+        "id": "aida-utsx-fools",
+        "names": {
+          "en": "CV-VC Phone (April Fool's bank)"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/TBUBGSxB#rIolx1X-Z2e9Qb66-rTAx6s7Y9MPSNKx4qjICzXQFlc",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "multipitch",
+          "kire",
+          "lang:jp"
+        ]
+      },
+      {
+        "id": "aida-utsx-vcv-complete",
+        "names": {
+          "en": "VCV Japanese Complete"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/uIM1iIpB#2hZjVk_mjAi4D5Lac0wuBTw8EphyER8tQe8L795_s3M",
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "multicolor",
+          "soft",
+          "falsetto",
+          "power",
+          "extra phonemes",
+          "english extras",
+          "glottal stops",
+          "lang:jp"
+        ]
+      },
+      {
+        "id": "aida-utsx-vccv1",
+        "names": {
+          "en": "VC-CV Eng Normal"
+        },
+        "file_url": null,
+        "download_page_url": "https://mega.nz/file/aIVTBaQJ#KwmB4K1i4M4docgSob8nKyiubVoSlrhoQ9sMJ4vmJV0",
+        "tags": [
+          "utau",
+          "openutau",
+          "vccv",
+          "multipitch",
+          "multicolor",
+          "soft",
+          "power",
+          "falsetto",
+          "triphones",
+          "extra phonemes",
+          "czsampa",
+          "lang:en"
+        ]
+      }
+    ],
+    "id": "aida-utsx",
+    "homepage_url": "https://utau.sexy/aida_utau.html"
   }
 ]
