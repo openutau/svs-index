@@ -476,5 +476,166 @@
     ],
     "id": "aeris",
     "homepage_url": "https://utau.sexy/aeris_utau.html"
+  },
+  {
+    "names": {
+      "en": "Arachne"
+    },
+    "owners": [
+      "general nuisance"
+    ],
+    "authors": [
+      "general nuisance"
+    ],
+    "variants": [
+      {
+        "id": "arachne-scorpion",
+        "names": {
+          "en": "Arachne SCORPION neo"
+        },
+        "file_url": "https://www.mediafire.com/file_premium/tdd84v376ddyh0g/Arachne_-SCORPION_neo-.rar/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "mature",
+          "androgynous",
+          "glottal stops",
+          "vocal fry",
+          "end breaths",
+          "start breaths",
+          "english extras",
+          "extra phonemes",
+          "power",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "arachne-recluse",
+        "names": {
+          "en": "Arachne RECLUSE neo"
+        },
+        "file_url": "https://www.mediafire.com/file_premium/158p1ny0lnz8e6r/Arachne_-RECLUSE_neo-.rar/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "falsetto",
+          "cutesy",
+          "airy",
+          "glottal stops",
+          "vocal fry",
+          "start breaths",
+          "end breaths",
+          "vocal fry",
+          "extra phonemes",
+          "english extras",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "arachne-tarantula",
+        "names": {
+          "en": "Arachne TARANTULA II"
+        },
+        "file_url": "https://www.mediafire.com/file_premium/pyvvrmbartge5qn/Arachne_-TARANTULA_II-.rar/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vccv",
+          "multipitch",
+          "multiexpression",
+          "power",
+          "sweet",
+          "whisper",
+          "dark",
+          "czsampa",
+          "glottal stops",
+          "vocal fry",
+          "start breaths",
+          "end breaths",
+          "alt otos",
+          "extra phonemes",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "arachne-widow",
+        "names": {
+          "en": "Arachne WIDOW"
+        },
+        "file_url": "https://www.mediafire.com/file_premium/fl51qvld5in1tue/Arachne_-WIDOW-.rar/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "mature",
+          "dark",
+          "glottal stops",
+          "vocal fry",
+          "start breaths",
+          "end breaths",
+          "english extras",
+          "extra phonemes",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "arachne-salt",
+        "names": {
+          "en": "Arachne SALTICIDAE"
+        },
+        "file_url": "https://www.mediafire.com/file_premium/trgwpbsrs3snikd/Arachne_-SALTICIDAE-.rar/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "whisper",
+          "airy",
+          "glottal stops",
+          "vocal fry",
+          "start breaths",
+          "end breaths",
+          "english extras",
+          "extra phonemes",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "arachne-solpugid",
+        "names": {
+          "en": "Arachne SOLPUGID"
+        },
+        "file_url": "https://www.mediafire.com/file_premium/04fhnqw9nckknju/Arachne_-SOLPUGID-.rar/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "glottal stops",
+          "vocal fry",
+          "start breaths",
+          "end breaths",
+          "english extras",
+          "extra phonemes",
+          "nasal",
+          "accented",
+          "lang:ja"
+        ]
+      }
+    ],
+    "id": "arachne",
+    "homepage_url": "https://generalnuisance.info/arachne",
+    "profile_image_url": "https://generalnuisance.info/graphics/Logobywrittenbelow.png"
   }
 ]
