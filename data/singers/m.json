@@ -894,5 +894,68 @@
     "id": "maru-ware-mokuba",
     "homepage_url": "https://projectfataloverride404.carrd.co/",
     "profile_image_url": "https://i.imgur.com/1dMG0sv.png"
+  },
+  {
+    "names": {
+      "en": "Milk",
+      "ja": "ミルク"
+    },
+    "owners": [
+      "xepheris"
+    ],
+    "authors": [
+      "xepheris"
+    ],
+    "variants": [
+      {
+        "id": "milk-xeph-ja",
+        "names": {
+          "en": "Milk",
+          "ja": "ミルク"
+        },
+        "file_url": "https://e8d04a7e-3ed2-436f-99cf-b884586f8d53.filesusr.com/archives/57a605_3d37144098a44226ae9abafcdbc46a44.rar?dn=Milk.rar",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "vcv",
+          "multipitch",
+          "multicolor",
+          "power",
+          "falsetto",
+          "end breaths",
+          "vocal fry",
+          "glottal stops",
+          "nonbinary",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "milk-xeph-en",
+        "names": {
+          "en": "Milk - English -"
+        },
+        "file_url": "https://e8d04a7e-3ed2-436f-99cf-b884586f8d53.filesusr.com/archives/57a605_e48457f0a4f04f8db4165f3d31b8f88a.rar?dn=Milk%20-%20English%20-.rar",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "openutau",
+          "arpasing",
+          "arpabet",
+          "multipitch",
+          "multicolor",
+          "power",
+          "whisper",
+          "falsetto",
+          "end breaths",
+          "glottal stops",
+          "vocal fry",
+          "extra phonemes",
+          "lang:en"
+        ]
+      }
+    ],
+    "id": "milk-xeph",
+    "homepage_url": "https://xepheris.wixsite.com/milk"
   }
 ]
