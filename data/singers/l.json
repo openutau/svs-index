@@ -479,5 +479,39 @@
     "id": "longwei",
     "homepage_url": "https://lw-winery.carrd.co/",
     "profile_image_url": "https://lw-winery.carrd.co/assets/images/slideshow02-361ae519.png?v=42bbdf43"
+  },
+  {
+    "names": {
+      "en": "Liu Xuanzhuan",
+      "zh": "刘旋转"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "liu-xuanzhuan-chn",
+        "names": {
+          "en": "Liu Xuanzhuan (Mandarin Chinese)",
+          "zh": "刘旋转 (中文)"
+        },
+        "file_url": "https://www.mediafire.com/file/reh894oetd8kgm0/Liu_Xuanzhuan_CVVC_Chinese.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "lang:zh",
+          "utau",
+          "female",
+          "cvvc",
+          "bipitch",
+          "mandarin"
+        ]
+      }
+    ],
+    "id": "liu-xuanzhuan",
+    "homepage_url": "https://assbackwardsp.wixsite.com/utaubackwards",
+    "profile_image_url": "https://i.imgur.com/3K1HhkI.png"
   }
 ]
