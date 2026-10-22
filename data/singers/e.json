@@ -120,5 +120,58 @@
     "id": "eseph",
     "homepage_url": "https://eseph-voice.carrd.co/",
     "profile_image_url": "https://eseph-voice.carrd.co/assets/images/gallery06/cbf6d155_original.png?v=1c7bb0c8"
+  },
+  {
+    "names": {
+      "en": "Esther"
+    },
+    "owners": [
+      "VoCreatures"
+    ],
+    "authors": [
+      "VoCreatures"
+    ],
+    "variants": [
+      {
+        "id": "esther-arpa",
+        "names": {
+          "en": "Esther Arpasing English"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/14kW3NIM9vzgYKZl_H98EqBopuhvuNrxm/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "openutau",
+          "arpasing",
+          "arpabet",
+          "multipitch",
+          "androgynous",
+          "rich",
+          "commercial use",
+          "personal use",
+          "lang:en"
+        ]
+      },
+      {
+        "id": "esther-ja",
+        "names": {
+          "en": "Esther CVVC Japanese"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1iYFiYavzdt-Oxw3CrpXJNBeM7GMimjyV/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "openutau",
+          "multipitch",
+          "cvvc",
+          "androgynous",
+          "rich",
+          "commercial use",
+          "personal use",
+          "lang:ja"
+        ]
+      }
+    ],
+    "id": "esther"
   }
 ]
