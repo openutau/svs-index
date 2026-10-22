@@ -120,5 +120,59 @@
       }
     ],
     "profile_image_url": "https://ec.crypton.co.jp/img/box_l/PFXV2.jpg"
+  },
+  {
+    "names": {
+      "en": "Bennett"
+    },
+    "owners": [
+      "VoCreatures"
+    ],
+    "authors": [
+      "VoCreatures"
+    ],
+    "variants": [
+      {
+        "id": "bennett-arpa",
+        "names": {
+          "en": "Bennett (ENG)"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1XktGmOibB0CeZ_gKWYlo10LdeGHZ2ooO/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "openutau",
+          "multipitch",
+          "arpasing",
+          "arpabet",
+          "commercial use",
+          "personal use",
+          "lang:en",
+          "rich",
+          "androgynous"
+        ]
+      },
+      {
+        "id": "bennett-ja",
+        "names": {
+          "en": "Bennett (JPN)"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/14Eag4f79k9kLUOlOvb5sKZy-8sHxBFmQ/view?usp=drive_link",
+        "tags": [
+          "utau",
+          "openutau",
+          "multipitch",
+          "cvvc",
+          "rich",
+          "androgynous",
+          "commercial use",
+          "personal use",
+          "lang:ja"
+        ]
+      }
+    ],
+    "id": "bennett",
+    "homepage_url": "https://vocreatures.carrd.co/#bennett"
   }
 ]
