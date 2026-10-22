@@ -55,5 +55,39 @@
     ],
     "id": "joule",
     "profile_image_url": "https://i.ibb.co/QFjW3xsc/portrait.png"
+  },
+  {
+    "names": {
+      "en": "Ji-Hye",
+      "ko": "지혜"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "ji-hye-cvvc",
+        "names": {
+          "en": "Ji-Hye CVVC Korean",
+          "ko": "지혜"
+        },
+        "file_url": "https://www.mediafire.com/file/f244ye2j0gy1vpf/Ji-Hye_KOR_ACT_2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "lang:ko",
+          "female",
+          "korean",
+          "bipitch",
+          "cvvc"
+        ]
+      }
+    ],
+    "id": "ji-hye",
+    "homepage_url": "https://assbackwardsp.wixsite.com/utaubackwards/home",
+    "profile_image_url": "https://i.imgur.com/21qrEwf.png"
   }
 ]
