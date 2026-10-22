@@ -406,5 +406,63 @@
     ],
     "id": "hikaru-ye",
     "homepage_url": "https://voskey.icalo.net/@HikaruYe"
+  },
+  {
+    "names": {
+      "en": "Hiro",
+      "ja": "ヒロ"
+    },
+    "owners": [
+      "Salem Wasteland"
+    ],
+    "authors": [
+      "Salem Wasteland"
+    ],
+    "variants": [
+      {
+        "id": "hiro-sw-redux",
+        "names": {
+          "en": "HIRO Redux",
+          "ja": "ヒロ・レーダックス"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1kX-7I9E2yQmh9CCXR53_GRgys-QjoXS8/view?usp=sharing",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "romaji encoded",
+          "kana aliased",
+          "romaji aliased",
+          "multiexpression",
+          "soft",
+          "monopitch",
+          "lang:ja"
+        ]
+      },
+      {
+        "id": "hiro-sw-eng",
+        "names": {
+          "en": "HIRO English",
+          "ja": "ヒロ・英語"
+        },
+        "file_url": null,
+        "download_page_url": "https://drive.google.com/file/d/1kX-7I9E2yQmh9CCXR53_GRgys-QjoXS8/view?usp=sharing",
+        "tags": [
+          "utau",
+          "openutau",
+          "cvvc",
+          "xsampa",
+          "cutesy",
+          "monopitch",
+          "ask commercial",
+          "personal use",
+          "lang:en"
+        ]
+      }
+    ],
+    "id": "hiro-sw",
+    "homepage_url": "https://utau.felinewasteland.com/vb/hiro",
+    "profile_image_url": "https://utau.felinewasteland.com/vb/images/icon_redux.png"
   }
 ]
