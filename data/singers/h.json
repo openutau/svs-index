@@ -406,5 +406,39 @@
     ],
     "id": "hikaru-ye",
     "homepage_url": "https://voskey.icalo.net/@HikaruYe"
+  },
+  {
+    "names": {
+      "en": "Hye-Ji",
+      "ko": "혜지"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "hye-ji-cvvc",
+        "names": {
+          "en": "Hye-Ji CVVC Korean",
+          "ko": "혜지"
+        },
+        "file_url": "https://www.mediafire.com/file/deic4bmdg45sw0v/Hye-Ji_KOR_ACT_2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "lang:ko",
+          "male",
+          "korean",
+          "bipitch",
+          "cvvc"
+        ]
+      }
+    ],
+    "id": "hye-ji",
+    "homepage_url": "https://assbackwardsp.wixsite.com/utaubackwards",
+    "profile_image_url": "https://i.imgur.com/tbP8SsN.png"
   }
 ]
