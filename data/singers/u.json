@@ -65,5 +65,54 @@
     ],
     "homepage_url": "https://www.kioon.com/vocaloid/piko/",
     "profile_image_url": "https://vocadb.net/Artist/PictureThumb/248"
+  },
+  {
+    "names": {
+      "en": "Uzuhi",
+      "ja": "太陽"
+    },
+    "owners": [
+      "GraySlate"
+    ],
+    "authors": [
+      "GraySlate"
+    ],
+    "variants": [
+      {
+        "id": "uzuhi-jpn",
+        "names": {
+          "en": "Uzuhi VCV Japanese",
+          "ja": "太陽 VCV"
+        },
+        "file_url": "https://www.mediafire.com/file/qss649d1na79k4i/Uzuhi_VCV_JPN.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "lang:ja",
+          "male",
+          "monopitch",
+          "vcv"
+        ]
+      },
+      {
+        "id": "uzuhi-eng",
+        "names": {
+          "en": "Uzuhi GrayGlish 2.0",
+          "ja": "太陽 GrayGlish 2.0"
+        },
+        "file_url": "https://www.mediafire.com/file/10qutqbf9rypb1f/Uzuhi_GrayGlish_2.zip/file",
+        "download_page_url": null,
+        "tags": [
+          "utau",
+          "lang:en",
+          "x-sampa",
+          "male",
+          "monopitch"
+        ]
+      }
+    ],
+    "id": "uzuhi",
+    "homepage_url": "https://assbackwardsp.wixsite.com/utaubackwards",
+    "profile_image_url": "https://i.imgur.com/SgaRkc6.png"
   }
 ]
